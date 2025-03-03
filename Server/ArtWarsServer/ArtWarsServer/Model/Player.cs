@@ -13,13 +13,11 @@ namespace ArtWarsServer.Model
     {
         //unique identifier for each player
         public int ID { get;}
-
         public string Name { get; }
-
-
+        public int score { get; set; }
 
         private Socket _socket;
-        private int _score {public get; set;}
+
 
 
 
@@ -28,13 +26,14 @@ namespace ArtWarsServer.Model
             //set player name
             this.Name = name;
 
+            //set id
+            this.ID = id;
+
             //set player socket
             _socket = socket;
 
             //set the score to 0
-            _score = 0;
-
-            this.ID = id;
+            score = 0;
         }
 
 
@@ -61,10 +60,6 @@ namespace ArtWarsServer.Model
 
         }
 
-     public incrementScore(){
-          _score++;
-
-     }
 
     }
 }

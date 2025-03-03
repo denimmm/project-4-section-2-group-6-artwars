@@ -11,6 +11,3 @@ build_property.RootNamespace = ArtWarsServer
 build_property.ProjectDir = C:\Users\PEKORA\Documents\school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
-build_property.CsWinRTUseWindowsUIXamlProjections = false
-build_property.EffectiveAnalysisLevelStyle = 8.0
-build_property.EnableCodeStyleSeverity = 
