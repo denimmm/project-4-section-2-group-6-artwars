@@ -9,7 +9,9 @@ namespace ArtWarsServer.Model
     class Server
     {
         //list of players in the game
-        List<Player> Players;
+        public List<Player> Players { get; set; }
+        public State state { get; set; }
+
 
         private int PlayerID_Index;//this is used to keep track of the last issued player id
 
@@ -27,13 +29,7 @@ namespace ArtWarsServer.Model
         /// <param name="p"></param>
         void AddPlayer(Player p)
         {
-            //increase player count
-            PlayerID_Index++;
-            //set player id
-            p.ID = PlayerID_Index;
 
-
-            Players.Add(p);
         }
 
         void RemovePlayer(Player p)
