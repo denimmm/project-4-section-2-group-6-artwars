@@ -17,7 +17,7 @@ namespace ArtWarsServer.Model
         public int Prompt_Writing_Time;
         public int Results_Time;
 
-        ServerConfig()
+        public ServerConfig()
         {
             Port = 25565;
             Max_Players = 4;

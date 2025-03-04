@@ -1,32 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj": {}
+    "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj": {
+    "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj",
+        "projectUniqueName": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj",
         "projectName": "ArtWarsServer",
-        "projectPath": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj",
-        "packagesPath": "C:\\Users\\PEKORA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\obj\\",
+        "projectPath": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj",
+        "packagesPath": "C:\\Users\\lizar\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\PEKORA\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\lizar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
         },
         "frameworks": {
           "net8.0-windows7.0": {
@@ -38,6 +33,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -62,7 +62,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.303/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
