@@ -37,7 +37,7 @@ namespace ArtWarsServer.Model
         }
 
 
-        public async Task sendData(string message, int Size)
+        public async Task sendDataAsync(string message)
         {
             try
             {
@@ -59,6 +59,16 @@ namespace ArtWarsServer.Model
             }
 
         }
+
+        public async Task recvDataAsync()
+        {
+
+
+
+
+
+        }
+
 
 
     }

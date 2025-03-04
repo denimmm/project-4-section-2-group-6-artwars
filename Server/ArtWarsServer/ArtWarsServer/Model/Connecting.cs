@@ -25,7 +25,7 @@ namespace ArtWarsServer.Model
         {
             connectPlayers();
 
-
+            NextState();
         }
 
         public void NextState()
@@ -38,7 +38,18 @@ namespace ArtWarsServer.Model
 
         private void connectPlayers()
         {
+            //create server socket
 
+
+
+            //wait for connections, make new thread for each.
+            while (running)
+            {
+
+
+
+                
+            }
 
         }
 
