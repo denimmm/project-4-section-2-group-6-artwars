@@ -5,16 +5,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net;
+using System.Net.Sockets;
 
 namespace ArtWarsServer.Model
 {
-    class Server
+
+
+
+    public class Server
     {
+        Socket serverSocket;
         public int code;
         public string IP_Address;
 
         //list of players in the game
-        public List<Player> Players { get; set; }
+        public List<Player> Players { get; private set; }
         //current state of the game
         public State state { get; set; }
         //last player id
@@ -26,7 +31,7 @@ namespace ArtWarsServer.Model
         //server config settings
         public ServerConfig serverConfig {get; private set;}
         
-            Server()
+            public Server()
         {
             //initialize players list
             Players = new List<Player>();
@@ -47,9 +52,14 @@ namespace ArtWarsServer.Model
 
         }
 
-        void AddPlayer(Player p)
+        public void AddPlayer(Player player)
         {
+            //assign an id to the new player
+            PlayerID_Index++;
+            player.ID = PlayerID_Index;
 
+            //add player to the list of players
+            Players.Add(player);
         }
 
         void RemovePlayer(Player p)
@@ -57,7 +67,7 @@ namespace ArtWarsServer.Model
             Players.Remove(p);
         }
 
-
+        //returns the server's ip address
         private string GetIPAddress()
 		{
             string hostName = Dns.GetHostName();
@@ -67,12 +77,27 @@ namespace ArtWarsServer.Model
             return IP;
 		}
 
+        //makes a new room code with a random number
         private int MakeRoomCode()
         {
             Random random = new Random();
 
-            return random.Next();
+            //trim to 4 digits or whatever ROOM_CODE_MAX_NUMBER is
+            return random.Next() % serverConfig.ROOM_CODE_MAX_NUMBER;
         }
 
+
+        public void Start()
+        {
+
+
+        }
+
+        public void Stop()
+        {
+
+
+
+        }
     }
 }

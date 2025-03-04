@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using System.Net.Sockets;
 
 namespace ArtWarsServer.Model
 {
@@ -11,13 +13,18 @@ namespace ArtWarsServer.Model
         bool running;
         private Server server { get; set; }
 
-
+        private TcpListener tcpListener;
+        
 
 
         public Connecting(Server server) {
             running = true;
         
             this.server = server;
+
+            //start listening for connections
+            tcpListener = new TcpListener(IPAddress.Any, server.serverConfig.Port);
+
         }
 
 
@@ -36,8 +43,12 @@ namespace ArtWarsServer.Model
 
         }
 
-        private void connectPlayers()
+        private async void connectPlayers()
         {
+
+            //start the tcp listener
+            tcpListener.Start();
+
             //create server socket
 
 
@@ -45,8 +56,9 @@ namespace ArtWarsServer.Model
             //wait for connections, make new thread for each.
             while (running)
             {
+                var clientSocket = await tcpListener.AcceptTcpClientAsync();
 
-
+                server.AddPlayer(new Player(clientSocket));
 
                 
             }

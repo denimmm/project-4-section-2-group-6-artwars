@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArtWarsServer.Model
 {
-    internal class ServerConfig
+    public class ServerConfig
     {
         //server settings//
         public int Port;
@@ -16,8 +16,10 @@ namespace ArtWarsServer.Model
         public int Drawing_Time;
         public int Prompt_Writing_Time;
         public int Results_Time;
+        public int ROOM_CODE_MAX_NUMBER;
 
-        public ServerConfig()
+
+		public ServerConfig()
         {
             Port = 25565;
             Max_Players = 4;
@@ -26,8 +28,8 @@ namespace ArtWarsServer.Model
             Voting_Time = 60;
             Drawing_Time = 360;
             Results_Time = 30;
-
-        }
+			ROOM_CODE_MAX_NUMBER = 10000;
+		}
 
     }
 }

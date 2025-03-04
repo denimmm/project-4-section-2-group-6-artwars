@@ -29,3 +29,15 @@ C:\Users\PEKORA\Documents\school\project-4-section-2-group-6-artwars\Server\ArtW
 C:\Users\PEKORA\Documents\school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\ArtWarsServer.pdb
 C:\Users\PEKORA\Documents\school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\ArtWarsServer.genruntimeconfig.cache
 C:\Users\PEKORA\Documents\school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\ref\ArtWarsServer.dll
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\View\ConnectingPage.g.cs
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\View\DrawingPage.g.cs
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\View\ResultsPage.g.cs
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\View\VotingPage.g.cs
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\View\WritingPromptPage.g.cs
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\ArtWarsServer_MarkupCompile.cache
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\ArtWarsServer_MarkupCompile.lref
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\ArtWarsServer.dll
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\refint\ArtWarsServer.dll
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\ArtWarsServer.pdb

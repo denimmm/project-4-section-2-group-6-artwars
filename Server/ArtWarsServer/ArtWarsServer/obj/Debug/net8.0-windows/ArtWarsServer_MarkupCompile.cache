@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\PEKORA\Documents\school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\obj\Debug\net8.0-windows\
 ArtWarsServer
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\PEKORA\Documents\school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\App.xaml
+C:\Users\lizar\Documents\0school\project-4-section-2-group-6-artwars\Server\ArtWarsServer\ArtWarsServer\App.xaml
 6-608393502
 
-17-154516925
-198-294894759
+19-470942123
+198-635017904
 MainWindow.xaml;View\ConnectingPage.xaml;View\DrawingPage.xaml;View\ResultsPage.xaml;View\VotingPage.xaml;View\WritingPromptPage.xaml;
 
-False
+True
 

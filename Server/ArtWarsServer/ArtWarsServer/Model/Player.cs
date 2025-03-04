@@ -6,45 +6,51 @@ using System.Threading.Tasks;
 using System.Net.Sockets;
 
 using System.Linq.Expressions;
+using System.IO;
 
 namespace ArtWarsServer.Model
 {
-    class Player
+    public class Player
     {
         //unique identifier for each player
-        public int ID { get;}
-        public string Name { get; }
+        public int ID { get; set; }
+        public string Name { get; set; }
         public int score { get; set; }
 
-        private Socket _socket;
+        public TcpClient ClientSocket { get; set; }
+
+		private Stream stream => ClientSocket.GetStream();
 
 
 
-
-        Player(string name, int id, Socket socket)
+        public Player(TcpClient socket)
         {
             //set player name
-            this.Name = name;
+            this.Name = "new player";
 
             //set id
-            this.ID = id;
+            this.ID = -1;
 
             //set player socket
-            _socket = socket;
+            ClientSocket = socket;
 
             //set the score to 0
             score = 0;
         }
 
 
+        //sends a packet to a player
         public async Task sendDataAsync(string message)
         {
             try
             {
-                if (_socket.Connected)
+                if (ClientSocket.Connected)
                 {
+                    //serialize data
                     byte[] data = Encoding.UTF8.GetBytes(message);
-                    await _socket.SendAsync(data, SocketFlags.None);
+
+                    //send data
+					await stream.WriteAsync(data, 0, data.Length);
                 }
                 else
                 {

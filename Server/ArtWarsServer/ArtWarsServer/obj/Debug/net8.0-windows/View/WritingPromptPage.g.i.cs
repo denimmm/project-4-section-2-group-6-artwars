@@ -53,7 +53,7 @@ namespace ArtWarsServer.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ArtWarsServer;V1.0.0.0;component/view/writingpromptpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ArtWarsServer;component/view/writingpromptpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\WritingPromptPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

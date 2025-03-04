@@ -53,7 +53,7 @@ namespace ArtWarsServer.View {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ArtWarsServer;V1.0.0.0;component/view/votingpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ArtWarsServer;component/view/votingpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\View\VotingPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

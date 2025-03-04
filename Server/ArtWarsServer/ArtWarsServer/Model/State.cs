@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArtWarsServer.Model
 {
-    interface State
+    public interface State
     {
 
         //begin the state
