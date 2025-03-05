@@ -3,40 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\view\\connectingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\view\\connectingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\server.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\connecting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\connecting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\view\\connectingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\view\\connectingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\view\\connectingpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\view\\connectingpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\voting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\voting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\serverconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\serverconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\view\\drawingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\view\\drawingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\writingprompt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\writingprompt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\state.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\voting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\voting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\view\\writingpromptpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\view\\writingpromptpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\model\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\view\\resultspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -47,24 +79,8 @@
       "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\view\\votingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\view\\drawingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\view\\drawingpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\view\\writingpromptpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\view\\writingpromptpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\artwarsserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\artwarsserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\pyvov\\source\\repos\\krakenartwars\\server\\artwarsserver\\artwarsserver\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -94,78 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Server.cs",
-              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Server.cs",
-              "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Server.cs",
-              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Server.cs",
-              "RelativeToolTip": "ArtWarsServer\\Model\\Server.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T01:27:53.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Drawing.cs",
-              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Drawing.cs",
-              "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Drawing.cs",
-              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Drawing.cs",
-              "RelativeToolTip": "ArtWarsServer\\Model\\Drawing.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T01:26:50.229Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "WritingPrompt.cs",
-              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\WritingPrompt.cs",
-              "RelativeDocumentMoniker": "ArtWarsServer\\Model\\WritingPrompt.cs",
-              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\WritingPrompt.cs",
-              "RelativeToolTip": "ArtWarsServer\\Model\\WritingPrompt.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T01:26:28.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Connecting.cs",
-              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Connecting.cs",
-              "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Connecting.cs",
-              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Connecting.cs",
-              "RelativeToolTip": "ArtWarsServer\\Model\\Connecting.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T01:25:48.651Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "State.cs",
-              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\State.cs",
-              "RelativeDocumentMoniker": "ArtWarsServer\\Model\\State.cs",
-              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\State.cs",
-              "RelativeToolTip": "ArtWarsServer\\Model\\State.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T01:25:13.3Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ResultsPage.xaml",
-              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\ResultsPage.xaml",
-              "RelativeDocumentMoniker": "ArtWarsServer\\View\\ResultsPage.xaml",
-              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\ResultsPage.xaml",
-              "RelativeToolTip": "ArtWarsServer\\View\\ResultsPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-02T01:23:39.216Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ConnectingPage.xaml",
               "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\ConnectingPage.xaml",
               "RelativeDocumentMoniker": "ArtWarsServer\\View\\ConnectingPage.xaml",
@@ -177,19 +122,121 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Voting.cs",
-              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Voting.cs",
-              "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Voting.cs",
-              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Voting.cs",
-              "RelativeToolTip": "ArtWarsServer\\Model\\Voting.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "Server.cs",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Server.cs",
+              "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Server.cs",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Server.cs",
+              "RelativeToolTip": "ArtWarsServer\\Model\\Server.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAFkAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T01:27:10.571Z"
+              "WhenOpened": "2025-03-02T01:27:53.719Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\App.xaml.cs",
+              "RelativeDocumentMoniker": "ArtWarsServer\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\App.xaml.cs",
+              "RelativeToolTip": "ArtWarsServer\\App.xaml.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T03:22:16.136Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ArtWarsServer\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\MainWindow.xaml",
+              "RelativeToolTip": "ArtWarsServer\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T01:14:36.85Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "State.cs",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\State.cs",
+              "RelativeDocumentMoniker": "ArtWarsServer\\Model\\State.cs",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\State.cs",
+              "RelativeToolTip": "ArtWarsServer\\Model\\State.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T01:25:13.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConnectingPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\ConnectingPage.xaml.cs",
+              "RelativeDocumentMoniker": "ArtWarsServer\\View\\ConnectingPage.xaml.cs",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\ConnectingPage.xaml.cs",
+              "RelativeToolTip": "ArtWarsServer\\View\\ConnectingPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T03:29:29.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ArtWarsServer\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ArtWarsServer\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAQwBsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T01:14:24.381Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ServerConfig.cs",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\ServerConfig.cs",
+              "RelativeDocumentMoniker": "ArtWarsServer\\Model\\ServerConfig.cs",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\ServerConfig.cs",
+              "RelativeToolTip": "ArtWarsServer\\Model\\ServerConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T20:08:53.845Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "WritingPrompt.cs",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\WritingPrompt.cs",
+              "RelativeDocumentMoniker": "ArtWarsServer\\Model\\WritingPrompt.cs",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\WritingPrompt.cs",
+              "RelativeToolTip": "ArtWarsServer\\Model\\WritingPrompt.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T01:26:28.121Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DrawingPage.xaml",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\DrawingPage.xaml",
+              "RelativeDocumentMoniker": "ArtWarsServer\\View\\DrawingPage.xaml",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\DrawingPage.xaml",
+              "RelativeToolTip": "ArtWarsServer\\View\\DrawingPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T01:22:35.028Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Results.cs",
               "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Results.cs",
               "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Results.cs",
@@ -201,41 +248,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Player.cs",
               "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Player.cs",
               "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Player.cs",
               "RelativeToolTip": "ArtWarsServer\\Model\\Player.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAuwCgAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAA7wB4AAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-02T01:28:24.383Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "VotingPage.xaml",
-              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\VotingPage.xaml",
-              "RelativeDocumentMoniker": "ArtWarsServer\\View\\VotingPage.xaml",
-              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\VotingPage.xaml",
-              "RelativeToolTip": "ArtWarsServer\\View\\VotingPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-02T01:23:00.095Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "DrawingPage.xaml",
-              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\DrawingPage.xaml",
-              "RelativeDocumentMoniker": "ArtWarsServer\\View\\DrawingPage.xaml",
-              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\DrawingPage.xaml",
-              "RelativeToolTip": "ArtWarsServer\\View\\DrawingPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-02T01:22:35.028Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "WritingPromptPage.xaml",
               "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\WritingPromptPage.xaml",
               "RelativeDocumentMoniker": "ArtWarsServer\\View\\WritingPromptPage.xaml",
@@ -246,7 +271,77 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 10,
+              "Title": "Voting.cs",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Voting.cs",
+              "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Voting.cs",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Voting.cs",
+              "RelativeToolTip": "ArtWarsServer\\Model\\Voting.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T01:27:10.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Drawing.cs",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Drawing.cs",
+              "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Drawing.cs",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Drawing.cs",
+              "RelativeToolTip": "ArtWarsServer\\Model\\Drawing.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T01:26:50.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Packet.cs",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Packet.cs",
+              "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Packet.cs",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Packet.cs",
+              "RelativeToolTip": "ArtWarsServer\\Model\\Packet.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T04:05:42.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "ArtWarsServer\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\AssemblyInfo.cs",
+              "RelativeToolTip": "ArtWarsServer\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-05T03:22:40.377Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ResultsPage.xaml",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\ResultsPage.xaml",
+              "RelativeDocumentMoniker": "ArtWarsServer\\View\\ResultsPage.xaml",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\ResultsPage.xaml",
+              "RelativeToolTip": "ArtWarsServer\\View\\ResultsPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T01:23:39.216Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "VotingPage.xaml",
+              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\VotingPage.xaml",
+              "RelativeDocumentMoniker": "ArtWarsServer\\View\\VotingPage.xaml",
+              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\View\\VotingPage.xaml",
+              "RelativeToolTip": "ArtWarsServer\\View\\VotingPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-02T01:23:00.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "ArtWarsServer.csproj",
               "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj",
               "RelativeDocumentMoniker": "ArtWarsServer\\ArtWarsServer.csproj",
@@ -255,33 +350,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-03-02T01:16:02.201Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "ArtWarsServer\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\MainWindow.xaml",
-              "RelativeToolTip": "ArtWarsServer\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-02T01:14:36.85Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "ArtWarsServer\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\MainWindow.xaml.cs",
-              "RelativeToolTip": "ArtWarsServer\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T01:14:24.381Z"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }

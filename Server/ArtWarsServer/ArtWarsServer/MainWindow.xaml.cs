@@ -20,4 +20,14 @@ public partial class MainWindow : Window
     {
         InitializeComponent();
     }
+    private void MainWindow_Loaded(object sender, RoutedEventArgs e)
+    {
+        
+            MainFrame.Navigate(new View.ConnectingPage());// Navigating to the connecting page
+        
+       
+    }
+
+                    
+
 }

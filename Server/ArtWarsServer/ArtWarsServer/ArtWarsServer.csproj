@@ -9,8 +9,22 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="View\Resources\Paint_splash1.png" />
+    <None Remove="View\Resources\Paint_splash2.png" />
+    <None Remove="View\Resources\Paint_splash3.png" />
+    <None Remove="View\Resources\Paint_splash4.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="ViewModel\" />
     <Folder Include="View\UserControls\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Resources\Paint_splash1.png" />
+    <Resource Include="View\Resources\Paint_splash2.png" />
+    <Resource Include="View\Resources\Paint_splash3.png" />
+    <Resource Include="View\Resources\Paint_splash4.png" />
   </ItemGroup>
 
 </Project>
