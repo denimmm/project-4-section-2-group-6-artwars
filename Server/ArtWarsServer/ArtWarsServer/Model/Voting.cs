@@ -17,7 +17,7 @@ namespace ArtWarsServer.Model
         }
 
 
-        public void Start()
+        public async Task Start()
         {
 
 
