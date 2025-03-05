@@ -10,7 +10,7 @@ namespace ArtWarsServer.Model
     {
 
         //begin the state
-        void Start();
+        Task Start();
 
         //change to next state. parameter tells the state who the server is.
         void NextState();

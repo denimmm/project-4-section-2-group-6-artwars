@@ -38,9 +38,6 @@ namespace ArtWarsServer.Model
 
             PlayerID_Index = 0;
 
-            //initialize state
-            state = new Connecting(this);
-
             prompt = "PROMPT NOT SET";
 
             serverConfig = new ServerConfig();
@@ -49,6 +46,9 @@ namespace ArtWarsServer.Model
 
             code = MakeRoomCode();
 
+
+            //initialize state
+            state = new Connecting(this);
 
         }
 
