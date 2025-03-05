@@ -58,7 +58,7 @@ namespace ArtWarsServer.Model
             {
                 var clientSocket = await tcpListener.AcceptTcpClientAsync();
 
-                server.AddPlayer(new Player(clientSocket));
+                server.AddPlayer(new Player(clientSocket, server));
 
                 
             }
