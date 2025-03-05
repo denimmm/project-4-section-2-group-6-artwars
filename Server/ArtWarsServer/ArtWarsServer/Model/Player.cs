@@ -21,9 +21,11 @@ namespace ArtWarsServer.Model
 
 		private Stream stream => ClientSocket.GetStream();
 
+        private Server server { get; set; }
 
 
-        public Player(TcpClient socket)
+
+        public Player(TcpClient socket, Server server)
         {
             //set player name
             this.Name = "new player";
@@ -66,12 +68,30 @@ namespace ArtWarsServer.Model
 
         }
 
-        public async Task recvDataAsync()
+        public async Task<string> ReceiveDataAsync()
         {
+            try
+            {
+                if (ClientSocket.Connected)
+                {
+                    byte[] buffer = new byte[server.serverConfig.bufferSize];
 
+                    int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
 
+                    if (bytesRead > 0)
+                    {
+                        return Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                    }
 
+                }
+            }
+            catch (Exception ex)
+            {
 
+                Console.WriteLine($"Error recieving data from player {ID} {Name} : {ex.Message}");
+            }
+
+            return null;
 
         }
 

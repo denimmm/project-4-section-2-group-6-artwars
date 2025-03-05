@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\model\\serverconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\serverconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\model\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\model\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\packet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\model\\serverconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\serverconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\model\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\model\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\model\\connecting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,14 +41,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\model\\voting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\voting.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\model\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\drawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\model\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|solutionrelative:artwarsserver\\model\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A2D3A11-4B31-4C93-8EE6-7D0BBE91A924}|ArtWarsServer\\ArtWarsServer.csproj|c:\\users\\lizar\\documents\\0school\\project-4-section-2-group-6-artwars\\server\\artwarsserver\\artwarsserver\\model\\writingprompt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,23 +82,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\App.xaml.cs",
               "RelativeDocumentMoniker": "ArtWarsServer\\App.xaml.cs",
               "ToolTip": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\App.xaml.cs",
               "RelativeToolTip": "ArtWarsServer\\App.xaml.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBwAAAArAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwBEAAAACAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T22:40:23.398Z"
+              "WhenOpened": "2025-03-04T22:40:23.398Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Packet.cs",
               "DocumentMoniker": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Packet.cs",
               "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Packet.cs",
@@ -106,36 +107,38 @@
               "RelativeToolTip": "ArtWarsServer\\Model\\Packet.cs",
               "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAKAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T21:16:41.189Z"
+              "WhenOpened": "2025-03-04T21:16:41.189Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "ServerConfig.cs",
               "DocumentMoniker": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\ServerConfig.cs",
               "RelativeDocumentMoniker": "ArtWarsServer\\Model\\ServerConfig.cs",
               "ToolTip": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\ServerConfig.cs",
               "RelativeToolTip": "ArtWarsServer\\Model\\ServerConfig.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T21:09:13.826Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "Player.cs",
               "DocumentMoniker": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Player.cs",
               "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Player.cs",
               "ToolTip": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Player.cs",
               "RelativeToolTip": "ArtWarsServer\\Model\\Player.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAdAAAA",
+              "ViewState": "AQIAAC8AAAAAAAAAAAAAwEYAAAA0AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T01:28:24.383Z"
+              "WhenOpened": "2025-03-02T01:28:24.383Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Server.cs",
               "DocumentMoniker": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Server.cs",
               "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Server.cs",
@@ -147,7 +150,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "Voting.cs",
               "DocumentMoniker": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Voting.cs",
               "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Voting.cs",
@@ -159,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "State.cs",
               "DocumentMoniker": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\State.cs",
               "RelativeDocumentMoniker": "ArtWarsServer\\Model\\State.cs",
@@ -171,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Connecting.cs",
               "DocumentMoniker": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Connecting.cs",
               "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Connecting.cs",
@@ -183,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "Drawing.cs",
               "DocumentMoniker": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Drawing.cs",
               "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Drawing.cs",
@@ -191,11 +194,12 @@
               "RelativeToolTip": "ArtWarsServer\\Model\\Drawing.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T01:26:50.229Z"
+              "WhenOpened": "2025-03-02T01:26:50.229Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 4,
               "Title": "Results.cs",
               "DocumentMoniker": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\Model\\Results.cs",
               "RelativeDocumentMoniker": "ArtWarsServer\\Model\\Results.cs",
@@ -203,7 +207,8 @@
               "RelativeToolTip": "ArtWarsServer\\Model\\Results.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-02T01:27:30.639Z"
+              "WhenOpened": "2025-03-02T01:27:30.639Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",

@@ -17,7 +17,7 @@ namespace ArtWarsServer.Model
         public int Prompt_Writing_Time;
         public int Results_Time;
         public int ROOM_CODE_MAX_NUMBER;
-
+        public int bufferSize;
 
 		public ServerConfig()
         {
@@ -29,6 +29,7 @@ namespace ArtWarsServer.Model
             Drawing_Time = 360;
             Results_Time = 30;
 			ROOM_CODE_MAX_NUMBER = 10000;
+            bufferSize = 4096;
 		}
 
     }
