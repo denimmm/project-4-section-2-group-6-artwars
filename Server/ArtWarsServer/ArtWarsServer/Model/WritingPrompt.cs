@@ -8,5 +8,30 @@ namespace ArtWarsServer.Model
 {
     class WritingPrompt : State
     {
+
+        private Server server { get; set; }
+
+
+
+
+        public WritingPrompt(Server server)
+        {
+            this.server = server;
+        }
+
+
+        public void Start()
+        {
+
+
+
+        }
+
+        public void NextState()
+        {
+            //make and assign new state to server
+            server.state = new Drawing(server);
+
+        }
     }
 }

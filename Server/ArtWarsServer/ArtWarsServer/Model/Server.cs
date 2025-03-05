@@ -1,40 +1,65 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Net;
+using System.Net.Sockets;
 
 namespace ArtWarsServer.Model
 {
-    class Server
+
+
+
+    public class Server
     {
+        Socket serverSocket;
+        public int code;
+        public string IP_Address;
+
         //list of players in the game
-        List<Player> Players;
+        public List<Player> Players { get; private set; }
+        //current state of the game
+        public State state { get; set; }
+        //last player id
+        public int PlayerID_Index { get; set; } //this is used to keep track of the last issued player id
 
-        private int PlayerID_Index;//this is used to keep track of the last issued player id
-
+        //prompt for the round
+        public string prompt;
         
-            Server()
+        //server config settings
+        public ServerConfig serverConfig {get; private set;}
+        
+            public Server()
         {
             //initialize players list
             Players = new List<Player>();
+
             PlayerID_Index = 0;
+
+            //initialize state
+            state = new Connecting(this);
+
+            prompt = "PROMPT NOT SET";
+
+            serverConfig = new ServerConfig();
+
+            IP_Address = GetIPAddress();
+
+            code = MakeRoomCode();
+
+
         }
 
-        /// <summary>
-        /// assigns an id to a player object and adds it to the list
-        /// </summary>
-        /// <param name="p"></param>
-        void AddPlayer(Player p)
+        public void AddPlayer(Player player)
         {
-            //increase player count
+            //assign an id to the new player
             PlayerID_Index++;
-            //set player id
-            p.ID = PlayerID_Index;
+            player.ID = PlayerID_Index;
 
-
-            Players.Add(p);
-
+            //add player to the list of players
+            Players.Add(player);
         }
 
         void RemovePlayer(Player p)
@@ -42,5 +67,37 @@ namespace ArtWarsServer.Model
             Players.Remove(p);
         }
 
+        //returns the server's ip address
+        private string GetIPAddress()
+		{
+            string hostName = Dns.GetHostName();
+
+            string IP = Dns.GetHostEntry(hostName).AddressList[0].ToString();
+
+            return IP;
+		}
+
+        //makes a new room code with a random number
+        private int MakeRoomCode()
+        {
+            Random random = new Random();
+
+            //trim to 4 digits or whatever ROOM_CODE_MAX_NUMBER is
+            return random.Next() % serverConfig.ROOM_CODE_MAX_NUMBER;
+        }
+
+
+        public void Start()
+        {
+
+
+        }
+
+        public void Stop()
+        {
+
+
+
+        }
     }
 }

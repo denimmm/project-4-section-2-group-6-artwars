@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using ArtWarsServer.Model;
+using System.Configuration;
 using System.Data;
 using System.Windows;
 
@@ -9,5 +10,31 @@ namespace ArtWarsServer;
 /// </summary>
 public partial class App : Application
 {
+	public Server server;
+
+
+
+	protected App()
+	{
+		InitializeComponent();
+		server = new Server();
+	}
+
+
+	protected override void OnStartup(StartupEventArgs e)
+	{
+		base.OnStartup(e);
+		server.Start();
+
+		MainWindow mainWindow = new MainWindow();
+		mainWindow.Show();
+	}
+
+	protected override void OnExit(ExitEventArgs e)
+	{
+		server.Stop(); // Cleanup when app closes
+		base.OnExit(e);
+	}
+
 }
 
