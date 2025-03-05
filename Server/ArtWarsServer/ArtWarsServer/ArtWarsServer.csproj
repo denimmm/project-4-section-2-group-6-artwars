@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <Folder Include="ViewModel\" />
-    <Folder Include="View\Resources\" />
     <Folder Include="View\UserControls\" />
   </ItemGroup>
 

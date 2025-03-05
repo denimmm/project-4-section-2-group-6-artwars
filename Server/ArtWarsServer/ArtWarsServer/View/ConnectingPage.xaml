@@ -5,10 +5,117 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ArtWarsServer.View"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="ConnectingPage">
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="ConnectingPage"
+      Background="White">
 
+    <!-- Main Grid container for all elements -->
     <Grid>
-        
+        <!-- ============================================== -->
+        <!-- Decorative Paint Splash Images (Background) -->
+        <!-- ============================================== -->
+
+        <!-- Bottom-left paint splash 1 -->
+        <Image  Source="/View/Resources/Paint_splash1.png"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left" 
+                Height="562" 
+                Margin="-1,0,0,-1" 
+                Width="561"/>
+
+        <!-- Centered-left paint splash 3 -->
+        <Image Source="/View/Resources/Paint_splash3.png"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left" 
+                Height="474" 
+                Margin="86,0,0,606" 
+                Width="497"/>
+
+        <!-- Bottom-right paint splash 4 -->
+        <Image Source="/View/Resources/Paint_splash4.png"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left" 
+                Height="512" 
+                Margin="913,0,0,-1" 
+                Width="578"/>
+
+        <!-- Top-right paint splash 2 -->
+        <Image Source="/View/Resources/Paint_splash2.png"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left" 
+               Height="562" 
+               Margin="1359,0,0,319" 
+               Width="561"/>
+
+
+        <!-- ============================================== -->
+        <!-- UI Elements (Labels and Output Fields) -->
+        <!-- ============================================== -->
+
+        <!-- Main Title: "Art Wars" -->
+        <Label Content="Art Wars" 
+               FontFamily="Algerian" 
+               FontSize="96"
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Top" Margin="0,63,0,0" Width="486"/>
+
+        <!-- Subtitle/Instruction Text -->
+        <Label 
+            Content="Join Art Wars Session by entering our Server IP, and Session code!!!" 
+            FontFamily="Roboto" 
+            FontSize="48"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top" 
+            Margin="0,200,0,0" 
+            Width="1430"/>
+
+        <!-- IP Output Section -->
+        <Label 
+            Content="IP:" 
+            FontFamily="Roboto" 
+            FontSize="48"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Margin="746,411,0,0" 
+            Width="67" 
+            Height="63"
+            VerticalContentAlignment="Center"/>
+
+        <TextBox 
+            HorizontalAlignment="Left" 
+            Margin="818,411,0,0" 
+            TextWrapping="Wrap" 
+            Text="000.000.000.000"
+            FontFamily="Roboto" 
+            FontSize="48"
+            VerticalAlignment="Top" 
+            Width="354" 
+            Height="63"
+            VerticalContentAlignment="Bottom"/>
+
+        <!-- Session Code Output Section -->
+        <Label 
+            Content="Session Code:" 
+            FontFamily="Roboto" 
+            FontSize="48"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Margin="504,540,0,0" 
+            Width="309" 
+            Height="64"
+            VerticalContentAlignment="Center"/>
+
+        <TextBox 
+            HorizontalAlignment="Left" 
+            Margin="818,541,0,0" 
+            TextWrapping="Wrap" 
+            Text="0000"
+            FontFamily="Roboto" 
+            FontSize="48"
+            VerticalAlignment="Top" 
+            Width="354" 
+            Height="63"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"/>
     </Grid>
 </Page>
