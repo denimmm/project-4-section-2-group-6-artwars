@@ -12,9 +12,9 @@ TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR
 C:\Users\pyvov\source\repos\KrakenArtWars\Server\ArtWarsServer\ArtWarsServer\App.xaml
 6-608393502
 
-19203010767
+21-113414431
 1981839832580
 MainWindow.xaml;View\ConnectingPage.xaml;View\DrawingPage.xaml;View\ResultsPage.xaml;View\VotingPage.xaml;View\WritingPromptPage.xaml;
 
-True
+False
 
