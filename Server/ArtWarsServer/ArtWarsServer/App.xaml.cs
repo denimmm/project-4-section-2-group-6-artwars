@@ -14,7 +14,7 @@ public partial class App : Application
 
 
 
-	protected App()
+	public App()
 	{
 		InitializeComponent();
 		server = new Server();
@@ -25,9 +25,6 @@ public partial class App : Application
 	{
 		base.OnStartup(e);
 		server.Start();
-
-		MainWindow mainWindow = new MainWindow();
-		mainWindow.Show();
 	}
 
 	protected override void OnExit(ExitEventArgs e)
