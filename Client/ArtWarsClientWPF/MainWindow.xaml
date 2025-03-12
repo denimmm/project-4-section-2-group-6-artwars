@@ -1,0 +1,19 @@
+﻿<Window x:Class="ArtWarsClientWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Art Wars - Login" Height="300" Width="400">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Name:" />
+            <TextBox x:Name="PlayerNameBox" Width="200" />
+
+            <TextBlock Text="Room Code:" Margin="0,10,0,0" />
+            <TextBox x:Name="RoomCodeBox" Width="200" />
+
+            <Button Content="Connect" Width="100" Margin="0,10,0,0"
+                    Click="ConnectButton_Click" />
+
+            <TextBlock x:Name="StatusText" Foreground="Red" />
+        </StackPanel>
+    </Grid>
+</Window>

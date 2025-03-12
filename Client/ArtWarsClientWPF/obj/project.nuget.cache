@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "LJm0H7UM+x8=",
+  "success": false,
+  "projectFilePath": "C:\\Users\\lizar\\Documents\\0school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "NU1102",
+      "level": "Error",
+      "message": "Unable to find package Newtonsoft.Json with version (>= 13.0.3)\r\n  - Found 1 version(s) in Microsoft Visual Studio Offline Packages [ Nearest version: 13.0.1 ]",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        "net8.0-windows7.0"
+      ]
+    }
+  ]
+}
