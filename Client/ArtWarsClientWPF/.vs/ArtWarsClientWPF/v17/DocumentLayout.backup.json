@@ -1,0 +1,209 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|c:\\users\\pekora\\documents\\school\\project-4-section-2-group-6-artwars\\client\\artwarsclientwpf\\artwarsclientwpf\\promptwritingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|solutionrelative:artwarsclientwpf\\promptwritingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|c:\\users\\pekora\\documents\\school\\project-4-section-2-group-6-artwars\\client\\artwarsclientwpf\\artwarsclientwpf\\promptwaitingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|solutionrelative:artwarsclientwpf\\promptwaitingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|c:\\users\\pekora\\documents\\school\\project-4-section-2-group-6-artwars\\client\\artwarsclientwpf\\artwarsclientwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|solutionrelative:artwarsclientwpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|c:\\users\\pekora\\documents\\school\\project-4-section-2-group-6-artwars\\client\\artwarsclientwpf\\artwarsclientwpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|solutionrelative:artwarsclientwpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|c:\\users\\pekora\\documents\\school\\project-4-section-2-group-6-artwars\\client\\artwarsclientwpf\\artwarsclientwpf\\promptwaitingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|solutionrelative:artwarsclientwpf\\promptwaitingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|c:\\users\\pekora\\documents\\school\\project-4-section-2-group-6-artwars\\client\\artwarsclientwpf\\artwarsclientwpf\\promptwritingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|solutionrelative:artwarsclientwpf\\promptwritingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|c:\\users\\pekora\\documents\\school\\project-4-section-2-group-6-artwars\\client\\artwarsclientwpf\\artwarsclientwpf\\waitingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|solutionrelative:artwarsclientwpf\\waitingwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|c:\\users\\pekora\\documents\\school\\project-4-section-2-group-6-artwars\\client\\artwarsclientwpf\\artwarsclientwpf\\waitingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|solutionrelative:artwarsclientwpf\\waitingwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|c:\\users\\pekora\\documents\\school\\project-4-section-2-group-6-artwars\\client\\artwarsclientwpf\\artwarsclientwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|solutionrelative:artwarsclientwpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|c:\\users\\pekora\\documents\\school\\project-4-section-2-group-6-artwars\\client\\artwarsclientwpf\\artwarsclientwpf\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|solutionrelative:artwarsclientwpf\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|c:\\users\\pekora\\documents\\school\\project-4-section-2-group-6-artwars\\client\\artwarsclientwpf\\artwarsclientwpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{87C836F6-367D-40CC-8CF7-13DFE05352F7}|ArtWarsClientWPF\\ArtWarsClientWPF.csproj|solutionrelative:artwarsclientwpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PromptWritingWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\PromptWritingWindow.xaml",
+              "RelativeDocumentMoniker": "ArtWarsClientWPF\\PromptWritingWindow.xaml",
+              "ToolTip": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\PromptWritingWindow.xaml",
+              "RelativeToolTip": "ArtWarsClientWPF\\PromptWritingWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-04T02:19:45.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PromptWaitingWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\PromptWaitingWindow.xaml",
+              "RelativeDocumentMoniker": "ArtWarsClientWPF\\PromptWaitingWindow.xaml",
+              "ToolTip": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\PromptWaitingWindow.xaml",
+              "RelativeToolTip": "ArtWarsClientWPF\\PromptWaitingWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-04T02:19:08.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "WaitingWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\WaitingWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ArtWarsClientWPF\\WaitingWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\WaitingWindow.xaml.cs",
+              "RelativeToolTip": "ArtWarsClientWPF\\WaitingWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T02:05:01.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "WaitingWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\WaitingWindow.xaml",
+              "RelativeDocumentMoniker": "ArtWarsClientWPF\\WaitingWindow.xaml",
+              "ToolTip": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\WaitingWindow.xaml",
+              "RelativeToolTip": "ArtWarsClientWPF\\WaitingWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-04T02:04:56.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\App.xaml",
+              "RelativeDocumentMoniker": "ArtWarsClientWPF\\App.xaml",
+              "ToolTip": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\App.xaml",
+              "RelativeToolTip": "ArtWarsClientWPF\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-04T01:35:03.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ArtWarsClientWPF\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ArtWarsClientWPF\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwBMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T01:30:19.637Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PromptWritingWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\PromptWritingWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ArtWarsClientWPF\\PromptWritingWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\PromptWritingWindow.xaml.cs",
+              "RelativeToolTip": "ArtWarsClientWPF\\PromptWritingWindow.xaml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAawBgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T02:20:51.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PromptWaitingWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\PromptWaitingWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ArtWarsClientWPF\\PromptWaitingWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\PromptWaitingWindow.xaml.cs",
+              "RelativeToolTip": "ArtWarsClientWPF\\PromptWaitingWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T02:21:23.283Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\App.xaml.cs",
+              "RelativeDocumentMoniker": "ArtWarsClientWPF\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\App.xaml.cs",
+              "RelativeToolTip": "ArtWarsClientWPF\\App.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T21:57:33.879Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "ArtWarsClientWPF\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\AssemblyInfo.cs",
+              "RelativeToolTip": "ArtWarsClientWPF\\AssemblyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T01:31:15.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ArtWarsClientWPF\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\MainWindow.xaml",
+              "RelativeToolTip": "ArtWarsClientWPF\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-04T01:30:23.204Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

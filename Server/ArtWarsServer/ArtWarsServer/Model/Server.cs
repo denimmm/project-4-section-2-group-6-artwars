@@ -43,8 +43,8 @@ namespace ArtWarsServer.Model
 
             IP_Address = GetIPAddress();
 
-            code = MakeRoomCode();
-
+            //code = MakeRoomCode();
+            code = "1234";
 
             //initialize state
             state = new Connecting(this);
@@ -88,7 +88,7 @@ namespace ArtWarsServer.Model
 
         public void Start()
         {
-
+            state.Start();
 
         }
 

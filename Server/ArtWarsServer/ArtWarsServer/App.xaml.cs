@@ -25,6 +25,7 @@ public partial class App : Application
 	{
 		base.OnStartup(e);
 		server.Start();
+		Console.WriteLine("Starting server");
 	}
 
 	protected override void OnExit(ExitEventArgs e)
