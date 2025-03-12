@@ -8,5 +8,9 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
 
+     <!-- this is where the pages will go -->
+        <Frame x:Name="MainContent" />
+        
+        
     </Grid>
 </Window>

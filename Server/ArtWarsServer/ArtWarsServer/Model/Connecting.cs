@@ -26,7 +26,7 @@ namespace ArtWarsServer.Model
 
             //start listening for connections
             tcpListener = new TcpListener(IPAddress.Any, server.serverConfig.Port);
-
+            Console.WriteLine("connecting state created");
         }
 
 
@@ -55,7 +55,7 @@ namespace ArtWarsServer.Model
             //start the tcp listener
             //this will asynchronously make a connection with every player
             tcpListener.Start();
-           
+            Console.WriteLine("waiting for connections");
             //wait for connections, make new thread and player for each.
             while (running)
             {

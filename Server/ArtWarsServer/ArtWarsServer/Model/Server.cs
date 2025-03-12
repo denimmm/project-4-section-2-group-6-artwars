@@ -14,8 +14,7 @@ namespace ArtWarsServer.Model
 
     public class Server
     {
-        Socket serverSocket;
-        public int code;
+        public string code;
         public string IP_Address;
 
         //list of players in the game
@@ -44,8 +43,8 @@ namespace ArtWarsServer.Model
 
             IP_Address = GetIPAddress();
 
-            code = MakeRoomCode();
-
+            //code = MakeRoomCode();
+            code = "1234";
 
             //initialize state
             state = new Connecting(this);
@@ -78,18 +77,18 @@ namespace ArtWarsServer.Model
 		}
 
         //makes a new room code with a random number
-        private int MakeRoomCode()
+        private string MakeRoomCode()
         {
             Random random = new Random();
 
             //trim to 4 digits or whatever ROOM_CODE_MAX_NUMBER is
-            return random.Next() % serverConfig.ROOM_CODE_MAX_NUMBER;
+            return (random.Next() % serverConfig.ROOM_CODE_MAX_NUMBER).ToString("D4");
         }
 
 
         public void Start()
         {
-
+            state.Start();
 
         }
 
