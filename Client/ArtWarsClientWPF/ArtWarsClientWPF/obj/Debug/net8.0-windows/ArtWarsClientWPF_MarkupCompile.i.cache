@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\PEKORA\Documents\school\project-4-section-2-group-6-artwars\Client\ArtWarsClientWPF\ArtWarsClientWPF\obj\Debug\net8.0-windows\
+C:\Users\brook\source\repos\ArtWarsClientWPF\ArtWarsClientWPF\obj\Debug\net8.0-windows\
 ArtWarsClientWPF
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
-C:\Users\PEKORA\Documents\school\project-4-section-2-group-6-artwars\Client\ArtWarsClientWPF\ArtWarsClientWPF\App.xaml
-41176463367
+C:\Users\brook\source\repos\ArtWarsClientWPF\ArtWarsClientWPF\App.xaml
+7-761395925
 
-9667243359
-199-1784308565
-MainWindow.xaml;PromptWaitingWindow.xaml;PromptWritingWindow.xaml;WaitingWindow.xaml;
+131560257247
+199-100623040
+DrawingWindow.xaml;MainWindow.xaml;PromptWaitingWindow.xaml;PromptWritingWindow.xaml;ResultWindow.xaml;VotingWindow.xaml;WaitingWindow.xaml;
 
 True
 
