@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\ArtWarsClientWPF.csproj": {}
+    "C:\\Users\\brook\\source\\repos\\ArtWarsClientWPF\\ArtWarsClientWPF\\ArtWarsClientWPF.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\ArtWarsClientWPF.csproj": {
+    "C:\\Users\\brook\\source\\repos\\ArtWarsClientWPF\\ArtWarsClientWPF\\ArtWarsClientWPF.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\ArtWarsClientWPF.csproj",
+        "projectUniqueName": "C:\\Users\\brook\\source\\repos\\ArtWarsClientWPF\\ArtWarsClientWPF\\ArtWarsClientWPF.csproj",
         "projectName": "ArtWarsClientWPF",
-        "projectPath": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\ArtWarsClientWPF.csproj",
-        "packagesPath": "C:\\Users\\PEKORA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Client\\ArtWarsClientWPF\\ArtWarsClientWPF\\obj\\",
+        "projectPath": "C:\\Users\\brook\\source\\repos\\ArtWarsClientWPF\\ArtWarsClientWPF\\ArtWarsClientWPF.csproj",
+        "packagesPath": "C:\\Users\\brook\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brook\\source\\repos\\ArtWarsClientWPF\\ArtWarsClientWPF\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PEKORA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\brook\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -66,6 +66,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.Net.Sdk.Compilers.Toolset",
+              "version": "[9.0.200, 9.0.200]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
@@ -74,7 +80,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

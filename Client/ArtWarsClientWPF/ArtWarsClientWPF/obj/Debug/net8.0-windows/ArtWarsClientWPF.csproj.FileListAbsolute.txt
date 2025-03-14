@@ -27,3 +27,10 @@ C:\Users\brook\source\repos\ArtWarsClientWPF\ArtWarsClientWPF\obj\Debug\net8.0-w
 C:\Users\brook\source\repos\ArtWarsClientWPF\ArtWarsClientWPF\obj\Debug\net8.0-windows\ArtWarsClientWPF.pdb
 C:\Users\brook\source\repos\ArtWarsClientWPF\ArtWarsClientWPF\obj\Debug\net8.0-windows\ArtWarsClientWPF.genruntimeconfig.cache
 C:\Users\brook\source\repos\ArtWarsClientWPF\ArtWarsClientWPF\obj\Debug\net8.0-windows\ref\ArtWarsClientWPF.dll
+C:\Users\brook\source\repos\ArtWarsClientWPF\ArtWarsClientWPF\obj\Debug\net8.0-windows\DrawingWindow.g.cs
+C:\Users\brook\source\repos\ArtWarsClientWPF\ArtWarsClientWPF\obj\Debug\net8.0-windows\ResultWindow.g.cs
+C:\Users\brook\source\repos\ArtWarsClientWPF\ArtWarsClientWPF\obj\Debug\net8.0-windows\VotingWindow.g.cs
+C:\Users\brook\source\repos\ArtWarsClientWPF\ArtWarsClientWPF\obj\Debug\net8.0-windows\DrawingWindow.baml
+C:\Users\brook\source\repos\ArtWarsClientWPF\ArtWarsClientWPF\obj\Debug\net8.0-windows\ResultWindow.baml
+C:\Users\brook\source\repos\ArtWarsClientWPF\ArtWarsClientWPF\obj\Debug\net8.0-windows\VotingWindow.baml
+C:\Users\brook\source\repos\ArtWarsClientWPF\ArtWarsClientWPF\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
