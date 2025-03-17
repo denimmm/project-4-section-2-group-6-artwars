@@ -112,6 +112,11 @@ namespace ArtWarsServer.Model
                 //make packet object
                 ConnectingPacket recvPacket = new ConnectingPacket(receivedData);
 
+                if (recvPacket.type == "failed")
+                {
+                    Console.WriteLine("Received Packet failed to be assigned to object. disconnecting player");
+                    newPlayer.Disconnect();
+                }
 
                 //verify room code
                 if (!server.verifyRoomCode(recvPacket.roomCode))
