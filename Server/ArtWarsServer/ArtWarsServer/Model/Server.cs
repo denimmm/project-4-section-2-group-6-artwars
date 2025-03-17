@@ -85,6 +85,13 @@ namespace ArtWarsServer.Model
             return (random.Next() % serverConfig.ROOM_CODE_MAX_NUMBER).ToString("D4");
         }
 
+        public bool verifyRoomCode(string roomCode)
+        {
+            if (this.code == roomCode) return true;
+
+            return false;
+        }
+
 
         public void Start()
         {

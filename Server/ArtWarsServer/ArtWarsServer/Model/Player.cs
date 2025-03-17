@@ -68,7 +68,7 @@ namespace ArtWarsServer.Model
 
         }
 
-        public async Task<string> ReceiveDataAsync()
+        public async Task<byte[]> ReceiveDataAsync()
         {
             try
             {
@@ -80,7 +80,7 @@ namespace ArtWarsServer.Model
 
                     if (bytesRead > 0)
                     {
-                        return Encoding.UTF8.GetString(buffer, 0, bytesRead);
+                        return buffer;
                     }
 
                 }

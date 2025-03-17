@@ -8,6 +8,8 @@ using System.Net.Sockets;
 using System.Data;
 using System.Security.Cryptography.Pkcs;
 
+using System.Text.Json;
+
 namespace ArtWarsServer.Model
 {
     class Connecting : State
@@ -95,23 +97,48 @@ namespace ArtWarsServer.Model
             {
 
                 //get the packet
-                string receivedData = await newPlayer.ReceiveDataAsync();
-                if (string.IsNullOrEmpty(receivedData))
+                byte[] receivedData = await newPlayer.ReceiveDataAsync();
+
+                //check if empty
+                if (receivedData == null || receivedData.Length <= 4)
                 {
-                    Console.WriteLine("Error: Player faield to send data");
+                    Console.WriteLine("Error: Player faild to receive data");
                     //newPlayer.Disconnect();
                     return;
 
                 }
 
 
+                //make packet object
+                ConnectingPacket recvPacket = new ConnectingPacket(receivedData);
 
-                //get the json from the packet
 
-                //verfy room code
+                //verify room code
+                if (!server.verifyRoomCode(recvPacket.roomCode))
+                {
+                    //disconnect player
+                }
 
-                //add the id to the player
+                //assign player's name
+                newPlayer.Name = recvPacket.playerName;
 
+                //add the player to server and assign id
+                server.AddPlayer(newPlayer);
+
+
+
+                //make response packet
+                var response = new
+                {
+                    type = "connect",
+                    code = server.code,
+                    playerName = newPlayer.Name,
+                    playerId = newPlayer.ID
+                };
+
+                string responsePacket = JsonSerializer.Serialize(response);
+                //send packet back to player with the new player's id
+                await newPlayer.sendDataAsync(responsePacket);
             }
             catch(Exception ex)
             {
