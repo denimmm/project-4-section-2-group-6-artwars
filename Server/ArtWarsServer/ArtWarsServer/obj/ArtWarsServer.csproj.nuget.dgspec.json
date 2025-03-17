@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj": {}
+    "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj": {
+    "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj",
+        "projectUniqueName": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj",
         "projectName": "ArtWarsServer",
-        "projectPath": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj",
-        "packagesPath": "C:\\Users\\PEKORA\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\PEKORA\\Documents\\school\\project-4-section-2-group-6-artwars\\Server\\ArtWarsServer\\ArtWarsServer\\obj\\",
+        "projectPath": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\ArtWarsServer.csproj",
+        "packagesPath": "C:\\Users\\pyvov\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pyvov\\source\\repos\\KrakenArtWars\\Server\\ArtWarsServer\\ArtWarsServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\PEKORA\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pyvov\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -68,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

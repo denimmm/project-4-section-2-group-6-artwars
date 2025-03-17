@@ -5,10 +5,100 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ArtWarsServer.View"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="WritingPromptPage">
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="WritingPromptPage"
+      Background="White">
 
     <Grid>
-        
+        <!-- ============================================== -->
+        <!-- Background Images (Same as Before) -->
+        <!-- ============================================== -->
+        <Image Source="/View/Resources/Paint_splash1.png"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left" 
+               Height="562" 
+               Margin="-1,0,0,-1" 
+               Width="561"/>
+
+        <Image Source="/View/Resources/Paint_splash3.png"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left" 
+               Height="474" 
+               Margin="86,0,0,606" 
+               Width="497"/>
+
+        <Image Source="/View/Resources/Paint_splash4.png"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left" 
+               Height="512" 
+               Margin="913,0,0,-1" 
+               Width="578"/>
+
+        <Image Source="/View/Resources/Paint_splash2.png"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left" 
+               Height="562" 
+               Margin="1359,0,0,319" 
+               Width="561"/>
+
+        <!-- ============================================== -->
+        <!-- Main Content -->
+        <!-- ============================================== -->
+        <Label Content="Art Wars" 
+               FontFamily="Algerian" 
+               FontSize="96"
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Top" 
+               Margin="0,63,0,0" 
+               Width="486"/>
+
+        <!-- Background Panel -->
+        <Rectangle Fill="#FFF0F0F0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   Width="700"
+                   Height="400"
+                   RadiusX="20"
+                   RadiusY="20"
+                   Margin="0,50,0,0"/>
+
+        <!-- Scrolling TextBox -->
+        <TextBox x:Name="promptTextBox"
+                 IsReadOnly="True"
+                 FontFamily="Roboto"
+                 FontSize="20"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 Width="600"
+                 Height="300"
+                 Margin="0,50,0,0"
+                 Background="Transparent"
+                 BorderThickness="0"
+                 Padding="20"
+                 Text="Your writing prompt will appear here...">
+            <TextBox.Resources>
+                <Style TargetType="TextBox">
+                    <Style.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="20"/>
+                        </Style>
+                    </Style.Resources>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TextBox">
+                                <Border Background="{TemplateBinding Background}"
+                                        BorderBrush="{TemplateBinding BorderBrush}"
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        CornerRadius="20">
+                                    <ScrollViewer x:Name="PART_ContentHost"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
     </Grid>
 </Page>

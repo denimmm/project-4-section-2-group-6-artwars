@@ -24,5 +24,10 @@ namespace ArtWarsServer.View
         {
             InitializeComponent();
         }
+
+        private void promptTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
