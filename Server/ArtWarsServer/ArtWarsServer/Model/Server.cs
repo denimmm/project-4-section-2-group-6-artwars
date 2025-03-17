@@ -46,6 +46,7 @@ namespace ArtWarsServer.Model
             //code = MakeRoomCode();
             code = "1234";
 
+
             //initialize state
             state = new Connecting(this);
 
@@ -70,11 +71,21 @@ namespace ArtWarsServer.Model
         private string GetIPAddress()
 		{
             string hostName = Dns.GetHostName();
+            var host = Dns.GetHostEntry(hostName);
+            //Old version: Returnd Ipv6 address
+            //string IP = Dns.GetHostEntry(hostName).AddressList[0].ToString();
 
-            string IP = Dns.GetHostEntry(hostName).AddressList[0].ToString();
-
-            return IP;
-		}
+            //New version: Return Ipv4 address
+            IPAddress[] Addresses = host.AddressList;
+            foreach (IPAddress ip in Addresses)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            throw new Exception("No network adapters with an IPv4 address in the system!");
+        }
 
         //makes a new room code with a random number
         public string MakeRoomCode()

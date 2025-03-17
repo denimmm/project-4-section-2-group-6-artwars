@@ -7,7 +7,8 @@
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="ConnectingPage"
-      Background="White">
+      Background="White"
+      Loaded="ConnectingPage_Loaded">
 
     <!-- Main Grid container for all elements -->
     <Grid>
@@ -82,6 +83,8 @@
             VerticalContentAlignment="Center"/>
 
         <TextBox 
+            x:Name="ip_textbox"
+            IsReadOnly="True"
             HorizontalAlignment="Left" 
             Margin="818,411,0,0" 
             TextWrapping="Wrap" 
@@ -91,7 +94,8 @@
             VerticalAlignment="Top" 
             Width="354" 
             Height="63"
-            VerticalContentAlignment="Bottom"/>
+            VerticalContentAlignment="Bottom"
+            HorizontalContentAlignment="Center"/>
 
         <!-- Session Code Output Section -->
         <Label 
@@ -106,6 +110,8 @@
             VerticalContentAlignment="Center"/>
 
         <TextBox 
+            x:Name="session_code_box"
+            IsReadOnly="True"
             HorizontalAlignment="Left" 
             Margin="818,541,0,0" 
             TextWrapping="Wrap" 

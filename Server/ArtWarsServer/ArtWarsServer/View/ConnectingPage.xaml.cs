@@ -23,6 +23,21 @@ namespace ArtWarsServer.View
         public ConnectingPage()
         {
             InitializeComponent();
+
         }
+        private void ConnectingPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (((App)Application.Current).server != null) // Check if server is initialized
+            {// Setting the IP address and session code for the connecting page
+                ip_textbox.Text = ((App)Application.Current).server.IP_Address;// IP address
+                session_code_box.Text = ((App)Application.Current).server.code.ToString();// Session code
+            }
+            else
+            {// If server is not initialized, display error messages
+                ip_textbox.Text = "OOPS. Something went wrong!";
+                session_code_box.Text = "OOPS. Something went wrong!";
+            }
+        }
+
     }
 }
