@@ -103,7 +103,7 @@ namespace ArtWarsServer.Model
                 if (receivedData == null || receivedData.Length <= 4)
                 {
                     Console.WriteLine("Error: Player faild to receive data");
-                    //newPlayer.Disconnect();
+                    newPlayer.Disconnect();
                     return;
 
                 }
@@ -116,12 +116,14 @@ namespace ArtWarsServer.Model
                 {
                     Console.WriteLine("Received Packet failed to be assigned to object. disconnecting player");
                     newPlayer.Disconnect();
+                    return;
                 }
 
-                //verify room code
+                //verify room code (authentication)
                 if (!server.verifyRoomCode(recvPacket.roomCode))
                 {
                     //disconnect player
+                    newPlayer.Disconnect();
                 }
 
                 //assign player's name
@@ -148,6 +150,7 @@ namespace ArtWarsServer.Model
             catch(Exception ex)
             {
                 Console.WriteLine($"Error processing player: {ex.Message}");
+                newPlayer.Disconnect();
             }
 
 

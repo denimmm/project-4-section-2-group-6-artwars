@@ -118,9 +118,10 @@ namespace ArtWarsServer.Model
             ClientSocket.Dispose();
             ClientSocket = null;
 
+            //remove player from server's list
+            server.RemovePlayer(this);
+
         }
-
-
 
     }
 }

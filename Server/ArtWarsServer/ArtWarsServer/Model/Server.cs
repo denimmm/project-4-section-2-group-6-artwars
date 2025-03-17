@@ -61,7 +61,7 @@ namespace ArtWarsServer.Model
             Players.Add(player);
         }
 
-        void RemovePlayer(Player p)
+        public void RemovePlayer(Player p)
         {
             Players.Remove(p);
         }
