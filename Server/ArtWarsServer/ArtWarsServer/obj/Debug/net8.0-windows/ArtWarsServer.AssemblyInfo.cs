@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArtWarsServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5456ab543f2b882cd2f3fc929203b550f0a21de1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+07a7021cbea47fe5ae7c7401a9e783728dcf0651")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArtWarsServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArtWarsServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
