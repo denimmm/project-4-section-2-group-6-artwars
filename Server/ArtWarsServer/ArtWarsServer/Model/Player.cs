@@ -17,9 +17,9 @@ namespace ArtWarsServer.Model
         public string Name { get; set; }
         public int score { get; set; }
 
-        public TcpClient ClientSocket { get; set; }
+        public TcpClient? ClientSocket { get; set; }
 
-		private Stream stream => ClientSocket.GetStream();
+		private Stream stream => ClientSocket!.GetStream();
 
         private Server server { get; set; }
 
@@ -38,6 +38,8 @@ namespace ArtWarsServer.Model
 
             //set the score to 0
             score = 0;
+
+            this.server = server;
         }
 
 
@@ -96,6 +98,30 @@ namespace ArtWarsServer.Model
         }
 
 
+        public void Disconnect()
+        {
+            Console.WriteLine($"Disconnecting Player: {this.Name} ID: {this.ID}");
+
+            //client connection doesnt exist
+            if(ClientSocket == null)
+            {
+                return;
+            }
+
+            if (ClientSocket.Connected)
+            {
+
+                ClientSocket.Client.Shutdown(SocketShutdown.Both);
+            }
+
+            ClientSocket.Close();
+            ClientSocket.Dispose();
+            ClientSocket = null;
+
+            //remove player from server's list
+            server.RemovePlayer(this);
+
+        }
 
     }
 }

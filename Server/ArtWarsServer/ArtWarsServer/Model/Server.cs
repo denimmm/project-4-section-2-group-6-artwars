@@ -61,7 +61,7 @@ namespace ArtWarsServer.Model
             Players.Add(player);
         }
 
-        void RemovePlayer(Player p)
+        public void RemovePlayer(Player p)
         {
             Players.Remove(p);
         }
@@ -77,7 +77,7 @@ namespace ArtWarsServer.Model
 		}
 
         //makes a new room code with a random number
-        private string MakeRoomCode()
+        public string MakeRoomCode()
         {
             Random random = new Random();
 

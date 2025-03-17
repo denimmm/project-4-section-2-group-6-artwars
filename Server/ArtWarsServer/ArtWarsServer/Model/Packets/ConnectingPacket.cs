@@ -22,6 +22,7 @@ namespace ArtWarsServer.Model
         public string jsonString;
 
         //make new packet from received data
+        //when you use this, do not forget to check if type == failed.
         public ConnectingPacket(byte[] packet)
         {
             //get the size
