@@ -77,7 +77,7 @@ namespace ArtWarsServer.Model
 		}
 
         //makes a new room code with a random number
-        private string MakeRoomCode()
+        public string MakeRoomCode()
         {
             Random random = new Random();
 

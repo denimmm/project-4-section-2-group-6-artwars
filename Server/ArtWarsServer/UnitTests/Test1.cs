@@ -5,14 +5,15 @@ namespace UnitTests
     [TestClass]
     public sealed class ServerFunctions
     {
-
         //test that the server makes a room code
         [TestMethod]
         public void create_room_code()
         {
             Server server = new Server();
 
-            Assert.IsNotNull(server.code);
+            string rc = server.MakeRoomCode();
+
+            Assert.IsTrue(rc.Length == 4);
         }
 
         //check if room code can be properly authenticated
@@ -36,5 +37,7 @@ namespace UnitTests
 
             Assert.IsFalse(server.verifyRoomCode("5678"));
         }
+
+
     }
 }
