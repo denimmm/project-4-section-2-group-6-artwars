@@ -11,7 +11,7 @@
 
     <Grid>
         <!-- ============================================== -->
-        <!-- Background Images (Same as Before) -->
+        <!-- Background Images -->
         <!-- ============================================== -->
         <Image Source="/View/Resources/Paint_splash1.png"
                VerticalAlignment="Bottom"
@@ -51,54 +51,39 @@
                VerticalAlignment="Top" 
                Margin="0,63,0,0" 
                Width="486"/>
-
-        <!-- Background Panel -->
         <Rectangle Fill="#FFF0F0F0"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   Width="700"
-                   Height="400"
+                   VerticalAlignment="Top"
+                   Width="1360"
+                   Height="554"
                    RadiusX="20"
                    RadiusY="20"
-                   Margin="0,50,0,0"/>
+                   Margin="0,246,0,0"/>
+        <Label Content="You need to draw:"
+               Margin="0,268,0,0"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"
+               FontFamily="Roboto"
+               FontSize="48"
+               />
+
+        <!-- Background Panel -->
 
         <!-- Scrolling TextBox -->
         <TextBox x:Name="promptTextBox"
                  IsReadOnly="True"
                  FontFamily="Roboto"
-                 FontSize="20"
+                 FontSize="36"
                  TextWrapping="Wrap"
                  VerticalScrollBarVisibility="Auto"
+                 HorizontalContentAlignment="Center"
                  HorizontalAlignment="Center"
                  VerticalAlignment="Center"
-                 Width="600"
-                 Height="300"
-                 Margin="0,50,0,0"
-                 Background="Transparent"
+                 Width="1274"
+                 Height="399"
+                 Background="GhostWhite"
                  BorderThickness="0"
                  Padding="20"
-                 Text="Your writing prompt will appear here...">
-            <TextBox.Resources>
-                <Style TargetType="TextBox">
-                    <Style.Resources>
-                        <Style TargetType="Border">
-                            <Setter Property="CornerRadius" Value="20"/>
-                        </Style>
-                    </Style.Resources>
-                    <Setter Property="Template">
-                        <Setter.Value>
-                            <ControlTemplate TargetType="TextBox">
-                                <Border Background="{TemplateBinding Background}"
-                                        BorderBrush="{TemplateBinding BorderBrush}"
-                                        BorderThickness="{TemplateBinding BorderThickness}"
-                                        CornerRadius="20">
-                                    <ScrollViewer x:Name="PART_ContentHost"/>
-                                </Border>
-                            </ControlTemplate>
-                        </Setter.Value>
-                    </Setter>
-                </Style>
-            </TextBox.Resources>
-        </TextBox>
+                 Text="A prompt will apear soon..."/>
     </Grid>
 </Page>

@@ -25,9 +25,17 @@ namespace ArtWarsServer.View
             InitializeComponent();
         }
 
-        private void promptTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        public void WritingPromptPage_Loaded()
         {
-
+            if (((App)Application.Current).server != null) // Check if server is initialized
+            {
+                promptTextBox.Text = ((App)Application.Current).server.prompt;
+            }
+            else
+            {
+                promptTextBox.Text = "OOPS. Something went wrong!";
+            }
         }
+
     }
 }
