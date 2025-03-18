@@ -5,10 +5,85 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ArtWarsServer.View"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="WritingPromptPage">
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="WritingPromptPage"
+      Background="White">
 
     <Grid>
-        
+        <!-- ============================================== -->
+        <!-- Background Images -->
+        <!-- ============================================== -->
+        <Image Source="/View/Resources/Paint_splash1.png"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left" 
+               Height="562" 
+               Margin="-1,0,0,-1" 
+               Width="561"/>
+
+        <Image Source="/View/Resources/Paint_splash3.png"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left" 
+               Height="474" 
+               Margin="86,0,0,606" 
+               Width="497"/>
+
+        <Image Source="/View/Resources/Paint_splash4.png"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left" 
+               Height="512" 
+               Margin="913,0,0,-1" 
+               Width="578"/>
+
+        <Image Source="/View/Resources/Paint_splash2.png"
+               VerticalAlignment="Bottom"
+               HorizontalAlignment="Left" 
+               Height="562" 
+               Margin="1359,0,0,319" 
+               Width="561"/>
+
+        <!-- ============================================== -->
+        <!-- Main Content -->
+        <!-- ============================================== -->
+        <Label Content="Art Wars" 
+               FontFamily="Algerian" 
+               FontSize="96"
+               HorizontalAlignment="Center" 
+               VerticalAlignment="Top" 
+               Margin="0,63,0,0" 
+               Width="486"/>
+        <Rectangle Fill="#FFF0F0F0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"
+                   Width="1360"
+                   Height="554"
+                   RadiusX="20"
+                   RadiusY="20"
+                   Margin="0,246,0,0"/>
+        <Label Content="You need to draw:"
+               Margin="0,268,0,0"
+               VerticalAlignment="Top"
+               HorizontalAlignment="Center"
+               FontFamily="Roboto"
+               FontSize="48"
+               />
+
+        <!-- Background Panel -->
+
+        <!-- Scrolling TextBox -->
+        <TextBox x:Name="promptTextBox"
+                 IsReadOnly="True"
+                 FontFamily="Roboto"
+                 FontSize="36"
+                 TextWrapping="Wrap"
+                 VerticalScrollBarVisibility="Auto"
+                 HorizontalContentAlignment="Center"
+                 HorizontalAlignment="Center"
+                 VerticalAlignment="Center"
+                 Width="1274"
+                 Height="399"
+                 Background="GhostWhite"
+                 BorderThickness="0"
+                 Padding="20"
+                 Text="A prompt will apear soon..."/>
     </Grid>
 </Page>

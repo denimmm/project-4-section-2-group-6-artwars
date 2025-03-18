@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\PEKORA\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\PEKORA\\.nuget\\packages",
+      "C:\\Users\\pyvov\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\pyvov\\.nuget\\packages",
       "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
     ],
     "configProperties": {
