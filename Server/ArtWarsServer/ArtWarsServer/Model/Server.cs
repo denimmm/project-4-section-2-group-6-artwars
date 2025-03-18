@@ -25,6 +25,7 @@ namespace ArtWarsServer.Model
         //last player id
         public int PlayerID_Index { get; set; } //this is used to keep track of the last issued player id
 
+        public int CurrentRound;
 
         //prompt for the round
         public string prompt;
@@ -48,7 +49,7 @@ namespace ArtWarsServer.Model
             //code = MakeRoomCode();
             code = "1234";
 
-
+            CurrentRound = 0;
             //initialize state
             state = new Connecting(this);
 

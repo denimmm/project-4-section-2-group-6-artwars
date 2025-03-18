@@ -41,7 +41,10 @@ namespace ArtWarsServer.Model
                     playerName = obj.playerName;
                     playerId = obj.playerId;
                 }
-
+                else
+                {
+                    throw new JsonException("connecting packet object was null");
+                }
             }
             catch (JsonException ex)
             {

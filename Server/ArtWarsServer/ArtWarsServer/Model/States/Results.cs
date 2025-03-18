@@ -30,8 +30,11 @@ namespace ArtWarsServer.Model
 
 
             //if there are more rounds left, restart at WritingPrompt
+            if(server.serverConfig.NumberOfRounds > server.CurrentRound)
+            {
 
-            if(server.)
+
+            }
 
             //make and assign new state to server
             server.state = new WritingPrompt(server);
