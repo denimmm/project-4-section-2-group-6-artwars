@@ -26,9 +26,20 @@ namespace ArtWarsServer.Model
 
         public void NextState()
         {
+
+
+
+            //if there are more rounds left, restart at WritingPrompt
+
+            if(server.)
+
             //make and assign new state to server
             server.state = new WritingPrompt(server);
 
+        }
+
+        public static void Reset()
+        {
         }
     }
 }

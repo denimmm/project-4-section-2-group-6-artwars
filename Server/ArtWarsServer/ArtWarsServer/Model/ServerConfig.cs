@@ -18,6 +18,7 @@ namespace ArtWarsServer.Model
         public int Results_Time;
         public int ROOM_CODE_MAX_NUMBER;
         public int bufferSize;
+        public int NumberOfRounds;
 
 		public ServerConfig()
         {
@@ -30,6 +31,7 @@ namespace ArtWarsServer.Model
             Results_Time = 30;
 			ROOM_CODE_MAX_NUMBER = 10000;
             bufferSize = 4096;
+            NumberOfRounds = 0;
 		}
 
     }

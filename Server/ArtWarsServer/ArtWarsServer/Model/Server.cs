@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using System.Windows;
 
 namespace ArtWarsServer.Model
 {
@@ -23,6 +24,7 @@ namespace ArtWarsServer.Model
         public State state { get; set; }
         //last player id
         public int PlayerID_Index { get; set; } //this is used to keep track of the last issued player id
+
 
         //prompt for the round
         public string prompt;
@@ -116,5 +118,39 @@ namespace ArtWarsServer.Model
 
 
         }
+
+        public void ResetGame()
+        {
+            //reset the states
+            Connecting.Reset();
+            WritingPrompt.Reset();
+            Drawing.Reset();
+            Voting.Reset();
+            Results.Reset();
+
+        }
+
+        //start the next round of the game
+        public void nextRound()
+        {
+            
+
+        }
+
+        //send a message to all players
+        public async Task BroadcastToPlayers(Packet packet)
+        {
+
+            try
+            {
+                // Send data to all players asynchronously and await all tasks
+                var sendTasks = Players.Select(p => p.sendDataAsync(packet));
+                await Task.WhenAll(sendTasks);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error broadcasting packet: {ex.Message}");
+            }
+        } 
     }
 }

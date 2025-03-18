@@ -9,13 +9,13 @@
         Loaded="MainWindow_Loaded"
         WindowState="Maximized"
         >
-    
+
     <Grid>
 
         <Frame x:Name="MainFrame" 
                NavigationUIVisibility="Hidden"
                HorizontalAlignment="Stretch" 
                VerticalAlignment="Stretch"/>
-                
+
     </Grid>
 </Window>

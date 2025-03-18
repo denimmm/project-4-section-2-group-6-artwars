@@ -30,5 +30,9 @@ namespace ArtWarsServer.Model
             server.state = new Voting(server);
         }
 
+
+        public static void Reset()
+        {
+        }
     }
 }
