@@ -25,7 +25,7 @@ namespace ArtWarsServer.View
             InitializeComponent();
         }
 
-        public void WritingPromptPage_Loaded()
+        public void WritingPromptPage_UpdatePrompt()
         {
             if (((App)Application.Current).server != null) // Check if server is initialized
             {
