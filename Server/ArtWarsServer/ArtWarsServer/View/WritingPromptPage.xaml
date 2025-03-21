@@ -59,7 +59,7 @@
                    RadiusX="20"
                    RadiusY="20"
                    Margin="0,246,0,0"/>
-        <Label Content="You need to draw:"
+        <Label Content="Wait a little..."
                Margin="0,268,0,0"
                VerticalAlignment="Top"
                HorizontalAlignment="Center"
@@ -70,7 +70,7 @@
         <!-- Background Panel -->
 
         <!-- Scrolling TextBox -->
-        <TextBox x:Name="promptTextBox"
+        <TextBox x:Name="PlayerTextBox"
                  IsReadOnly="True"
                  FontFamily="Roboto"
                  FontSize="36"
@@ -84,6 +84,6 @@
                  Background="GhostWhite"
                  BorderThickness="0"
                  Padding="20"
-                 Text="A prompt will apear soon..."/>
+                 Text="Someone is writing a prompt"/>
     </Grid>
 </Page>
