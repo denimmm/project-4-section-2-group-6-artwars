@@ -24,5 +24,16 @@ namespace ArtWarsServer.View
         {
             InitializeComponent();
         }
+        public void DrawingPromptPage_UpdatePrompt()
+        {
+            if (((App)Application.Current).server != null) // Check if server is initialized
+            {
+                promptTextBox.Text = ((App)Application.Current).server.prompt;
+            }
+            else
+            {
+                promptTextBox.Text = "OOPS. Something went wrong!";
+            }
+        }
     }
 }

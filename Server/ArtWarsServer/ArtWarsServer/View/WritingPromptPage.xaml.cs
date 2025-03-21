@@ -24,18 +24,18 @@ namespace ArtWarsServer.View
         {
             InitializeComponent();
         }
-
-        public void WritingPromptPage_UpdatePrompt()
+        public void updatePlayerWritingThePrompt()
         {
             if (((App)Application.Current).server != null) // Check if server is initialized
             {
-                promptTextBox.Text = ((App)Application.Current).server.prompt;
+                //promptTextBox.Text = ((App)Application.Current).server.state.chsenPlayer.name + "is writing the prompt...";
+                PlayerTextBox.Text = "Example Player is writing the prompt";
             }
             else
             {
-                promptTextBox.Text = "OOPS. Something went wrong!";
+                PlayerTextBox.Text = "OOPS. Something went wrong!";
             }
-        }
 
-    }
+
+        }
 }
