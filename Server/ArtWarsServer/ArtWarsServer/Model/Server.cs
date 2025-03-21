@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace ArtWarsServer.Model
 {
@@ -29,12 +30,15 @@ namespace ArtWarsServer.Model
 
         //prompt for the round
         public string prompt;
-        
+
+        public Frame ?MainFrame {  get; set; }
+
         //server config settings
         public ServerConfig serverConfig {get; private set;}
         
             public Server()
-        {
+            {
+
             //initialize players list
             Players = new List<Player>();
 
@@ -52,6 +56,8 @@ namespace ArtWarsServer.Model
             CurrentRound = 0;
             //initialize state
             state = new Connecting(this);
+
+
 
         }
 

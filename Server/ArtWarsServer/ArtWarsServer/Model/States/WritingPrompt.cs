@@ -11,7 +11,8 @@ namespace ArtWarsServer.Model
 
         private Server server { get; set; }
 
-        public static List<Player> EligiblePrompters = new List<Player>();
+        //should be null the first time it is ran
+        public static List<Player> ?EligiblePrompters;
 
         public Player chosenPlayer;
 
@@ -19,6 +20,13 @@ namespace ArtWarsServer.Model
         {
             this.server = server;
 
+            EligiblePrompters = new List<Player>();
+
+            //get eligable prompter
+            if(EligiblePrompters.Count == 0)
+            {
+                EligiblePrompters = new List<Player>(server.Players);
+            }
             //choose the player
             chosenPlayer = selectPlayerToWritePrompt();
 
@@ -62,25 +70,36 @@ namespace ArtWarsServer.Model
         //choose a player for the prompt
         private Player selectPlayerToWritePrompt()
         {
+            try
+            {
 
-            //choose a player from the list
-            Player p = EligiblePrompters[new Random().Next(EligiblePrompters.Count)];
+                //choose a player from the list
+                int index = new Random().Next(EligiblePrompters.Count - 1);
 
-            //remove it from the list
-            EligiblePrompters.Remove(p);
+                Player p = EligiblePrompters[index];
 
-            return p;
+                //remove it from the list
+                EligiblePrompters.Remove(p);
+
+                return p;
+
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine($"Failed to select player to write prompt: {e}");
+                return null;
+
+            }
+
         }
-
-
-        //receive the prompt
-
-
 
         //reset the eligible players list once the game is complete
         public static void Reset()
         {
-            EligiblePrompters.Clear();
+            if(EligiblePrompters != null)
+            {
+                EligiblePrompters.Clear();
+            }
         }
 
     }

@@ -10,21 +10,25 @@ namespace ArtWarsServer;
 /// </summary>
 public partial class App : Application
 {
-	public Server server;
+	public Server server { get; private set; }
 
 
 
 	public App()
 	{
 		InitializeComponent();
-		server = new Server();
-	}
+        server = new Server();
+    }
 
 
 	protected override void OnStartup(StartupEventArgs e)
 	{
+
+
 		base.OnStartup(e);
-		server.Start();
+
+
+        server.Start();
 		Console.WriteLine("Starting server");
 	}
 

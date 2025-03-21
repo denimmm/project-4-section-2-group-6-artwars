@@ -22,7 +22,7 @@ namespace ArtWarsServer.Model
 
 		public ServerConfig()
         {
-            Port = 25565;
+            Port = 27000;
             Max_Players = 4;
             Min_Players = 3;
             Prompt_Writing_Time = 60;
