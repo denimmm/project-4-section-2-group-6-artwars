@@ -12,18 +12,18 @@ namespace ArtWarsServer.Model
 {
 
 
-    class ConnectingPacket : Packet
+    class PromptPacket : Packet
     {
         public string type { get; }
         public string roomCode { get; }
-        public string playerName { get; }
+        public string prompt { get; set; }
         public int playerId { get; }
 
         public string jsonString;
 
         //make new packet from received data
         //when you use this, do not forget to check if type == failed.
-        public ConnectingPacket(byte[] packet)
+        public PromptPacket(byte[] packet)
         {
             //get the size
             size = BitConverter.ToInt32(packet, 0); //get int from the first 4 bytes
@@ -33,25 +33,22 @@ namespace ArtWarsServer.Model
             {
 
                 //make a connectingPacket object and copy its data lol
-                var obj = JsonSerializer.Deserialize<ConnectingPacket>(json);
+                var obj = JsonSerializer.Deserialize<PromptPacket>(json);
                 if (obj != null)
                 {
                     type = obj.type;
                     roomCode = obj.roomCode;
-                    playerName = obj.playerName;
+                    prompt = obj.prompt;
                     playerId = obj.playerId;
                 }
-                else
-                {
-                    throw new JsonException("connecting packet object was null");
-                }
+
             }
             catch (JsonException ex)
             {
                 Console.WriteLine($"Error deserializing JSON: {ex.Message}");
                 type = "failed";
                 roomCode = "-1";
-                playerName = "";
+                prompt = "";
                 playerId = -1 ;
             }
 
@@ -59,17 +56,17 @@ namespace ArtWarsServer.Model
         }
 
         //make new packet to send
-        public ConnectingPacket(string roomCode, string playerName, int playerId) {
-            this.type = "connecting";
+        public PromptPacket(string roomCode, string prompt, int playerId) {
+            this.type = "prompt";
             this.roomCode = roomCode;
-            this.playerName = playerName;
+            this.prompt = prompt;
             this.playerId = playerId;
 
             var json = new
             {
                 type = this.type,
                 roomCode = this.roomCode,
-                playerName = this.playerName,
+                prompt = this.prompt,
                 playerId = this.playerId
             };
 

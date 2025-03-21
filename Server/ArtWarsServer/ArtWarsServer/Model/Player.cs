@@ -44,14 +44,22 @@ namespace ArtWarsServer.Model
 
 
         //sends a packet to a player
-        public async Task sendDataAsync(string message)
+        public async Task sendDataAsync(Packet packet)
         {
+
+            //error handling
+            if(ClientSocket == null)
+            {
+                Console.WriteLine($"Client Socket was null during Send for Player: {ID}, {Name}");
+                return;
+            }
+
             try
             {
                 if (ClientSocket.Connected)
                 {
                     //serialize data
-                    byte[] data = Encoding.UTF8.GetBytes(message);
+                    byte[] data = packet.Serialize();
 
                     //send data
 					await stream.WriteAsync(data, 0, data.Length);
@@ -72,6 +80,13 @@ namespace ArtWarsServer.Model
 
         public async Task<byte[]> ReceiveDataAsync()
         {
+
+            if (ClientSocket == null)
+            {
+                Console.WriteLine($"Client Socket was null during Receive for Player: {ID}, {Name}");
+                return null;
+            }
+
             try
             {
                 if (ClientSocket.Connected)

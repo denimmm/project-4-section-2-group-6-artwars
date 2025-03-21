@@ -28,6 +28,11 @@ namespace ArtWarsServer.Model
 
             //start listening for connections
             tcpListener = new TcpListener(IPAddress.Any, server.serverConfig.Port);
+
+            //set number of rounds based on number of players
+            server.serverConfig.NumberOfRounds = server.Players.Count;
+
+
             Console.WriteLine("connecting state created");
         }
 
@@ -134,16 +139,8 @@ namespace ArtWarsServer.Model
 
 
 
-                //make response packet
-                var response = new
-                {
-                    type = "connect",
-                    code = server.code,
-                    playerName = newPlayer.Name,
-                    playerId = newPlayer.ID
-                };
+                ConnectingPacket responsePacket = new ConnectingPacket(server.code, newPlayer.Name, newPlayer.ID);
 
-                string responsePacket = JsonSerializer.Serialize(response);
                 //send packet back to player with the new player's id
                 await newPlayer.sendDataAsync(responsePacket);
             }
@@ -156,6 +153,9 @@ namespace ArtWarsServer.Model
 
         }
 
+        public static void Reset()
+        {
+        }
 
 
 

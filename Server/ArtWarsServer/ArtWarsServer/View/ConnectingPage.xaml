@@ -166,6 +166,7 @@
                 Width="400"
                 Height="100"
                 Background="DarkSeaGreen"
+                Click="start_button_click"
                 >
 
                 <Label
