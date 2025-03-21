@@ -29,7 +29,7 @@ namespace ArtWarsClientWPF
             }
             try
             {
-                _client = new TcpClient("127.0.0.1", 5000); // Local IP Port, change if needed
+                _client = new TcpClient("127.0.0.1", 27000); // Local IP Port, change if needed
                 _stream = _client.GetStream();
 
                 // Creates the JSON Packet...may need to add IP Address too for connecting to the server

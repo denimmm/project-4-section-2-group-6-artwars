@@ -14,5 +14,7 @@ namespace ArtWarsServer.Model
 
         //change to next state. parameter tells the state who the server is.
         void NextState();
+
+        abstract static void Reset();
     }
 }

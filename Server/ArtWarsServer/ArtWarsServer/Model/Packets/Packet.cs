@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ArtWarsServer.Model
 {
-    abstract class Packet
+    public abstract class Packet
     {
         public const int HEADER_SIZE = 4;
 

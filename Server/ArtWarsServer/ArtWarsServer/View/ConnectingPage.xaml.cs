@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ArtWarsServer.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,14 @@ namespace ArtWarsServer.View
     /// </summary>
     public partial class ConnectingPage : Page
     {
+        //get the server
+        Server server;
+        
+
         public ConnectingPage()
         {
             InitializeComponent();
-
+            server = ((App)Application.Current).server;
         }
         private void ConnectingPage_Loaded(object sender, RoutedEventArgs e)
         {
@@ -37,6 +42,12 @@ namespace ArtWarsServer.View
                 ip_textbox.Text = "OOPS. Something went wrong!";
                 session_code_box.Text = "OOPS. Something went wrong!";
             }
+        }
+
+        private void start_button_click(object sender, RoutedEventArgs e)
+        {
+            server.state.NextState();
+            server.MainFrame.Navigate(new View.WritingPromptPage());
         }
 
     }
