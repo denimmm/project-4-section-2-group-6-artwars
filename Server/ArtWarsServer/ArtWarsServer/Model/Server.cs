@@ -8,6 +8,9 @@ using System.Net;
 using System.Net.Sockets;
 using System.Windows;
 using System.Windows.Controls;
+using System.Diagnostics;
+
+
 
 namespace ArtWarsServer.Model
 {
@@ -30,8 +33,14 @@ namespace ArtWarsServer.Model
 
         //prompt for the round
         public string prompt;
+        //player chosen to write prompt
+        public Player ?chosenPlayer;
 
         public Frame ?MainFrame {  get; set; }
+
+
+        //events
+        public event EventHandler PrompterChosen;
 
         //server config settings
         public ServerConfig serverConfig {get; private set;}
@@ -54,6 +63,9 @@ namespace ArtWarsServer.Model
             code = "1234";
 
             CurrentRound = 0;
+
+            chosenPlayer = null;
+
             //initialize state
             state = new Connecting(this);
 
@@ -115,6 +127,11 @@ namespace ArtWarsServer.Model
 
         public void Start()
         {
+            Player testPlayer = new Player(new TcpClient(), this);
+            testPlayer.Name = "Denim";
+            AddPlayer(testPlayer);
+
+
             state.Start();
 
         }
@@ -156,8 +173,17 @@ namespace ArtWarsServer.Model
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error broadcasting packet: {ex.Message}");
+                Debug.WriteLine($"Error broadcasting packet: {ex.Message}");
             }
-        } 
+        }
+
+
+        public void UpdatePrompter(Player p)
+        {
+
+            chosenPlayer = p; 
+
+            PrompterChosen(this, EventArgs.Empty);
+        }
     }
 }

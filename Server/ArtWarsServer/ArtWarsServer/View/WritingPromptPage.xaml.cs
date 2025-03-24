@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ArtWarsServer.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,16 +21,23 @@ namespace ArtWarsServer.View
     /// </summary>
     public partial class WritingPromptPage : Page
     {
+        Server server;
+
         public WritingPromptPage()
         {
             InitializeComponent();
+
+            server = ((App)Application.Current).server;
+
+
+            updatePlayerWritingThePrompt();
+
         }
         public void updatePlayerWritingThePrompt()
         {
-            if (((App)Application.Current).server != null) // Check if server is initialized
+            if (server != null && server.chosenPlayer != null) // Check if server is initialized
             {
-                //promptTextBox.Text = ((App)Application.Current).server.state.chsenPlayer.name + "is writing the prompt...";
-                PlayerTextBox.Text = "Example Player is writing the prompt";
+                PlayerTextBox.Text = $"Waiting for {server.chosenPlayer.Name} to write the prompt";
             }
             else
             {
@@ -38,4 +46,5 @@ namespace ArtWarsServer.View
 
 
         }
+    }
 }
