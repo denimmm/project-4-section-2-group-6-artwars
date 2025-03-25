@@ -19,13 +19,13 @@ namespace ArtWarsClientWPF.Models
             _client.Connect(hostIP, port);
             _stream = _client.GetStream();
         }
-        public void SendPacket(byte[] packet)
+        public async Task SendPacket(byte[] packet)
         {
             //string jsonMessage = JsonConvert.SerializeObject(message);
             //byte[] data = Encoding.UTF8.GetBytes(packet);
             _stream.Write(packet, 0, packet.Length);
         }
-        public T ReceivePacket <T>(T anyPacket){
+        public async Task <T> ReceivePacket <T>(T anyPacket){
             byte[] data = new byte[1024];
             int bytes = _stream.Read(data, 0, data.Length);
             string jsonDataRv = Encoding.UTF8.GetString(data, 0, bytes);

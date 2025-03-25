@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace ArtWarsServer.Model
 {
@@ -23,6 +24,11 @@ namespace ArtWarsServer.Model
 
         //make new packet from received data
         //when you use this, do not forget to check if type == failed.
+        public ConnectingPacket()
+        {
+
+        }
+        [JsonConstructor]
         public ConnectingPacket(byte[] packet)
         {
             //get the size
