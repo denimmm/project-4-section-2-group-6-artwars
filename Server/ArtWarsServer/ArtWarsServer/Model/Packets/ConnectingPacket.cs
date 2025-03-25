@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 using System.Text.Json;
 
@@ -27,6 +28,7 @@ namespace ArtWarsServer.Model
         {
             //get the size
             size = BitConverter.ToInt32(packet, 0); //get int from the first 4 bytes
+
             string json = Encoding.UTF8.GetString(packet, 4, size -4);
 
             try
@@ -48,7 +50,7 @@ namespace ArtWarsServer.Model
             }
             catch (JsonException ex)
             {
-                Console.WriteLine($"Error deserializing JSON: {ex.Message}");
+                Debug.WriteLine($"Error deserializing JSON: {ex.Message}");
                 type = "failed";
                 roomCode = "-1";
                 playerName = "";
