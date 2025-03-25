@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ArtWarsClientWPF.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,12 +16,18 @@ using System.Windows.Shapes;
 namespace ArtWarsClientWPF
 {
     /// <summary>
-    /// Interaction logic for PromptWaitingWindow.xaml
+    /// Interaction logic for DrawingWindow.xaml
     /// </summary>
-    public partial class PromptWaitingWindow : Window
+    public partial class DrawingWindow : Window
     {
-        public PromptWaitingWindow()
+        private Client _client;
+        private TcpHandler _handler;
+        private dynamic _packet;
+        public DrawingWindow(TcpHandler handler, Client client, dynamic packet)
         {
+            _handler = handler;
+            _client = client;
+            _packet = packet;
             InitializeComponent();
         }
     }
