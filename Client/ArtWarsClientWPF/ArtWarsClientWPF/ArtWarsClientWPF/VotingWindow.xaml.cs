@@ -15,13 +15,25 @@ using System.Windows.Shapes;
 namespace ArtWarsClientWPF
 {
     /// <summary>
-    /// Interaction logic for WaitingWindow.xaml
+    /// Interaction logic for VotingWindow.xaml
     /// </summary>
-    public partial class WaitingWindow : Window
+    public partial class VotingWindow : Window
     {
-        public WaitingWindow()
+        public VotingWindow()
         {
             InitializeComponent();
+        }
+        private void updateImage()
+        {
+
+        }
+        private void LeftButton_Click(object sender, RoutedEventArgs e)
+        {
+            updateImage();
+        }
+        private void RightButton_Click(object sender, RoutedEventArgs e)
+        {
+            updateImage();
         }
     }
 }
