@@ -5,6 +5,8 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
+
 
 using System.Text.Json;
 
@@ -45,7 +47,7 @@ namespace ArtWarsServer.Model
             }
             catch (JsonException ex)
             {
-                Console.WriteLine($"Error deserializing JSON: {ex.Message}");
+                Debug.WriteLine($"Error deserializing JSON: {ex.Message}");
                 type = "failed";
                 roomCode = "-1";
                 prompt = "";

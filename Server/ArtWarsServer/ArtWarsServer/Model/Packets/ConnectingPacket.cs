@@ -5,6 +5,7 @@ using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 using System.Text.Json;
 using System.Text.Json.Serialization;
@@ -22,6 +23,17 @@ namespace ArtWarsServer.Model
 
         public string jsonString;
 
+
+        //used for json
+        [JsonConstructor]
+        public ConnectingPacket(string type, string roomCode, string playerName, int playerId)
+        {
+            this.type = type;
+            this.roomCode = roomCode;
+            this.playerName = playerName;
+            this.playerId = playerId;
+        }
+
         //make new packet from received data
         //when you use this, do not forget to check if type == failed.
         public ConnectingPacket()
@@ -33,6 +45,7 @@ namespace ArtWarsServer.Model
         {
             //get the size
             size = BitConverter.ToInt32(packet, 0); //get int from the first 4 bytes
+
             string json = Encoding.UTF8.GetString(packet, 4, size -4);
 
             try
@@ -54,7 +67,7 @@ namespace ArtWarsServer.Model
             }
             catch (JsonException ex)
             {
-                Console.WriteLine($"Error deserializing JSON: {ex.Message}");
+                Debug.WriteLine($"Error deserializing JSON: {ex.Message}");
                 type = "failed";
                 roomCode = "-1";
                 playerName = "";

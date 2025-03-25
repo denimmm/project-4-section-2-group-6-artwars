@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Data;
 using System.Windows;
+using System.Diagnostics;
 
 namespace ArtWarsServer;
 
@@ -29,7 +30,7 @@ public partial class App : Application
 
 
         server.Start();
-		Console.WriteLine("Starting server");
+		Debug.WriteLine("Starting server");
 	}
 
 	protected override void OnExit(ExitEventArgs e)

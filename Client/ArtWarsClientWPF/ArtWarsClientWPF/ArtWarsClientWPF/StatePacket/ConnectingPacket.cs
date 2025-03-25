@@ -16,6 +16,18 @@ namespace ArtWarsClientWPF.StatePacket
         public int playerId;
         public string jsonString;
 
+
+
+        //used for json
+        [JsonConstructor]
+        public ConnectingPacket(string type, string roomCode, string playerName, int playerId)
+        {
+            this.type = type;
+            this.roomCode = roomCode;
+            this.playerName = playerName;
+            this.playerId = playerId;
+        }
+
         //make a packet from upcoming packet with series of bytes
         public ConnectingPacket(byte[] bytes)
         {

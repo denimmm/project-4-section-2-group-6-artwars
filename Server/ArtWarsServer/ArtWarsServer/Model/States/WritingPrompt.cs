@@ -1,8 +1,12 @@
-﻿using System;
+﻿using ArtWarsServer.View;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
+using System.Diagnostics;
+
 
 namespace ArtWarsServer.Model
 {
@@ -13,8 +17,6 @@ namespace ArtWarsServer.Model
 
         //should be null the first time it is ran
         public static List<Player> ?EligiblePrompters;
-
-        public Player chosenPlayer;
 
         public WritingPrompt(Server server)
         {
@@ -28,7 +30,7 @@ namespace ArtWarsServer.Model
                 EligiblePrompters = new List<Player>(server.Players);
             }
             //choose the player
-            chosenPlayer = selectPlayerToWritePrompt();
+            selectPlayerToWritePrompt();
 
 
         }
@@ -36,13 +38,18 @@ namespace ArtWarsServer.Model
 
         public async Task Start()
         {
+            if(server.chosenPlayer == null)
+            {
+                return;
+            }
+
             //broadcast the prompt request to all players
-            PromptPacket PromptRequest = new PromptPacket(server.code, "", chosenPlayer.ID);
+            PromptPacket PromptRequest = new PromptPacket(server.code, "", server.chosenPlayer.ID);
             //send to all players
             await server.BroadcastToPlayers(PromptRequest);
 
             //receive the prompt from the user
-            PromptPacket returnPacket = new PromptPacket(await chosenPlayer.ReceiveDataAsync());
+            PromptPacket returnPacket = new PromptPacket(await server.chosenPlayer.ReceiveDataAsync());
 
             //get the prompt
             server.prompt = returnPacket.prompt;
@@ -68,7 +75,7 @@ namespace ArtWarsServer.Model
 
 
         //choose a player for the prompt
-        private Player selectPlayerToWritePrompt()
+        private void selectPlayerToWritePrompt()
         {
             try
             {
@@ -81,13 +88,12 @@ namespace ArtWarsServer.Model
                 //remove it from the list
                 EligiblePrompters.Remove(p);
 
-                return p;
+                server.UpdatePrompter(p);
 
             }
             catch(Exception e)
             {
-                Console.WriteLine($"Failed to select player to write prompt: {e}");
-                return null;
+                Debug.WriteLine($"Failed to select player to write prompt: {e}");
 
             }
 
