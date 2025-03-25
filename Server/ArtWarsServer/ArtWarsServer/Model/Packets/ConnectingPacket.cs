@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Diagnostics;
 
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace ArtWarsServer.Model
 {
@@ -21,6 +22,17 @@ namespace ArtWarsServer.Model
         public int playerId { get; }
 
         public string jsonString;
+
+
+        //used for json
+        [JsonConstructor]
+        public ConnectingPacket(string type, string roomCode, string playerName, int playerId)
+        {
+            this.type = type;
+            this.roomCode = roomCode;
+            this.playerName = playerName;
+            this.playerId = playerId;
+        }
 
         //make new packet from received data
         //when you use this, do not forget to check if type == failed.
