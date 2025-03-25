@@ -112,6 +112,59 @@ namespace ArtWarsServer.Model
 
         }
 
+        public async Task<byte[]> ReceiveImageAsync()
+        {
+
+            if (ClientSocket == null)
+            {
+                Debug.WriteLine($"Client Socket was null during Receive for Player: {ID}, {Name}");
+                return null;
+            }
+
+            try
+            {
+                if (ClientSocket.Connected)
+                {
+
+                    //get the file path
+                    string filePath = $"{server.serverConfig.ImageFolder}/{ID}.jpg";
+
+
+
+
+                        byte[] buffer = new byte[server.serverConfig.bufferSize];
+
+                    /* this code will be useful eventually for saving the image to a file
+                     
+                    //make an image file for the player
+                    using (FileStream fs = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+                    {
+                        fs.Write(buffer, index, server.serverConfig.bufferSize);
+
+                    }
+
+
+                     */
+
+                    int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+
+                    if (bytesRead > 0)
+                    {
+                        return buffer;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Debug.WriteLine($"Error recieving data from player {ID} {Name} : {ex.Message}");
+            }
+
+            return null;
+
+        }
+
 
         public void Disconnect()
         {

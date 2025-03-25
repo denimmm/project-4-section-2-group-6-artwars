@@ -19,6 +19,7 @@ namespace ArtWarsServer.Model
         public int ROOM_CODE_MAX_NUMBER;
         public int bufferSize;
         public int NumberOfRounds;
+        public string ImageFolder;
 
 		public ServerConfig()
         {
@@ -32,6 +33,7 @@ namespace ArtWarsServer.Model
 			ROOM_CODE_MAX_NUMBER = 10000;
             bufferSize = 4096;
             NumberOfRounds = 0;
+            ImageFolder = "Images";
 		}
 
     }
