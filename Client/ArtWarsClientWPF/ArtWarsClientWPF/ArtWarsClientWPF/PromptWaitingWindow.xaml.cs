@@ -40,14 +40,14 @@ namespace ArtWarsClientWPF
                 id = "",
                 prompt = ""
             };
-            var promptPacket = _handler.ReceivePacket(PromptP);
-            if(promptPacket != null)
-            {
-                DrawingWindow drawingWindow = new DrawingWindow(_handler, _client, promptPacket);
-                drawingWindow.Show();
-                this.Close();
+            //var promptPacket = _handler.ReceivePacket(_client);
+            //if(promptPacket != null)
+            //{
+            //    DrawingWindow drawingWindow = new DrawingWindow(_handler, _client, promptPacket);
+            //    drawingWindow.Show();
+            //    this.Close();
 
-            }
+            //}
 
         }
     }

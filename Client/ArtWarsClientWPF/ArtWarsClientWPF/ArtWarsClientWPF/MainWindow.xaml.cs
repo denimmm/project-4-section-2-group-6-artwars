@@ -19,11 +19,8 @@ namespace ArtWarsClientWPF
             InitializeComponent();
         }
 
-        private void ConnectButton_Click(object sender, RoutedEventArgs e)
+        private async void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
-            //string playerName = PlayerNameBox.Text;
-            //string roomCode = RoomCodeBox.Text;
-            //int playerId;
             Client client = new Client(PlayerNameBox.Text, RoomCodeBox.Text);
             TcpHandler tcpHandler = new TcpHandler();
             if (string.IsNullOrWhiteSpace(client.player.Name) || string.IsNullOrWhiteSpace(client.roomCode))
@@ -34,49 +31,27 @@ namespace ArtWarsClientWPF
             try
             {
                 tcpHandler.Connect("127.0.0.1", 27000); // Local IP Port, change if needed
-                                                        //_stream = _client.GetStream();
 
-                // Creates the JSON Packet...may need to add IP Address too for connecting to the server
-                // After testing, IP Address was not needed but needed to change port
                 ConnectingPacket connectPacket = new ConnectingPacket(client.roomCode, client.player.Name);
-                //string jsonData = JsonConvert.SerializeObject(connectPacket);
-                //byte[] data = Encoding.UTF8.GetBytes(jsonData);
+                await tcpHandler.SendPacket(connectPacket.Serialize()); // Await the async call
 
-
-                tcpHandler.SendPacket(connectPacket.Serialize());
-                // Sends data to the server
-                //_stream.Write(data, 0, data.Length);
                 StatusText.Text = "Room connection successful!";
-                // Receives data from the server
-                
-                //wait for server to send the packet with player id
-
-                //async Task ReceivePacketsAsync()
-                //{
-
-                    byte[] rvBytes = new byte[1024];
-                //
-                    int rvData = tcpHandler._stream.Read(rvBytes, 0, rvBytes.Length);
-                    if (rvData > 0)
+                //tcpHandler.ReceivePacket(client); // Await the async call
+                byte[] rvBytes = new byte[1024];
+                int rvData = await tcpHandler._stream.ReadAsync(rvBytes, 0, rvBytes.Length); // Await the async call
+                if (rvData > 0)
+                {
+                    if (client.player.Id == "-1")
                     {
-                        if (client.player.Id == "-1")
-                        {
-
                         ConnectingPacket rpacket = new ConnectingPacket(rvBytes);
-
-                            client.state = rpacket.type;
-                            client.roomCode = rpacket.roomCode;
-                            client.player.Name = rpacket.playerName;
-                            client.player.Id = rpacket.playerId.ToString();
-                        }
+                        client.state = rpacket.type;
+                        client.roomCode = rpacket.roomCode;
+                        client.player.Name = rpacket.playerName;
+                        client.player.Id = rpacket.playerId.ToString();
                     }
-                    else
-                    {
+                }
 
-
-                    }
-               // }
-                    WaitingWindow waitingWindow = new WaitingWindow(tcpHandler, client);
+                WaitingWindow waitingWindow = new WaitingWindow(tcpHandler, client);
                 waitingWindow.Show();
                 this.Close();
             }

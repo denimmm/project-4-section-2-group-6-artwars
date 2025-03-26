@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using ArtWarsClientWPF.StatePacket;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,12 +26,26 @@ namespace ArtWarsClientWPF.Models
             //byte[] data = Encoding.UTF8.GetBytes(packet);
             _stream.Write(packet, 0, packet.Length);
         }
-        public async Task <T> ReceivePacket <T>(T anyPacket){
+        public async void ReceivePacket (Client client){
             byte[] data = new byte[1024];
-            int bytes = _stream.Read(data, 0, data.Length);
-            string jsonDataRv = Encoding.UTF8.GetString(data, 0, bytes);
-            return JsonConvert.DeserializeAnonymousType(jsonDataRv, anyPacket);
-            
+            int bytes = await _stream.ReadAsync(data, 0, data.Length);
+            //string jsonDataRv = Encoding.UTF8.GetString(data, 0, bytes);
+            //return JsonConvert.DeserializeAnonymousType(jsonDataRv, anyPacket);
+            if (bytes > 0)
+            {
+                if (client.player.Id == "-1")
+                {
+                    ConnectingPacket rpacket = new ConnectingPacket(data);
+                    client.state = rpacket.type;
+                    client.roomCode = rpacket.roomCode;
+                    client.player.Name = rpacket.playerName;
+                    client.player.Id = rpacket.playerId.ToString();
+                }
+                else { 
+                    // decise to go waiting or writing prompt
+
+                }
+            }
         }
         public void Close()
         {
