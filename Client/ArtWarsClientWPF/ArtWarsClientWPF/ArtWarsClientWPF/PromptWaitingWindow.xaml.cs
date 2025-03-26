@@ -32,21 +32,31 @@ namespace ArtWarsClientWPF
             _client = client;
 
             InitializeComponent();
+            _ = ReceivePacketAsysc();
         }
 
-        //wait for the server to broadcast the prompt
-        private async void Window_Loaded(object sender, RoutedEventArgs e)
+        private async Task ReceivePacketAsysc()
         {
-            byte[] rvdata = new byte[1024];
-            int inbytes = await _handler._stream.ReadAsync(rvdata, 0, rvdata.Length);
-            //once received, put in waiting packet and pass it to drawing window
-            if (inbytes > 0)
+            byte[] bytes = new byte[1024];
+            int bytesRec = await _handler._stream.ReadAsync(bytes, 0, bytes.Length);
+            if (bytesRec > 0)
             {
-                WaitingPacket waiting = new WaitingPacket(rvdata);
-                DrawingWindow drawingWindow = new DrawingWindow(_handler, _client, waiting);
-                drawingWindow.Show();
-                this.Close();
+                WaitingPacket packet = new WaitingPacket(bytes);
+                //got to drawing window
+                if (packet.prompt != null)
+                {
+
+                    DrawingWindow drawingWindow = new DrawingWindow(_handler, _client, packet);
+                    drawingWindow.Show();
+                    this.Close();
+                }
+                else
+                {
+                    //go to waiting window
+
+                }
             }
+
         }
     }
 }
