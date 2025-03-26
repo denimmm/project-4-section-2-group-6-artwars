@@ -28,11 +28,15 @@ namespace ArtWarsServer.View
             InitializeComponent();
 
             server = ((App)Application.Current).server;
-
-
+            this.Loaded += Start;
+        }
+        
+        public void Start(object sender, System.Windows.RoutedEventArgs e)
+        {
             updatePlayerWritingThePrompt();
 
         }
+
         public void updatePlayerWritingThePrompt()
         {
             if (server != null && server.chosenPlayer != null) // Check if server is initialized

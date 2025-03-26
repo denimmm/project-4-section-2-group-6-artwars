@@ -54,7 +54,7 @@ namespace ArtWarsServer.Model
 
             //make and assign new state to server
             server.state = new WritingPrompt(server);
-
+            server.state.Start();
         }
 
         private async Task connectPlayers()

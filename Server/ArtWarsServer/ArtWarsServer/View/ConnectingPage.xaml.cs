@@ -46,8 +46,8 @@ namespace ArtWarsServer.View
 
         private void start_button_click(object sender, RoutedEventArgs e)
         {
+            server.MainFrame?.Navigate(new View.WritingPromptPage());
             server.state.NextState();
-            server.MainFrame.Navigate(new View.WritingPromptPage());
         }
 
     }
