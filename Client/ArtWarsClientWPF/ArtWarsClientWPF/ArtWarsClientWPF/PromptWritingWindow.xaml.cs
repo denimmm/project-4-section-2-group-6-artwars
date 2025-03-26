@@ -29,6 +29,7 @@ namespace ArtWarsClientWPF
             _handler = handler;
             _client = client;
             InitializeComponent();
+
         }
 
         private async void SubmitPromptButton_Click(object sender, RoutedEventArgs e)
