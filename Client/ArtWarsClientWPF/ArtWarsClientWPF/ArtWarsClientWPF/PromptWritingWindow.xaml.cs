@@ -1,4 +1,5 @@
 ﻿using ArtWarsClientWPF.Models;
+using ArtWarsClientWPF.StatePacket;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,14 +31,19 @@ namespace ArtWarsClientWPF
             InitializeComponent();
         }
 
-        private void SubmitPromptButton_Click(object sender, RoutedEventArgs e)
+        private async void SubmitPromptButton_Click(object sender, RoutedEventArgs e)
         {
             string prompt = PromptBox.Text;
             if (prompt != null)
             {
-                //_handler.SendPacket(prompt);
+                // make a packet from server with the prompt 
+
+                WaitingPacket promptPacket = new WaitingPacket(_client.roomCode, prompt, _client.player.Id);
+
+                await _handler.SendPacket(promptPacket.Serialize());
                 PromptWaitingWindow promptWaitingWindow = new PromptWaitingWindow(_handler, _client);
                 promptWaitingWindow.Show();
+                this.Close();
             }
             else
             {

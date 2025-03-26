@@ -62,12 +62,12 @@ namespace ArtWarsClientWPF.StatePacket
         }
 
         //make new packet to send
-        public WaitingPacket(string roomCode, string prompt, int playerId)
+        public WaitingPacket(string roomCode, string prompt, string playerId)
         {
             this.type = "prompt";
             this.roomCode = roomCode;
             this.prompt = prompt;
-            this.playerId = playerId;
+            this.playerId = int.Parse(playerId);
 
             var json = new
             {

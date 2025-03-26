@@ -38,25 +38,31 @@ namespace ArtWarsClientWPF
         private async Task InitializeData()
         {
             int inbytes = await tcpHandler._stream.ReadAsync(rvdata,0, rvdata.Length);
-
-            if (inbytes > 0)
+            while (true)
             {
-                WaitingPacket waiting = new WaitingPacket(rvdata);
-                // if playerid == waiting.playerid
-                if (client.player.Id == waiting.playerId.ToString())
+                if (inbytes > 0)
                 {
-                    // go to waiting window
-                    WaitingWindow waitingWindow = new WaitingWindow(tcpHandler, client);
-                    waitingWindow.Show();
-                    //this.Close();
+                    WaitingPacket waiting = new WaitingPacket(rvdata);
+                    // if playerid == waiting.playerid
+                    if (client.player.Id == waiting.playerId.ToString())
+                    {
+                        // go to prompt writing window
+                        PromptWritingWindow promptWritingWindow = new PromptWritingWindow(tcpHandler, client);
+                        promptWritingWindow.Show();
+                        this.Close();
+                        break;
+                    }
+                    else
+                    {
+                        // go to prompt window
+                        PromptWaitingWindow promptWaitingWindow = new PromptWaitingWindow(tcpHandler, client);
+                        promptWaitingWindow.Show();
+                        this.Close();
+                        break;
+                    }
                 }
-                else
-                {
-                    // go to prompt window
-                    PromptWaitingWindow promptWaitingWindow = new PromptWaitingWindow(tcpHandler, client);
-                    promptWaitingWindow.Show();
-                    //this.Close();
-                }
+            
+           
             }
         }
         
