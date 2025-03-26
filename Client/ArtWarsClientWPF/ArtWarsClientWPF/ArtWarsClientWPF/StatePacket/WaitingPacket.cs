@@ -1,94 +1,79 @@
-﻿using System;
-using System.CodeDom;
+﻿using ArtWarsClientWPF.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
 using System.Diagnostics;
-
+using System.Linq;
+using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Threading.Tasks;
 
-namespace ArtWarsServer.Model
+namespace ArtWarsClientWPF.StatePacket
 {
-
-
-    class ConnectingPacket : Packet
+    public class WaitingPacket : Packet
     {
         public string type { get; }
         public string roomCode { get; }
-        public string playerName { get; }
+        public string prompt { get; set; }
         public int playerId { get; }
 
         public string jsonString;
 
-
-        //used for json
+        //make new packet from received data
+        //when you use this, do not forget to check if type == failed.
         [JsonConstructor]
-        public ConnectingPacket(string type, string roomCode, string playerName, int playerId)
+        public WaitingPacket(string type, string roomCode, string prompt, int playerId)
         {
             this.type = type;
             this.roomCode = roomCode;
-            this.playerName = playerName;
+            this.prompt = prompt;
             this.playerId = playerId;
         }
-
-        //make new packet from received data
-        //when you use this, do not forget to check if type == failed.
-        public ConnectingPacket()
-        {
-
-        }
-        //[JsonConstructor]
-        public ConnectingPacket(byte[] packet)
+        public WaitingPacket(byte[] packet)
         {
             //get the size
             size = BitConverter.ToInt32(packet, 0); //get int from the first 4 bytes
-
-            string json = Encoding.UTF8.GetString(packet, 4, size -4);
+            string json = Encoding.UTF8.GetString(packet, 4, size - 4);
 
             try
             {
 
                 //make a connectingPacket object and copy its data lol
-                var obj = JsonSerializer.Deserialize<ConnectingPacket>(json);
+                var obj = JsonSerializer.Deserialize<WaitingPacket>(json);
                 if (obj != null)
                 {
                     type = obj.type;
                     roomCode = obj.roomCode;
-                    playerName = obj.playerName;
+                    prompt = obj.prompt;
                     playerId = obj.playerId;
                 }
-                else
-                {
-                    throw new JsonException("connecting packet object was null");
-                }
+
             }
             catch (JsonException ex)
             {
                 Debug.WriteLine($"Error deserializing JSON: {ex.Message}");
                 type = "failed";
                 roomCode = "-1";
-                playerName = "";
-                playerId = -1 ;
+                prompt = "";
+                playerId = -1;
             }
 
 
         }
 
         //make new packet to send
-        public ConnectingPacket(string roomCode, string playerName, int playerId) {
-            this.type = "connecting";
+        public WaitingPacket(string roomCode, string prompt, string playerId)
+        {
+            this.type = "prompt";
             this.roomCode = roomCode;
-            this.playerName = playerName;
-            this.playerId = playerId;
+            this.prompt = prompt;
+            this.playerId = int.Parse(playerId);
 
             var json = new
             {
                 type = this.type,
                 roomCode = this.roomCode,
-                playerName = this.playerName,
+                prompt = this.prompt,
                 playerId = this.playerId
             };
 
@@ -101,7 +86,7 @@ namespace ArtWarsServer.Model
         }
 
 
-        public override byte[] Serialize()
+        public byte[] Serialize()
         {
 
             byte[] serializedData = new byte[size];
@@ -117,5 +102,4 @@ namespace ArtWarsServer.Model
         }
 
     }
-
 }

@@ -1,4 +1,5 @@
 ﻿using ArtWarsClientWPF.Models;
+using ArtWarsClientWPF.StatePacket;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,23 +33,20 @@ namespace ArtWarsClientWPF
 
             InitializeComponent();
         }
-        async Task ReceivePacketAsync() 
+
+        //wait for the server to broadcast the prompt
+        private async void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            var PromptP = new
+            byte[] rvdata = new byte[1024];
+            int inbytes = await _handler._stream.ReadAsync(rvdata, 0, rvdata.Length);
+            //once received, put in waiting packet and pass it to drawing window
+            if (inbytes > 0)
             {
-                type = "",
-                id = "",
-                prompt = ""
-            };
-            var promptPacket = _handler.ReceivePacket(PromptP);
-            if(promptPacket != null)
-            {
-                DrawingWindow drawingWindow = new DrawingWindow(_handler, _client, promptPacket);
+                WaitingPacket waiting = new WaitingPacket(rvdata);
+                DrawingWindow drawingWindow = new DrawingWindow(_handler, _client, waiting);
                 drawingWindow.Show();
                 this.Close();
-
             }
-
         }
     }
 }
