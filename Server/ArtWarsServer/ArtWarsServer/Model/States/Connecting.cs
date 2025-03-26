@@ -43,6 +43,7 @@ namespace ArtWarsServer.Model
             await connectPlayers();
 
             NextState();
+            await server.state.Start();
         }
 
         public void NextState()
@@ -54,7 +55,7 @@ namespace ArtWarsServer.Model
 
             //make and assign new state to server
             server.state = new WritingPrompt(server);
-            server.state.Start();
+            //server.state.Start();
         }
 
         private async Task connectPlayers()
