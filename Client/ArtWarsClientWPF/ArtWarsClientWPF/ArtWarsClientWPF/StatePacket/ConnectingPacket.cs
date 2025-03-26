@@ -50,7 +50,7 @@ namespace ArtWarsClientWPF.StatePacket
         //make a packet from log in screen
         public ConnectingPacket(string roomCode, string playerName)
         {
-            this.type = "Connecting";
+            this.type = "connecting";
             this.roomCode = roomCode;
             this.playerName = playerName;
             this.playerId = -1;

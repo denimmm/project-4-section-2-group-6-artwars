@@ -38,7 +38,7 @@ namespace ArtWarsServer.Model
 
         public async Task Start()
         {
-            if(server.chosenPlayer == null)
+            if(server.chosenPlayer == null || server.chosenPlayer.ClientSocket.Connected == false)
             {
                 return;
             }
