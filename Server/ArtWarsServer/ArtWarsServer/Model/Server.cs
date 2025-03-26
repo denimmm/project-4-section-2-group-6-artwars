@@ -127,9 +127,9 @@ namespace ArtWarsServer.Model
 
         public void Start()
         {
-            Player testPlayer = new Player(new TcpClient(), this);
-            testPlayer.Name = "Denim";
-            AddPlayer(testPlayer);
+            //Player testPlayer = new Player(new TcpClient(), this);
+            //testPlayer.Name = "Denim";
+            //AddPlayer(testPlayer);
 
 
             state.Start();
@@ -183,7 +183,7 @@ namespace ArtWarsServer.Model
 
             chosenPlayer = p; 
 
-            PrompterChosen(this, EventArgs.Empty);
+            PrompterChosen?.Invoke(this, EventArgs.Empty);
         }
     }
 }

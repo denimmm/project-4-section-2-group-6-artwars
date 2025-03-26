@@ -9,6 +9,7 @@ using System.Diagnostics;
 
 
 using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace ArtWarsServer.Model
 {
@@ -22,6 +23,18 @@ namespace ArtWarsServer.Model
         public int playerId { get; }
 
         public string jsonString;
+
+
+        [JsonConstructor]
+        public PromptPacket(string type, string roomCode, string prompt, int playerId)
+        {
+            this.type = type;
+            this.roomCode = roomCode;
+            this.prompt = prompt;
+            this.playerId = playerId;
+
+            jsonString = "";
+        }
 
         //make new packet from received data
         //when you use this, do not forget to check if type == failed.
@@ -54,6 +67,7 @@ namespace ArtWarsServer.Model
                 playerId = -1 ;
             }
 
+            jsonString = "";
 
         }
 
