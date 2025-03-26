@@ -80,14 +80,17 @@ namespace ArtWarsServer.Model
             try
             {
 
-                //choose a player from the list
-                int index = new Random().Next(EligiblePrompters.Count - 1);
 
-                Player p = EligiblePrompters[index];
 
-                //remove it from the list
-                EligiblePrompters.Remove(p);
+                Player? p = null;
+                while (p == null) {
+                    //choose a player from the list
+                    int index = new Random().Next(EligiblePrompters.Count - 1);
 
+                    p = EligiblePrompters[index];
+                    //remove it from the list
+                    EligiblePrompters.Remove(p);
+                }
                 server.UpdatePrompter(p);
 
             }

@@ -62,13 +62,12 @@ namespace ArtWarsClientWPF
                         if (client.player.Id == "-1")
                         {
 
-                            string jsonDataRv = Encoding.UTF8.GetString(rvBytes, 0, rvData);
-                            var dataReceived = JsonConvert.DeserializeAnonymousType(jsonDataRv, connectPacket);
+                        ConnectingPacket rpacket = new ConnectingPacket(rvBytes);
 
-                            client.state = dataReceived.type;
-                            client.roomCode = dataReceived.roomCode;
-                            client.player.Name = dataReceived.playerName;
-                            client.player.Id = dataReceived.playerId.ToString();
+                            client.state = rpacket.type;
+                            client.roomCode = rpacket.roomCode;
+                            client.player.Name = rpacket.playerName;
+                            client.player.Id = rpacket.playerId.ToString();
                         }
                     }
                     else
