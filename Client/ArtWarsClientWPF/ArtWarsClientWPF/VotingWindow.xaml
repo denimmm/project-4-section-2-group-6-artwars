@@ -1,0 +1,15 @@
+﻿<Window x:Class="ArtWarsClientWPF.VotingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ArtWarsClientWPF"
+        mc:Ignorable="d"
+        Title="VotingWindow" Height="450" Width="800">
+    <Grid>
+
+        <Button Margin="20,0,0,0" Content="&lt;" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="50" Height="30" FontSize="20" Click="LeftButton_Click"/>
+        <Image x:Name="Image1" Width="400" Height="300" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Uniform" Margin="210,55,0,0" />
+        <Button Margin="0,0,20,0"  Content=">" HorizontalAlignment="Right"  VerticalAlignment="Center" Width="50" Height="30" FontSize="20" Click="RightButton_Click"/>
+</Grid>
+</Window>
