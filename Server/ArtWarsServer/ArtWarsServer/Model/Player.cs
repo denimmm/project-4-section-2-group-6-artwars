@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Net.Sockets;
-
+using System.Diagnostics;
 using System.Linq.Expressions;
 using System.IO;
 
@@ -44,34 +44,49 @@ namespace ArtWarsServer.Model
 
 
         //sends a packet to a player
-        public async Task sendDataAsync(string message)
+        public async Task sendDataAsync(Packet packet)
         {
+
+            //error handling
+            if(ClientSocket == null)
+            {
+                Debug.WriteLine($"Client Socket was null during Send for Player: {ID}, {Name}");
+                return;
+            }
+
             try
             {
                 if (ClientSocket.Connected)
                 {
                     //serialize data
-                    byte[] data = Encoding.UTF8.GetBytes(message);
+                    byte[] data = packet.Serialize();
 
                     //send data
 					await stream.WriteAsync(data, 0, data.Length);
                 }
                 else
                 {
-                    Console.WriteLine($" {Name}, Player ID: {ID} is not connected");
+                    Debug.WriteLine($" {Name}, Player ID: {ID} is not connected");
 
                 }
 
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error sending message to player \"{Name}\" ID: {ID}. {ex.Message}");
+                Debug.WriteLine($"Error sending message to player \"{Name}\" ID: {ID}. {ex.Message}");
             }
 
         }
 
         public async Task<byte[]> ReceiveDataAsync()
         {
+
+            if (ClientSocket == null)
+            {
+                Debug.WriteLine($"Client Socket was null during Receive for Player: {ID}, {Name}");
+                return null;
+            }
+
             try
             {
                 if (ClientSocket.Connected)
@@ -90,7 +105,60 @@ namespace ArtWarsServer.Model
             catch (Exception ex)
             {
 
-                Console.WriteLine($"Error recieving data from player {ID} {Name} : {ex.Message}");
+                Debug.WriteLine($"Error recieving data from player {ID} {Name} : {ex.Message}");
+            }
+
+            return null;
+
+        }
+
+        public async Task<byte[]> ReceiveImageAsync()
+        {
+
+            if (ClientSocket == null)
+            {
+                Debug.WriteLine($"Client Socket was null during Receive for Player: {ID}, {Name}");
+                return null;
+            }
+
+            try
+            {
+                if (ClientSocket.Connected)
+                {
+
+                    //get the file path
+                    string filePath = $"{server.serverConfig.ImageFolder}/{ID}.jpg";
+
+
+
+
+                        byte[] buffer = new byte[server.serverConfig.bufferSize];
+
+                    /* this code will be useful eventually for saving the image to a file
+                     
+                    //make an image file for the player
+                    using (FileStream fs = new FileStream(filePath, FileMode.Create, FileAccess.Write))
+                    {
+                        fs.Write(buffer, index, server.serverConfig.bufferSize);
+
+                    }
+
+
+                     */
+
+                    int bytesRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+
+                    if (bytesRead > 0)
+                    {
+                        return buffer;
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                Debug.WriteLine($"Error recieving data from player {ID} {Name} : {ex.Message}");
             }
 
             return null;
@@ -100,7 +168,7 @@ namespace ArtWarsServer.Model
 
         public void Disconnect()
         {
-            Console.WriteLine($"Disconnecting Player: {this.Name} ID: {this.ID}");
+            Debug.WriteLine($"Disconnecting Player: {this.Name} ID: {this.ID}");
 
             //client connection doesnt exist
             if(ClientSocket == null)

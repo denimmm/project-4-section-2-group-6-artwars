@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
+
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -14,81 +15,74 @@ namespace ArtWarsServer.Model
 {
 
 
-    class ConnectingPacket : Packet
+    class PromptPacket : Packet
     {
         public string type { get; }
         public string roomCode { get; }
-        public string playerName { get; }
+        public string prompt { get; set; }
         public int playerId { get; }
 
         public string jsonString;
 
 
-        //used for json
         [JsonConstructor]
-        public ConnectingPacket(string type, string roomCode, string playerName, int playerId)
+        public PromptPacket(string type, string roomCode, string prompt, int playerId)
         {
             this.type = type;
             this.roomCode = roomCode;
-            this.playerName = playerName;
+            this.prompt = prompt;
             this.playerId = playerId;
+
+            jsonString = "";
         }
 
         //make new packet from received data
         //when you use this, do not forget to check if type == failed.
-        public ConnectingPacket()
-        {
-
-        }
-        //[JsonConstructor]
-        public ConnectingPacket(byte[] packet)
+        public PromptPacket(byte[] packet)
         {
             //get the size
             size = BitConverter.ToInt32(packet, 0); //get int from the first 4 bytes
-
             string json = Encoding.UTF8.GetString(packet, 4, size -4);
 
             try
             {
 
                 //make a connectingPacket object and copy its data lol
-                var obj = JsonSerializer.Deserialize<ConnectingPacket>(json);
+                var obj = JsonSerializer.Deserialize<PromptPacket>(json);
                 if (obj != null)
                 {
                     type = obj.type;
                     roomCode = obj.roomCode;
-                    playerName = obj.playerName;
+                    prompt = obj.prompt;
                     playerId = obj.playerId;
                 }
-                else
-                {
-                    throw new JsonException("connecting packet object was null");
-                }
+
             }
             catch (JsonException ex)
             {
                 Debug.WriteLine($"Error deserializing JSON: {ex.Message}");
                 type = "failed";
                 roomCode = "-1";
-                playerName = "";
+                prompt = "";
                 playerId = -1 ;
             }
 
+            jsonString = "";
 
         }
 
         //make new packet to send
-        public ConnectingPacket(string roomCode, string playerName, int playerId) {
-            this.type = "connecting";
+        public PromptPacket(string roomCode, string prompt, int playerId) {
+            this.type = "prompt";
             this.roomCode = roomCode;
-            this.playerName = playerName;
+            this.prompt = prompt;
             this.playerId = playerId;
 
             var json = new
             {
                 type = this.type,
                 roomCode = this.roomCode,
-                playerName = this.playerName,
+                prompt = this.prompt,
                 playerId = this.playerId
             };
 

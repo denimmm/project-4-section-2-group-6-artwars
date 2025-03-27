@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Data;
 using System.Windows;
+using System.Diagnostics;
 
 namespace ArtWarsServer;
 
@@ -10,22 +11,26 @@ namespace ArtWarsServer;
 /// </summary>
 public partial class App : Application
 {
-	public Server server;
+	public Server server { get; private set; }
 
 
 
 	public App()
 	{
 		InitializeComponent();
-		server = new Server();
-	}
+        server = new Server();
+    }
 
 
 	protected override void OnStartup(StartupEventArgs e)
 	{
+
+
 		base.OnStartup(e);
-		server.Start();
-		Console.WriteLine("Starting server");
+
+
+        server.Start();
+		Debug.WriteLine("Starting server");
 	}
 
 	protected override void OnExit(ExitEventArgs e)

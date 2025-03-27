@@ -7,83 +7,112 @@
       mc:Ignorable="d" 
       d:DesignHeight="1080" d:DesignWidth="1920"
       Title="ConnectingPage"
-      Background="White">
+      Background="White"
+      Loaded="ConnectingPage_Loaded">
 
     <!-- Main Grid container for all elements -->
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="10*"/>
+        </Grid.RowDefinitions>
+
         <!-- ============================================== -->
         <!-- Decorative Paint Splash Images (Background) -->
         <!-- ============================================== -->
+        <Grid Grid.RowSpan="5">
+            <!-- Bottom-left paint splash 1 -->
+            <Image  Source="/View/Resources/Paint_splash1.png"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left" 
+                    Height="562" 
+                    Margin="-1,0,0,-1" 
+                    Width="561"/>
 
-        <!-- Bottom-left paint splash 1 -->
-        <Image  Source="/View/Resources/Paint_splash1.png"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Left" 
-                Height="562" 
-                Margin="-1,0,0,-1" 
-                Width="561"/>
+            <!-- Centered-left paint splash 3 -->
+            <Image Source="/View/Resources/Paint_splash3.png"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left" 
+                    Height="474" 
+                    Margin="86,0,0,606" 
+                    Width="497"/>
 
-        <!-- Centered-left paint splash 3 -->
-        <Image Source="/View/Resources/Paint_splash3.png"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Left" 
-                Height="474" 
-                Margin="86,0,0,606" 
-                Width="497"/>
+            <!-- Bottom-right paint splash 4 -->
+            <Image Source="/View/Resources/Paint_splash4.png"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Left" 
+                    Height="512" 
+                    Margin="913,0,0,-1" 
+                    Width="578"/>
 
-        <!-- Bottom-right paint splash 4 -->
-        <Image Source="/View/Resources/Paint_splash4.png"
-                VerticalAlignment="Bottom"
-                HorizontalAlignment="Left" 
-                Height="512" 
-                Margin="913,0,0,-1" 
-                Width="578"/>
-
-        <!-- Top-right paint splash 2 -->
-        <Image Source="/View/Resources/Paint_splash2.png"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left" 
-               Height="562" 
-               Margin="1359,0,0,319" 
-               Width="561"/>
-
-
-        <!-- ============================================== -->
+            <!-- Top-right paint splash 2 -->
+            <Image Source="/View/Resources/Paint_splash2.png"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left" 
+                   Height="562" 
+                   Margin="1359,0,0,319" 
+                   Width="561"/>
+        </Grid>
+                <!-- ============================================== -->
         <!-- UI Elements (Labels and Output Fields) -->
         <!-- ============================================== -->
 
         <!-- Main Title: "Art Wars" -->
-        <Label Content="Art Wars" 
+        <Viewbox Grid.Row="0">
+            <Label Content="Art Wars" 
                FontFamily="Algerian" 
                FontSize="96"
                HorizontalAlignment="Center" 
-               VerticalAlignment="Top" Margin="0,63,0,0" Width="486"/>
-
-        <!-- Subtitle/Instruction Text -->
-        <Label 
+               VerticalAlignment="Stretch"
+               Grid.Row="0"
+               VerticalContentAlignment="Center"
+               />
+        </Viewbox>
+                <!-- Subtitle/Instruction Text -->
+        <Viewbox Grid.Row="1">
+            <Label 
             Content="Join Art Wars Session by entering our Server IP, and Session code!!!" 
             FontFamily="Roboto" 
             FontSize="48"
             HorizontalAlignment="Center" 
-            VerticalAlignment="Top" 
-            Margin="0,200,0,0" 
-            Width="1430"/>
+            VerticalAlignment="Stretch" 
+            Margin="250,0"
+                />
+        </Viewbox>
 
-        <!-- IP Output Section -->
-        <Label 
+        <Viewbox Grid.Row="2"
+                 StretchDirection="DownOnly">
+            <StackPanel>
+                <!-- IP Output Section -->
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Stretch"
+                    >
+
+                    <Label 
             Content="IP:" 
             FontFamily="Roboto" 
             FontSize="48"
-            HorizontalAlignment="Left" 
+            HorizontalAlignment="Center" 
             VerticalAlignment="Top" 
-            Margin="746,411,0,0" 
+            Margin="0,0,0,0" 
             Width="67" 
             Height="63"
-            VerticalContentAlignment="Center"/>
+            VerticalContentAlignment="Center"
+            />
 
-        <TextBox 
-            HorizontalAlignment="Left" 
-            Margin="818,411,0,0" 
+                    <TextBox 
+            x:Name="ip_textbox"
+            IsReadOnly="True"
+            HorizontalAlignment="Center"
             TextWrapping="Wrap" 
             Text="000.000.000.000"
             FontFamily="Roboto" 
@@ -91,31 +120,62 @@
             VerticalAlignment="Top" 
             Width="354" 
             Height="63"
-            VerticalContentAlignment="Bottom"/>
+            VerticalContentAlignment="Bottom"
+            HorizontalContentAlignment="Center"/>
+                    
+                </StackPanel>
 
-        <!-- Session Code Output Section -->
-        <Label 
+
+                <!-- Session Code Output Section -->
+                <StackPanel
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Stretch">
+                    <Label 
             Content="Session Code:" 
             FontFamily="Roboto" 
             FontSize="48"
-            HorizontalAlignment="Left" 
+            HorizontalAlignment="Stretch" 
             VerticalAlignment="Top" 
-            Margin="504,540,0,0" 
             Width="309" 
             Height="64"
             VerticalContentAlignment="Center"/>
 
-        <TextBox 
-            HorizontalAlignment="Left" 
-            Margin="818,541,0,0" 
+                    <TextBox 
+            x:Name="session_code_box"
+            IsReadOnly="True"
+            HorizontalAlignment="Stretch" 
             TextWrapping="Wrap" 
             Text="0000"
             FontFamily="Roboto" 
             FontSize="48"
             VerticalAlignment="Top" 
-            Width="354" 
+ 
             Height="63"
             VerticalContentAlignment="Center"
             HorizontalContentAlignment="Center"/>
+
+                </StackPanel>
+            </StackPanel>
+        </Viewbox>
+
+        <Viewbox StretchDirection="DownOnly"
+            Grid.Row="3"
+            >
+            <Button 
+                Width="400"
+                Height="100"
+                Background="DarkSeaGreen"
+                Click="start_button_click"
+                >
+
+                <Label
+                FontSize="50"
+                >
+                    START
+                </Label>
+
+            </Button>
+        </Viewbox>
     </Grid>
 </Page>

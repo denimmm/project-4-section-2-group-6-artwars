@@ -6,6 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
+using System.Windows;
+using System.Windows.Controls;
+using System.Diagnostics;
+
+
 
 namespace ArtWarsServer.Model
 {
@@ -24,14 +29,25 @@ namespace ArtWarsServer.Model
         //last player id
         public int PlayerID_Index { get; set; } //this is used to keep track of the last issued player id
 
+        public int CurrentRound;
+
         //prompt for the round
         public string prompt;
-        
+        //player chosen to write prompt
+        public Player ?chosenPlayer;
+
+        public Frame ?MainFrame {  get; set; }
+
+
+        //events
+        public event EventHandler PrompterChosen;
+
         //server config settings
         public ServerConfig serverConfig {get; private set;}
         
             public Server()
-        {
+            {
+
             //initialize players list
             Players = new List<Player>();
 
@@ -46,8 +62,14 @@ namespace ArtWarsServer.Model
             //code = MakeRoomCode();
             code = "1234";
 
+            CurrentRound = 0;
+
+            chosenPlayer = null;
+
             //initialize state
             state = new Connecting(this);
+
+
 
         }
 
@@ -70,11 +92,21 @@ namespace ArtWarsServer.Model
         private string GetIPAddress()
 		{
             string hostName = Dns.GetHostName();
+            var host = Dns.GetHostEntry(hostName);
+            //Old version: Returnd Ipv6 address
+            //string IP = Dns.GetHostEntry(hostName).AddressList[0].ToString();
 
-            string IP = Dns.GetHostEntry(hostName).AddressList[0].ToString();
-
-            return IP;
-		}
+            //New version: Return Ipv4 address
+            IPAddress[] Addresses = host.AddressList;
+            foreach (IPAddress ip in Addresses)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            throw new Exception("No network adapters with an IPv4 address in the system!");
+        }
 
         //makes a new room code with a random number
         public string MakeRoomCode()
@@ -95,6 +127,11 @@ namespace ArtWarsServer.Model
 
         public void Start()
         {
+            //Player testPlayer = new Player(new TcpClient(), this);
+            //testPlayer.Name = "Denim";
+            //AddPlayer(testPlayer);
+
+
             state.Start();
 
         }
@@ -104,6 +141,49 @@ namespace ArtWarsServer.Model
 
 
 
+        }
+
+        public void ResetGame()
+        {
+            //reset the states
+            Connecting.Reset();
+            WritingPrompt.Reset();
+            Drawing.Reset();
+            Voting.Reset();
+            Results.Reset();
+
+        }
+
+        //start the next round of the game
+        public void nextRound()
+        {
+            
+
+        }
+
+        //send a message to all players
+        public async Task BroadcastToPlayers(Packet packet)
+        {
+
+            try
+            {
+                // Send data to all players asynchronously and await all tasks
+                var sendTasks = Players.Select(p => p.sendDataAsync(packet));
+                await Task.WhenAll(sendTasks);
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error broadcasting packet: {ex.Message}");
+            }
+        }
+
+
+        public void UpdatePrompter(Player p)
+        {
+
+            chosenPlayer = p; 
+
+            PrompterChosen?.Invoke(this, EventArgs.Empty);
         }
     }
 }

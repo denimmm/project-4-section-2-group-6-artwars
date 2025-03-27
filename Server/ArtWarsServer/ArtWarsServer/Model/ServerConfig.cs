@@ -18,10 +18,12 @@ namespace ArtWarsServer.Model
         public int Results_Time;
         public int ROOM_CODE_MAX_NUMBER;
         public int bufferSize;
+        public int NumberOfRounds;
+        public string ImageFolder;
 
 		public ServerConfig()
         {
-            Port = 25565;
+            Port = 27000;
             Max_Players = 4;
             Min_Players = 3;
             Prompt_Writing_Time = 60;
@@ -30,6 +32,8 @@ namespace ArtWarsServer.Model
             Results_Time = 30;
 			ROOM_CODE_MAX_NUMBER = 10000;
             bufferSize = 4096;
+            NumberOfRounds = 0;
+            ImageFolder = "Images";
 		}
 
     }
