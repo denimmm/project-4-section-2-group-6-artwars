@@ -8,25 +8,27 @@
         Title="DrawingWindow" Height="450" Width="800">
     <Grid>
         <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Background="LightGray" Width="100">
-            <!-- <TextBlock Text="Drawing Tools" FontWeight="Bold" Margin="5" HorizontalAlignment="Center"/>
-            <Button Content="Black" Click="Black_Click" Background="Black" Foreground="White" Margin="2"></Button>
-            <Button Content="Red" Click="Red_Click" Background="Red" Foreground="White" Margin="2"></Button>
-            <Button Content="Blue" Click="Blue_Click" Background="Blue" Foreground="White" Margin="2"></Button>
-            <Button Content="Green" Click="Green_Click" Background="Green" Foreground="White" Margin="2"></Button>
-            <Button Content="Yellow" Click="Yellow_Click" Background="Yellow" Foreground="Black" Margin="2"></Button>
-            <Button Content="Brown" Click="Brown_Click" Background="Brown" Foreground="White" Margin="2"></Button>
-            <Button Content="Pink" Click="Pink_Click" Background="Pink" Foreground="White" Margin="2"></Button>
-            <Button Content="Purple" Click="Purple_Click" Background="Purple" Foreground="White" Margin="2"></Button>
-            <Button Content="Orange" Click="Orange_Click" Background="Orange" Foreground="White" Margin="2"></Button>
-            <Button Content="Gray" Click="Gray_Click" Background="Gray" Foreground="White" Margin="2"></Button>
-            <Button Content="Draw" Click="Draw_Click" Foreground="Gray" Margin="2"></Button>
-            <Button Content="Erase" Click="Erase_Click" Foreground="Gray" Margin="2"></Button>
-            <Button Content="Clear" Click="Clear_Click" Foreground="Gray" Margin="2"></Button> -->
-            <!--<Button Content="Submit" Click="Submit_Click" Foreground="Gray" Margin="2"></Button>-->
+            <TextBlock Text="Drawing Tools" FontWeight="Bold" Margin="5" HorizontalAlignment="Center"/>
+            <Button Content="Black" Click="ColorButton_Click" Background="Black" Foreground="White" Margin="2" Tag="Black"/>
+            <Button Content="Red" Click="ColorButton_Click" Background="Red" Foreground="White" Margin="2" Tag="Red"/>
+            <Button Content="Blue" Click="ColorButton_Click" Background="Blue" Foreground="White" Margin="2" Tag="Blue"/>
+            <Button Content="Green" Click="ColorButton_Click" Background="Green" Foreground="White" Margin="2" Tag="Green"/>
+            <Button Content="Yellow" Click="ColorButton_Click" Background="Yellow" Foreground="Black" Margin="2" Tag="Yellow"/>
+            <Button Content="Brown" Click="ColorButton_Click" Background="Brown" Foreground="White" Margin="2" Tag="Brown"/>
+            <Button Content="Pink" Click="ColorButton_Click" Background="Pink" Foreground="White" Margin="2" Tag="Pink"/>
+            <Button Content="Purple" Click="ColorButton_Click" Background="Purple" Foreground="White" Margin="2" Tag="Purple"/>
+            <Button Content="Orange" Click="ColorButton_Click" Background="Orange" Foreground="White" Margin="2" Tag="Orange"/>
+            <Button Content="Gray" Click="ColorButton_Click" Background="Gray" Foreground="White" Margin="2" Tag="Gray"/>
+            <Button Content="Erase" Click="Erase_Click" Foreground="Black" Margin="2"/>
+            <Button Content="Clear" Click="Clear_Click" Foreground="Black" Margin="2"/>
+
+            <!-- Brush Size Slider -->
+            <TextBlock Text="Brush Size" FontWeight="Bold" Margin="5" HorizontalAlignment="Center"/>
+            <Slider x:Name="BrushSizeSlider" Minimum="1" Maximum="20" Value="3" TickPlacement="BottomRight" TickFrequency="1"
+                    ValueChanged="BrushSizeSlider_ValueChanged"/>
         </StackPanel>
 
         <local:DrawingCanvas x:Name="CanvasArea" Background="White" Margin="10,10,105,10"/>
-
-
     </Grid>
 </Window>
+
