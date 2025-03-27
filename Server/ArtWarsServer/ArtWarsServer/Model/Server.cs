@@ -61,7 +61,7 @@ namespace ArtWarsServer.Model
             Players.Add(player);
         }
 
-        void RemovePlayer(Player p)
+        public void RemovePlayer(Player p)
         {
             Players.Remove(p);
         }
@@ -77,12 +77,19 @@ namespace ArtWarsServer.Model
 		}
 
         //makes a new room code with a random number
-        private string MakeRoomCode()
+        public string MakeRoomCode()
         {
             Random random = new Random();
 
             //trim to 4 digits or whatever ROOM_CODE_MAX_NUMBER is
             return (random.Next() % serverConfig.ROOM_CODE_MAX_NUMBER).ToString("D4");
+        }
+
+        public bool verifyRoomCode(string roomCode)
+        {
+            if (this.code == roomCode) return true;
+
+            return false;
         }
 
 
