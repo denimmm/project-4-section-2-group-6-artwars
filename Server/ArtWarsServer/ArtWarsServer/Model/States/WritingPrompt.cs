@@ -61,6 +61,8 @@ namespace ArtWarsServer.Model
             await server.BroadcastToPlayers(PromptRequest);
 
 
+            //Move to DrawingScreen
+            server.MainFrame?.Navigate(new View.DrawingPage());
             //go to the next state
             NextState();
 

@@ -23,6 +23,7 @@ namespace ArtWarsServer.View
         public DrawingPage()
         {
             InitializeComponent();
+            this.DrawingPromptPage_UpdatePrompt();
         }
         public void DrawingPromptPage_UpdatePrompt()
         {
