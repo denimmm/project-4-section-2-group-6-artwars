@@ -12,7 +12,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using System.ComponentModel;
 
 namespace ArtWarsClientWPF
 {
@@ -25,7 +25,9 @@ namespace ArtWarsClientWPF
         private TcpHandler _handler;
         private dynamic _packet;
 
-  
+        // Add a property for DrawingPrompt
+        public string DrawingPrompt;
+
         public DrawingWindow(TcpHandler handler, Client client, dynamic packet)
         {
             _handler = handler;
@@ -33,7 +35,8 @@ namespace ArtWarsClientWPF
             _packet = packet;
             InitializeComponent();
             Background = Brushes.White;
-         
+            DrawingPrompt = "Draw you master pice";// packet.prompt;
+
         }
         private void ColorButton_Click(object sender, RoutedEventArgs e)
         {
@@ -55,8 +58,16 @@ namespace ArtWarsClientWPF
 
         private void BrushSizeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            CanvasArea.SetBrushThickness(e.NewValue);
+            if (CanvasArea != null)
+            {
+                CanvasArea.SetBrushThickness(e.NewValue);
+            }
+            else
+            {
+                // Handle the null case, e.g., log an error or initialize CanvasArea
+            }
         }
+
     }
 }
 
