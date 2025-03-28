@@ -10,80 +10,101 @@
       Background="White">
 
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="5*"/>
+
+        </Grid.RowDefinitions>
+
         <!-- ============================================== -->
-        <!-- Background Images -->
+        <!-- Decorative Paint Splash Images (Background) -->
         <!-- ============================================== -->
-        <Image Source="/View/Resources/Paint_splash1.png"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left" 
-               Height="562" 
-               Margin="-1,0,0,-1" 
-               Width="561"/>
+        <Grid Grid.RowSpan="5">
+            <!-- Bottom-left paint splash 1 -->
+            <Image  Source="/View/Resources/Paint_splash1.png"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left" 
+                Height="562" 
+                Margin="-1,0,0,-1" 
+                Width="561"/>
 
-        <Image Source="/View/Resources/Paint_splash3.png"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left" 
-               Height="474" 
-               Margin="86,0,0,606" 
-               Width="497"/>
+            <!-- Centered-left paint splash 3 -->
+            <Image Source="/View/Resources/Paint_splash3.png"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left" 
+                Height="474" 
+                Margin="86,0,0,606" 
+                Width="497"/>
 
-        <Image Source="/View/Resources/Paint_splash4.png"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left" 
-               Height="512" 
-               Margin="913,0,0,-1" 
-               Width="578"/>
+            <!-- Bottom-right paint splash 4 -->
+            <Image Source="/View/Resources/Paint_splash4.png"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Left" 
+                Height="512" 
+                Margin="913,0,0,-1" 
+                Width="578"/>
 
-        <Image Source="/View/Resources/Paint_splash2.png"
+            <!-- Top-right paint splash 2 -->
+            <Image Source="/View/Resources/Paint_splash2.png"
                VerticalAlignment="Bottom"
                HorizontalAlignment="Left" 
                Height="562" 
                Margin="1359,0,0,319" 
                Width="561"/>
-
+        </Grid>
         <!-- ============================================== -->
         <!-- Main Content -->
         <!-- ============================================== -->
-        <Label Content="Art Wars" 
-               FontFamily="Algerian" 
-               FontSize="96"
-               HorizontalAlignment="Center" 
-               VerticalAlignment="Top" 
-               Margin="0,63,0,0" 
-               Width="486"/>
-        <Rectangle Fill="#FFF0F0F0"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Top"
-                   Width="1360"
-                   Height="554"
-                   RadiusX="20"
-                   RadiusY="20"
-                   Margin="0,246,0,0"/>
-        <Label Content="Wait a little..."
-               Margin="0,268,0,0"
-               VerticalAlignment="Top"
-               HorizontalAlignment="Center"
-               FontFamily="Roboto"
-               FontSize="48"
-               />
+        <Viewbox Grid.Row="0">
+            <Label Content="Art Wars" 
+                FontFamily="Algerian" 
+                FontSize="96"
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Stretch"
+                Grid.Row="0"
+                VerticalContentAlignment="Center"
+   />
+        </Viewbox>
+        <!-- Combined elements in one Viewbox -->
+        <Viewbox Grid.Row="1" StretchDirection="DownOnly">
+            <Grid Width="1200" Height="554">
+                <!-- Base dimensions -->
+                <!-- Background Rectangle -->
+                <Rectangle Fill="WhiteSmoke"
+                           RadiusX="20"
+                           RadiusY="20"
+                           Width="1200"
+                           Height="554"/>
 
-        <!-- Background Panel -->
+                <!-- Wait Label (centered) -->
+                <Label Content="Wait a little..."
+                       FontFamily="Roboto"
+                       FontSize="48"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="0,20"/>
 
-        <!-- Scrolling TextBox -->
-        <TextBox x:Name="PlayerTextBox"
-                 IsReadOnly="True"
-                 FontFamily="Roboto"
-                 FontSize="36"
-                 TextWrapping="Wrap"
-                 VerticalScrollBarVisibility="Auto"
-                 HorizontalContentAlignment="Center"
-                 HorizontalAlignment="Center"
-                 VerticalAlignment="Center"
-                 Width="1274"
-                 Height="399"
-                 Background="GhostWhite"
-                 BorderThickness="0"
-                 Padding="20"
-                 Text="Someone is writing a prompt"/>
+                <!-- TextBox (centered below label) -->
+                <TextBox x:Name="PlayerTextBox"
+                         IsReadOnly="True"
+                         FontFamily="Roboto"
+                         FontSize="36"
+                         TextWrapping="Wrap"
+                         VerticalScrollBarVisibility="Auto"
+                         HorizontalContentAlignment="Center"
+                         Width="1100"
+                         Height="400"
+                         Background="GhostWhite"
+                         BorderThickness="0"
+                         Padding="20"
+                         Text="Someone is writing a prompt"
+                         Margin="0,80,0,0"/>
+            </Grid>
+        </Viewbox>
     </Grid>
 </Page>

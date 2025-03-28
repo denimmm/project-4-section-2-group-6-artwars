@@ -10,80 +10,95 @@
       Background="White">
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <!-- Title area -->
+            <RowDefinition Height="20*"/>
+            <!-- Main content -->
+            <RowDefinition Height="5*"/>
+            <!-- Spacing -->
+        </Grid.RowDefinitions>
+
         <!-- ============================================== -->
         <!-- Background Images -->
         <!-- ============================================== -->
-        <Image Source="/View/Resources/Paint_splash1.png"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left" 
-               Height="562" 
-               Margin="-1,0,0,-1" 
-               Width="561"/>
+        <Grid Grid.RowSpan="5">
+            <Image Source="/View/Resources/Paint_splash1.png"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left" 
+                   Height="562" 
+                   Margin="-1,0,0,-1" 
+                   Width="561"/>
 
-        <Image Source="/View/Resources/Paint_splash3.png"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left" 
-               Height="474" 
-               Margin="86,0,0,606" 
-               Width="497"/>
+            <Image Source="/View/Resources/Paint_splash3.png"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left" 
+                   Height="474" 
+                   Margin="86,0,0,606" 
+                   Width="497"/>
 
-        <Image Source="/View/Resources/Paint_splash4.png"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left" 
-               Height="512" 
-               Margin="913,0,0,-1" 
-               Width="578"/>
+            <Image Source="/View/Resources/Paint_splash4.png"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left" 
+                   Height="512" 
+                   Margin="913,0,0,-1" 
+                   Width="578"/>
 
-        <Image Source="/View/Resources/Paint_splash2.png"
-               VerticalAlignment="Bottom"
-               HorizontalAlignment="Left" 
-               Height="562" 
-               Margin="1359,0,0,319" 
-               Width="561"/>
+            <Image Source="/View/Resources/Paint_splash2.png"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left" 
+                   Height="562" 
+                   Margin="1359,0,0,319" 
+                   Width="561"/>
+        </Grid>
 
         <!-- ============================================== -->
         <!-- Main Content -->
         <!-- ============================================== -->
-        <Label Content="Art Wars" 
-               FontFamily="Algerian" 
-               FontSize="96"
-               HorizontalAlignment="Center" 
-               VerticalAlignment="Top" 
-               Margin="0,63,0,0" 
-               Width="486"/>
-        <Rectangle Fill="#FFF0F0F0"
+
+        <!-- Title -->
+        <Viewbox Grid.Row="0" StretchDirection="DownOnly">
+            <Label Content="Art Wars" 
+                   FontFamily="Algerian"
+                   FontSize="96"
                    HorizontalAlignment="Center"
-                   VerticalAlignment="Top"
-                   Width="1360"
-                   Height="554"
-                   RadiusX="20"
-                   RadiusY="20"
-                   Margin="0,246,0,0"/>
-        <Label Content="You need to draw:"
-               Margin="0,268,0,0"
-               VerticalAlignment="Top"
-               HorizontalAlignment="Center"
-               FontFamily="Roboto"
-               FontSize="48"
-               />
+                   VerticalAlignment="Center"/>
+        </Viewbox>
 
-        <!-- Background Panel -->
+        <!-- Combined Content Container -->
+        <Viewbox Grid.Row="1" StretchDirection="DownOnly">
+            <Grid Width="1360" Height="554">
+                <!-- Background Panel -->
+                <Rectangle Fill="#FFF0F0F0"
+                           RadiusX="20"
+                           RadiusY="20"
+                           Width="1200"
+                           Height="554"/>
 
-        <!-- Scrolling TextBox -->
-        <TextBox x:Name="promptTextBox"
-                 IsReadOnly="True"
-                 FontFamily="Roboto"
-                 FontSize="36"
-                 TextWrapping="Wrap"
-                 VerticalScrollBarVisibility="Auto"
-                 HorizontalContentAlignment="Center"
-                 HorizontalAlignment="Center"
-                 VerticalAlignment="Center"
-                 Width="1274"
-                 Height="399"
-                 Background="GhostWhite"
-                 BorderThickness="0"
-                 Padding="20"
-                 Text="A prompt will apear soon..."/>
+                <!-- Instruction Label -->
+                <Label Content="You need to draw:"
+                       FontFamily="Roboto"
+                       FontSize="48"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"
+                       Margin="0,40"/>
+
+                <!-- Prompt TextBox -->
+                <TextBox x:Name="promptTextBox"
+                         IsReadOnly="True"
+                         FontFamily="Roboto"
+                         FontSize="36"
+                         TextWrapping="Wrap"
+                         VerticalScrollBarVisibility="Auto"
+                         HorizontalContentAlignment="Center"
+                         Width="1100"
+                         Height="400"
+                         Background="GhostWhite"
+                         BorderThickness="0"
+                         Padding="20"
+                         Text="A prompt will appear soon..."
+                         Margin="0,80,0,0"/>
+            </Grid>
+        </Viewbox>
     </Grid>
 </Page>
