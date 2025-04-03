@@ -42,6 +42,8 @@ namespace ArtWarsClientWPF
             if (bytesRec > 0)
             {
                 WaitingPacket packet = new WaitingPacket(bytes);
+                //change type to propmpt
+                _client.state = packet.type;
                 //got to drawing window
                 if (packet.prompt != null)
                 {
