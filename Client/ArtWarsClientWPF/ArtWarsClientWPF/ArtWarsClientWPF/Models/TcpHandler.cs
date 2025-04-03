@@ -47,10 +47,5 @@ namespace ArtWarsClientWPF.Models
                 }
             }
         }
-        public void Close()
-        {
-            _stream.Close();
-            _client.Close();
-        }
     }
 }
