@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="UnitTests\" />
     <Folder Include="Resources\" />
   </ItemGroup>
 
