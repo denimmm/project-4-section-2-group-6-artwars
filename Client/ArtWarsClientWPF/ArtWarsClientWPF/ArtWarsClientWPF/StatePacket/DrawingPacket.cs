@@ -1,97 +1,84 @@
-﻿using ArtWarsClientWPF.Models;
-using System;
+﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
+using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
-
+using System.Windows.Media.Imaging;
+using ArtWarsClientWPF.Models;
 namespace ArtWarsClientWPF.StatePacket
 {
-    public class WaitingPacket : Packet
+    internal class DrawingPacket : Packet
     {
         public string type { get; }
         public string roomCode { get; }
-        public string prompt { get; set; }
-        public int playerId { get; }
+        public byte[] image { get; set; }
+        public string playerId { get; }
         public string jsonString { get; set; } = string.Empty;
 
-        //make new packet from received data
-        //when you use this, do not forget to check if type == failed.
         [JsonConstructor]
-        public WaitingPacket(string type, string roomCode, string prompt, int playerId)
+        public DrawingPacket(string type, string roomCode, byte[] image, string playerId)
         {
             this.type = type;
             this.roomCode = roomCode;
-            this.prompt = prompt;
+            this.image = image;
             this.playerId = playerId;
         }
-        public WaitingPacket(byte[] packet)
+        //make a packet to send
+        public DrawingPacket(byte[] data, Client client)
+        {
+            //get the size
+
+            type = "drawing";
+            roomCode = client.roomCode;
+            image = data;
+            playerId = client.player.Id;
+
+            var json = new {
+
+                type = type,
+                roomCode = roomCode,
+                image = image,
+                playerId = playerId
+            };
+            jsonString = JsonSerializer.Serialize(json);
+
+            size = Encoding.UTF8.GetByteCount(jsonString) + HEADER_SIZE;
+
+        }
+        //make new packet from received data
+        public DrawingPacket(byte[] packet)
         {
             //get the size
             size = BitConverter.ToInt32(packet, 0); //get int from the first 4 bytes
             string json = Encoding.UTF8.GetString(packet, 4, size - 4);
-
             try
             {
-
                 //make a connectingPacket object and copy its data lol
-                var obj = JsonSerializer.Deserialize<WaitingPacket>(json);
+                var obj = JsonSerializer.Deserialize<DrawingPacket>(json);
                 if (obj != null)
                 {
                     type = obj.type;
                     roomCode = obj.roomCode;
-                    prompt = obj.prompt;
+                    image = obj.image;
                     playerId = obj.playerId;
                 }
                 else
                 {
                     type = "failed";
                     roomCode = "-1";
-                    prompt = "";
-                    playerId = -1;
+                    image = null;
+                    playerId = "-1";
                 }
-
             }
             catch (JsonException ex)
             {
-                Debug.WriteLine($"Error deserializing JSON: {ex.Message}");
-                type = "failed";
-                roomCode = "-1";
-                prompt = "";
-                playerId = -1;
+                Console.WriteLine($"Error deserializing JSON: {ex.Message}");
             }
-
-            jsonString = json;
         }
-
-        //make new packet to send
-        public WaitingPacket(string roomCode, string prompt, string playerId)
-        {
-            this.type = "prompt";
-            this.roomCode = roomCode;
-            this.prompt = prompt;
-            this.playerId = int.Parse(playerId);
-
-            var json = new
-            {
-                type = this.type,
-                roomCode = this.roomCode,
-                prompt = this.prompt,
-                playerId = this.playerId
-            };
-
-            //serialize the json into a string
-            jsonString = JsonSerializer.Serialize(json);
-
-            //set size of packet
-            size = HEADER_SIZE + Encoding.UTF8.GetBytes(jsonString).Length;
-
-        }
-
-
         public byte[] Serialize()
         {
 
@@ -109,3 +96,5 @@ namespace ArtWarsClientWPF.StatePacket
 
     }
 }
+
+   

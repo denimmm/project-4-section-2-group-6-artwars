@@ -10,6 +10,9 @@
             <TextBlock Text="Room Code:" Margin="0,10,0,0" />
             <TextBox x:Name="RoomCodeBox" Width="200" />
 
+            <TextBlock Text="IP Address:" Margin="0,10,0,0" />
+            <TextBox x:Name="IpCodeBox" Width="200" />
+
             <Button Content="Connect" Width="100" Margin="0,10,0,0"
                     Click="ConnectButton_Click" />
 

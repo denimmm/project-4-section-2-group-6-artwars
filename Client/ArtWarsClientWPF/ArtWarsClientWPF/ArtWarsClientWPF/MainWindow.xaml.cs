@@ -22,6 +22,7 @@ namespace ArtWarsClientWPF
         private async void ConnectButton_Click(object sender, RoutedEventArgs e)
         {
             Client client = new Client(PlayerNameBox.Text, RoomCodeBox.Text);
+            string Ip = IpCodeBox.Text;
             TcpHandler tcpHandler = new TcpHandler();
             if (string.IsNullOrWhiteSpace(client.player.Name) || string.IsNullOrWhiteSpace(client.roomCode))
             {

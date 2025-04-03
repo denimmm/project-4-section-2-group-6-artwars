@@ -3,7 +3,8 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Input;
 using System.Windows;
-
+using System.Windows.Media.Imaging;
+using System.IO;
 namespace ArtWarsClientWPF
 {
     public class DrawingCanvas : Canvas
@@ -62,6 +63,21 @@ namespace ArtWarsClientWPF
         private void Canvas_MouseUp(object sender, MouseButtonEventArgs e)
         {
             polyline = null;
+        }
+        // Add a method to save the canvas to a file
+        public void SaveCanvas(string filename, int quality = 90)
+        {
+            var renderBitmap = new RenderTargetBitmap((int)ActualWidth, (int)ActualHeight, 96d, 96d, PixelFormats.Pbgra32);
+            renderBitmap.Render(this);
+
+            var encoder = new JpegBitmapEncoder();
+            encoder.QualityLevel = quality;
+            encoder.Frames.Add(BitmapFrame.Create(renderBitmap));
+
+            using (var fileStream = new FileStream(filename, FileMode.Create))
+            {
+                encoder.Save(fileStream);
+            }
         }
     }
 }
