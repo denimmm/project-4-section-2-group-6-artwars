@@ -14,7 +14,7 @@ namespace ArtWarsServer.Model.Packets
         public string roomCode { get; }
         public byte[] image { get; set; }
         public string playerId { get; }
-        public string jsonString { get; set; } = string.Empty;
+        //public string jsonString { get; set; } = string.Empty;
 
 
         [JsonConstructor]
@@ -38,7 +38,8 @@ namespace ArtWarsServer.Model.Packets
                 {
                     type = obj.type;
                     roomCode = obj.roomCode;
-                    image = Convert.FromBase64String(obj.jsonString); // Convert from Base64
+                    image = obj.image;
+                    //image = Convert.FromBase64String(obj.jsonString); // Convert from Base64
                     playerId = obj.playerId;
                 }
                 else
@@ -53,7 +54,8 @@ namespace ArtWarsServer.Model.Packets
         }
         public override byte[] Serialize()
         {
-            byte[] jsonBytes = Encoding.UTF8.GetBytes(jsonString);
+            string json = JsonSerializer.Serialize(this);
+            byte[] jsonBytes = Encoding.UTF8.GetBytes(json);
             byte[] serializedData = new byte[jsonBytes.Length + HEADER_SIZE];
 
             Buffer.BlockCopy(BitConverter.GetBytes(serializedData.Length), 0, serializedData, 0, HEADER_SIZE);

@@ -109,9 +109,9 @@ namespace ArtWarsClientWPF
             _drawingPacket = new DrawingPacket(data, _client);
             await _handler.SendPacket(_drawingPacket.Serialize());
 
-            // go to voting screen
-            VotingWindow votingWindow = new VotingWindow(_handler, _client);
-            votingWindow.Show();
+            // go to waiting to vote screen
+            VoteWaitingWindow voteWaitingWindow = new VoteWaitingWindow(_handler, _client /*_drawingPacket*/);
+            voteWaitingWindow.Show();
             this.Close();
         }
        
