@@ -19,6 +19,9 @@
     <Compile Update="ResultWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="VoteWaitingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="VotingWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ResultWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="VoteWaitingWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="VotingWindow.xaml">
