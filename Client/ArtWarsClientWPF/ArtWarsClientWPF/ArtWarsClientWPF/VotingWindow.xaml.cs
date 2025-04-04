@@ -83,7 +83,7 @@ namespace ArtWarsClientWPF
             if (image == null && drawingPacketSend != null && drawingPacketSend.Count > _currentImageIndex)
             {
                 //view current image
-                Image1.Source = _images[_currentImageIndex];
+                Image1.Source =image;
 
             }
         }
@@ -122,6 +122,10 @@ namespace ArtWarsClientWPF
             // Disable the vote button to stop vote button from being pressed multiple times
             VoteButton.IsEnabled = false;
             MessageBox.Show($"Vote successful");
+            //got to ResultsWindow
+            ResultWindow resultsWindow = new ResultWindow(_handler, _client);
+            resultsWindow.Show();
+            this.Close();
         }
     }
 }
