@@ -27,10 +27,12 @@ namespace ArtWarsClientWPF
         private BitmapImage[] _images;
         private int _currentImageIndex = 0;
         private List <DrawingPacket> drawingPacketSend;
-        public VotingWindow(TcpHandler tcpHandler, Client client)
+        public VotingWindow(TcpHandler tcpHandler, Client client, DrawingPacket firstPacketForVote)
         {
             _handler = tcpHandler;
             _client = client;
+            drawingPacketSend = new List<DrawingPacket>();
+            drawingPacketSend.Add(firstPacketForVote);
             InitializeComponent();
       
             _ = ReceiveImagesFromServerAsync();
@@ -39,7 +41,7 @@ namespace ArtWarsClientWPF
         {
             //could be less or more than four images
 
-            _images = new BitmapImage[4];
+            //_images = new BitmapImage[4];
             for (int i = 0; i < 4; i++)
             {
                 byte[] data = new byte[4048];
