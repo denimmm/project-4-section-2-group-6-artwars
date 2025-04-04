@@ -65,7 +65,7 @@ namespace ArtWarsServer.Model
             server.MainFrame?.Navigate(new View.DrawingPage());
             //go to the next state
             NextState();
-
+            await server.state.Start();
         }
 
         public void NextState()
