@@ -14,6 +14,7 @@ namespace ArtWarsServer.Model
         public Voting(Server server)
         {
             this.server = server;
+            server.MainFrame?.Navigate(new View.VotingPage());
         }
 
 

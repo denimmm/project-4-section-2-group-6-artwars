@@ -28,10 +28,7 @@ public partial class MainWindow : Window
 
     private void MainWindow_Loaded(object sender, RoutedEventArgs e)
     {
-        Player p1 = new Player(null, server);
-        p1.Name = "Player 1";
-        p1.ID = 1;
-        server.AddPlayer(p1);
+        
         MainFrame.Navigate(new View.ConnectingPage());// Navigating to the connecting page
 
 
