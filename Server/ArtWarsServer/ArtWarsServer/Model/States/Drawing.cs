@@ -29,8 +29,31 @@ namespace ArtWarsServer.Model
                 // Ensure the Images directory exists
                 Directory.CreateDirectory(server.serverConfig.ImageFolder);
 
+                //create a timer
+                TimeSpan DrawingTime = TimeSpan.FromSeconds(server.serverConfig.Drawing_Time);
+
                 // Create tasks to receive and save drawings from all players
-                var tasks = server.Players.Select(player => ReceiveAndSaveDrawingAsync(player)).ToList();
+                var tasks = server.Players.Select(async player =>
+                {
+
+                    var timeout = Task.Delay(DrawingTime);
+                    var task = ReceiveAndSaveDrawingAsync(player);
+
+                    var completedTask = await Task.WhenAny(task, timeout);
+
+                    if (completedTask == task)
+                    {
+                        await task;
+
+                    }
+                    else
+                    {
+                        Debug.WriteLine($"{player.Name} did not complete their drawing on time");
+
+                    }
+
+                }
+                ).ToList();
 
                 // Wait for all tasks to complete
                 await Task.WhenAll(tasks);
@@ -52,6 +75,7 @@ namespace ArtWarsServer.Model
             {
                 // Receive the packet data from the player
                 byte[] data = await player.ReceiveDataAsync();
+
                 if (data == null || data.Length == 0)
                 {
                     Debug.WriteLine($"No data received from player {player.ID}");
