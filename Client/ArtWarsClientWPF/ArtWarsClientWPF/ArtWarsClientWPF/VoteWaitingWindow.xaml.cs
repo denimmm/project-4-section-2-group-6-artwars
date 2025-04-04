@@ -46,6 +46,7 @@ namespace ArtWarsClientWPF
                 votingWindow.Show();
                 this.Close();
             }
+
             else
             {
                 //wait for the vote

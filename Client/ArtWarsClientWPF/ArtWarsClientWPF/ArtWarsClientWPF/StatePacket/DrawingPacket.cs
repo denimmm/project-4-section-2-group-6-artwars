@@ -11,7 +11,7 @@ using System.Windows.Media.Imaging;
 using ArtWarsClientWPF.Models;
 namespace ArtWarsClientWPF.StatePacket
 {
-    internal class DrawingPacket : Packet
+    public class DrawingPacket : Packet
     {
         public string type { get; }
         public string roomCode { get; }
