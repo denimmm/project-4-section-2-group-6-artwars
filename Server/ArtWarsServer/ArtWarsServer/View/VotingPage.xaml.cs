@@ -52,11 +52,11 @@ namespace ArtWarsServer.View
                 {
                     path = $"/View/Resources/NotFound.jpg";
                 }
-                
+
                 artworks.Add(new Artwork
                 {
                     ImagePath = path,
-                    PlayerName = server.Players[i].Name // player name
+                    PlayerName = server.Players[i].ID.ToString() // player name
                 });
             }
 
