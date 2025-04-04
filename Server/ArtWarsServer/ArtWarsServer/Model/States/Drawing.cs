@@ -68,7 +68,7 @@ namespace ArtWarsServer.Model
                 // Handle the error as needed
             }
         }
-
+        
         private async Task ReceiveAndSaveDrawingAsync(Player player)
         {
             try
