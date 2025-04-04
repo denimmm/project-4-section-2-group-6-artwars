@@ -12,7 +12,7 @@ namespace ArtWarsClientWPF.Models
 {
     public class TcpHandler
     {
-        private TcpClient _client;
+        public TcpClient _client;
         public NetworkStream _stream;
         public void Connect(String hostIP, int port)
         {
