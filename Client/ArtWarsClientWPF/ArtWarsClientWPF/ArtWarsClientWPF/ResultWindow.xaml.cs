@@ -1,5 +1,8 @@
-﻿using System;
+﻿using ArtWarsClientWPF.Models;
+using ArtWarsClientWPF.StatePacket;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +22,34 @@ namespace ArtWarsClientWPF
     /// </summary>
     public partial class ResultWindow : Window
     {
-        public ResultWindow()
+        private Client _client;
+        private TcpHandler _handler;
+        public ResultWindow(TcpHandler handler, Client client)
         {
+            _handler = handler;
+            _client = client;
             InitializeComponent();
+            //start receiving the result image from server
+            _ = ReceiveResultImageFromServerAsync();
+        }
+        //wait to receive the result image from server
+        private async Task ReceiveResultImageFromServerAsync()
+        {
+            byte[] data = new byte[4048];
+            int bytes = await _handler._stream.ReadAsync(data, 0, data.Length);
+            DrawingPacket drawingPacket = new DrawingPacket(data);
+            BitmapImage image = new BitmapImage();
+            image.BeginInit();
+            image.StreamSource = new MemoryStream(drawingPacket.image);
+            image.EndInit();
+            //display the image in the result image control
+            WinnerImage.Source = image;
+
+        }
+        //close the window
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
