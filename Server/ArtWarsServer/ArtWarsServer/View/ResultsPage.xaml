@@ -5,10 +5,104 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:ArtWarsServer.View"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="ResultsPage">
+      d:DesignHeight="1080" d:DesignWidth="1920"
+      Title="ResultsPage"
+      Background="White"
+      Loaded="Page_Loaded">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5*"/>
+            <!-- Title area -->
+            <RowDefinition Height="20*"/>
+            <!-- Winner content -->
+            <RowDefinition Height="5*"/>
+            <!-- Spacing -->
+        </Grid.RowDefinitions>
+
+        <!-- ============================================== -->
+        <!-- Background Images (Same as other pages) -->
+        <!-- ============================================== -->
+        <Grid Grid.RowSpan="3">
+            <!-- Bottom-left paint splash 1 -->
+            <Image Source="/View/Resources/Paint_splash1.png"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left" 
+                   Height="562" 
+                   Margin="-1,0,0,-1" 
+                   Width="561"/>
+
+            <!-- Centered-left paint splash 3 -->
+            <Image Source="/View/Resources/Paint_splash3.png"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left" 
+                   Height="474" 
+                   Margin="86,0,0,606" 
+                   Width="497"/>
+
+            <!-- Bottom-right paint splash 4 -->
+            <Image Source="/View/Resources/Paint_splash4.png"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left" 
+                   Height="512" 
+                   Margin="913,0,0,-1" 
+                   Width="578"/>
+
+            <!-- Top-right paint splash 2 -->
+            <Image Source="/View/Resources/Paint_splash2.png"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left" 
+                   Height="562" 
+                   Margin="1359,0,0,319" 
+                   Width="561"/>
+        </Grid>
+
+        <!-- ============================================== -->
+        <!-- Title (Same as other pages) -->
+        <!-- ============================================== -->
+        <Viewbox Grid.Row="0" StretchDirection="DownOnly">
+            <Label Content="Art Wars" 
+                   FontFamily="Algerian"
+                   FontSize="96"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"/>
+        </Viewbox>
+
+        <!-- ============================================== -->
+        <!-- Winner Display Content -->
+        <!-- ============================================== -->
+        <Viewbox Grid.Row="1" StretchDirection="DownOnly">
+            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                <!-- Winner Text -->
+                <TextBlock Text="The winner is..."
+                           FontSize="48"
+                           FontFamily="Roboto"
+                           Foreground="DarkSlateGray"
+                           HorizontalAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+                <!-- Winner Name -->
+                <Label x:Name="WinnerLabel"
+                       Content="{Binding Name}"
+                       FontSize="64"
+                       FontFamily="Roboto"
+                       FontWeight="Bold"
+                       Foreground="DarkBlue"
+                       HorizontalAlignment="Center"
+                       Margin="0,0,0,40"/>
+                <Border Margin="20" Background="WhiteSmoke" CornerRadius="20">
+                    <!-- Winner Image -->
+                <Image x:Name="WinnerImage"
+                       Source="{Binding Path}"
+                       MaxWidth="600"
+                       MaxHeight="600"
+                       Stretch="Uniform"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Center">
+                        
+                    </Image>
+                </Border>
+            </StackPanel>
+        </Viewbox>
     </Grid>
 </Page>

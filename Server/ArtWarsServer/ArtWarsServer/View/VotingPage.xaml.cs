@@ -14,7 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using System.IO;
+using Path= System.IO.Path; // To avoid confusion with System.Windows.Shapes.Path
 namespace ArtWarsServer.View
 {
     /// <summary>
@@ -37,15 +38,24 @@ namespace ArtWarsServer.View
         {
             // Get all existing images (you might want to modify this path)
             var artworks = new List<Artwork>();
-            Server server = ((App)Application.Current).server;  
+            Server server = ((App)Application.Current).server;
+
+            string imagesDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images"); // Change directory here if needed // Currently configured to Access Images folder in Base directory (Debug)
+
             for (int i = 0; i<server.Players.Count; i++)
             {
                 int playerId = server.Players[i].ID;
-                string path = $"/View/Resources/Images/{playerId}.jpg"; //Change to another path if needed
-                // In real application, check if file exists using File.Exists()
+
+                string path = Path.Combine(imagesDir,$"{playerId}.jpg"); 
+                
+                if (!File.Exists(path))
+                {
+                    path = $"/View/Resources/NotFound.jpg";
+                }
+                
                 artworks.Add(new Artwork
                 {
-                    ImagePath = path,// image path
+                    ImagePath = path,
                     PlayerName = server.Players[i].Name // player name
                 });
             }
