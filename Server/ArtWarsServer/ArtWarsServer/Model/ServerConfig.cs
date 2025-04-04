@@ -31,7 +31,7 @@ namespace ArtWarsServer.Model
             Drawing_Time = 360;
             Results_Time = 30;
 			ROOM_CODE_MAX_NUMBER = 10000;
-            bufferSize = 4096;
+            bufferSize = 50000;
             NumberOfRounds = 0;
             ImageFolder = "Images";
 		}
