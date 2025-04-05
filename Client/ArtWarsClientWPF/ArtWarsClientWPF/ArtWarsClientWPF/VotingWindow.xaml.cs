@@ -60,6 +60,8 @@ namespace ArtWarsClientWPF
                 //    break;
                 //}
             }
+            //Displays first image once its been received
+            updateImage();
         }
         private void updateImage()
         {
@@ -76,18 +78,21 @@ namespace ArtWarsClientWPF
             BitmapImage image = new BitmapImage();
             image.BeginInit();
             image.StreamSource = new MemoryStream(currentPacket.image);
+            image.CacheOption = BitmapCacheOption.OnLoad;
             image.EndInit();
+            image.Freeze();
             //if (_client.state == "Voting")
             //{
             //    //do not accept anymore
             //    break;
             //}
-            if (image == null && drawingPacketSend != null && drawingPacketSend.Count > _currentImageIndex)
-            {
-                //view current image
-                Image1.Source =image;
 
+            //fixed if condition from == to !=
+            if (image != null && drawingPacketSend != null && drawingPacketSend.Count > _currentImageIndex)
+            {
+                Image1.Source = image;
             }
+
         }
         private void LeftButton_Click(object sender, RoutedEventArgs e)
         {

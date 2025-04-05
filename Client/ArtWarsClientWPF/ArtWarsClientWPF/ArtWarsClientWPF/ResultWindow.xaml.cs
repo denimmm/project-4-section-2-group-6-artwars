@@ -35,17 +35,34 @@ namespace ArtWarsClientWPF
         //wait to receive the result image from server
         private async Task ReceiveResultImageFromServerAsync()
         {
-            byte[] data = new byte[4048];
-            int bytes = await _handler._stream.ReadAsync(data, 0, data.Length);
-            DrawingPacket drawingPacket = new DrawingPacket(data);
-            BitmapImage image = new BitmapImage();
-            image.BeginInit();
-            image.StreamSource = new MemoryStream(drawingPacket.image);
-            image.EndInit();
-            //display the image in the result image control
-            WinnerImage.Source = image;
+            try
+            {
+                byte[] data = new byte[4048];
+                int bytes = await _handler._stream.ReadAsync(data, 0, data.Length);
 
+                if (bytes > 0)
+                {
+                    DrawingPacket drawingPacket = new DrawingPacket(data);
+                    BitmapImage image = new BitmapImage();
+                    image.BeginInit();
+                    image.StreamSource = new MemoryStream(drawingPacket.image);
+                    image.CacheOption = BitmapCacheOption.OnLoad; // Optional but safe
+                    image.EndInit();
+                    image.Freeze(); // Makes it UI-thread safe
+
+                    WinnerImage.Source = image;
+                }
+                else
+                {
+                    MessageBox.Show("Failed to load winner image. Server returned no data.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error receiving result image: {ex.Message}");
+            }
         }
+
         //close the window
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
