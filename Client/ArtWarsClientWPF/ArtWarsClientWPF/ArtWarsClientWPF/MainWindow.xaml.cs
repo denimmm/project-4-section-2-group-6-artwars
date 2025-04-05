@@ -31,7 +31,7 @@ namespace ArtWarsClientWPF
             }
             try
             {
-                tcpHandler.Connect("127.0.0.1", 27000); // Local IP Port, change if needed
+                tcpHandler.Connect(Ip, 27000); // Local IP Port, change if needed
 
                 ConnectingPacket connectPacket = new ConnectingPacket(client.roomCode, client.player.Name);
                 await tcpHandler.SendPacket(connectPacket.Serialize()); // Await the async call

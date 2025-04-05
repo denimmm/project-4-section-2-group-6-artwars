@@ -55,6 +55,7 @@ namespace ArtWarsClientWPF
                 else
                 {
                     //go to waiting window
+                    await ReceivePacketAsysc();
 
                 }
             }

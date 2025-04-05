@@ -39,12 +39,12 @@ namespace ArtWarsClientWPF
             int bytes = await _handler._stream.ReadAsync(data, 0, data.Length);
             DrawingPacket drawingPacket = new DrawingPacket(data);
             //proceed to voting
-            if (drawingPacket.type == "Voting")
+            if (drawingPacket.type != null)
             {
                 //open the voting window
-                VotingWindow votingWindow = new VotingWindow(_handler, _client, drawingPacket);
-                votingWindow.Show();
-                this.Close();
+                //VotingWindow votingWindow = new VotingWindow(_handler, _client, drawingPacket);
+                //votingWindow.Show();
+                //this.Close();
             }
 
             else

@@ -46,6 +46,7 @@ namespace ArtWarsClientWPF
                     // if playerid == waiting.playerid
                     if (client.player.Id == waiting.playerId.ToString())
                     {
+                        client.state = waiting.type;
                         // go to prompt writing window
                         PromptWritingWindow promptWritingWindow = new PromptWritingWindow(tcpHandler, client);
                         promptWritingWindow.Show();
@@ -55,6 +56,7 @@ namespace ArtWarsClientWPF
                     else
                     {
                         // go to prompt window
+                        client.state = waiting.type;
                         PromptWaitingWindow promptWaitingWindow = new PromptWaitingWindow(tcpHandler, client);
                         promptWaitingWindow.Show();
                         this.Close();
