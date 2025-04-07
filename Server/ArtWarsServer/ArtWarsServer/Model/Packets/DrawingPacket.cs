@@ -15,7 +15,7 @@ namespace ArtWarsServer.Model.Packets
         public byte[] image { get; set; }
         public string playerId { get; }
         //public string jsonString { get; set; } = string.Empty;
-
+        
 
         [JsonConstructor]
         public DrawingPacket(string type, string roomCode, byte[] image, string playerId)

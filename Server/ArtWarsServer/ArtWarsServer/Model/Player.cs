@@ -7,6 +7,7 @@ using System.Net.Sockets;
 using System.Diagnostics;
 using System.Linq.Expressions;
 using System.IO;
+using ArtWarsServer.Model.Packets;
 
 namespace ArtWarsServer.Model
 {
@@ -162,6 +163,39 @@ namespace ArtWarsServer.Model
             }
 
             return null;
+
+        }
+
+        public async Task sendImageAsync(DrawingPacket packet)
+        {
+            //error handling
+            if (ClientSocket == null)
+            {
+                Debug.WriteLine($"Client Socket was null during Send for Player: {ID}, {Name}");
+                return;
+            }
+
+            try
+            {
+                if (ClientSocket.Connected)
+                {
+                    //serialize data
+                    byte[] data = packet.Serialize();
+
+                    //send data
+                    await stream.WriteAsync(data, 0, data.Length);
+                }
+                else
+                {
+                    Debug.WriteLine($" {Name}, Player ID: {ID} is not connected");
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error sending message to player \"{Name}\" ID: {ID}. {ex.Message}");
+            }
 
         }
 
