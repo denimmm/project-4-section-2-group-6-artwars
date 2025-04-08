@@ -27,15 +27,15 @@ namespace ArtWarsClientWPF
         private TcpHandler _handler;
         private dynamic _packet;
         private DrawingPacket _drawingPacket;
-        private string prompt = "Draw here.....";
         public DrawingWindow(TcpHandler handler, Client client, dynamic packet)
         {
             _handler = handler;
             _client = client;
             _packet = packet;
+            _client.state = packet.type;
             InitializeComponent();
             Background = Brushes.White;
-           setDrawingLabel(prompt);
+           setDrawingLabel(_packet.prompt);
         }
         private void setDrawingLabel(string p)
         {
@@ -108,11 +108,16 @@ namespace ArtWarsClientWPF
             byte[] data = File.ReadAllBytes(filePath);
             _drawingPacket = new DrawingPacket(data, _client);
             await _handler.SendPacket(_drawingPacket.Serialize());
+            //// go to voting screen
+            VotingWindow votingWindow = new VotingWindow(_handler, _client/*, _drawingPacket*/);
+            votingWindow.Show();
+            //close the current window
+            this.Close();
 
             // go to waiting to vote screen
-            VoteWaitingWindow voteWaitingWindow = new VoteWaitingWindow(_handler, _client /*_drawingPacket*/);
-            voteWaitingWindow.Show();
-            this.Close();
+            //VoteWaitingWindow voteWaitingWindow = new VoteWaitingWindow(_handler, _client);
+            //voteWaitingWindow.Show();
+            //this.Close();
         }
        
     }

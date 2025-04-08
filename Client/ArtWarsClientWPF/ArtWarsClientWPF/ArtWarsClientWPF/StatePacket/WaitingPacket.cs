@@ -1,7 +1,9 @@
 ﻿using ArtWarsClientWPF.Models;
+using ArtWarsServer.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.Json;
@@ -54,6 +56,7 @@ namespace ArtWarsClientWPF.StatePacket
                     playerId = -1;
                 }
 
+                DataLogger.Instance.LogIN($"{size}{json}");
             }
             catch (JsonException ex)
             {
@@ -65,6 +68,8 @@ namespace ArtWarsClientWPF.StatePacket
             }
 
             jsonString = json;
+            //log received packet to file
+            
         }
 
         //make new packet to send
@@ -88,7 +93,8 @@ namespace ArtWarsClientWPF.StatePacket
 
             //set size of packet
             size = HEADER_SIZE + Encoding.UTF8.GetBytes(jsonString).Length;
-
+            //log sent packet to file
+            DataLogger.Instance.LogOUT($"{size}{jsonString}");
         }
 
 

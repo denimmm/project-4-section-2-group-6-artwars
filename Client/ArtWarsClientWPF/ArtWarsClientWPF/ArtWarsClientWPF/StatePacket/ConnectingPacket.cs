@@ -5,6 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.IO;
+using System.Linq.Expressions;
+using ArtWarsServer.Model;
 
 namespace ArtWarsClientWPF.StatePacket
 {
@@ -34,6 +37,8 @@ namespace ArtWarsClientWPF.StatePacket
             //get the size from bytes 
             size = BitConverter.ToInt32(bytes, 0);
             string json = Encoding.UTF8.GetString(bytes, HEADER_SIZE, size - HEADER_SIZE);
+            //log data to file 
+            DataLogger.Instance.LogIN($"{size}{json}");
             try
             {
                 var packet = JsonConvert.DeserializeObject<ConnectingPacket>(json);
@@ -46,6 +51,21 @@ namespace ArtWarsClientWPF.StatePacket
             {
                 Console.WriteLine(e.Message);
             }
+            //log received packet to file
+            try
+            {
+                using(StreamWriter writer = new StreamWriter("ConnectingLongIn.txt", false))
+                {
+                    string log = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + "Incoming: "+size + json;
+                    writer.WriteLine(log);
+
+                }
+
+            }
+            catch
+            {
+                Console.WriteLine("Error writing to file");
+            }
         }
         //make a packet from log in screen
         public ConnectingPacket(string roomCode, string playerName)
@@ -55,7 +75,8 @@ namespace ArtWarsClientWPF.StatePacket
             this.playerName = playerName;
             this.playerId = -1;
 
-            var json = new {
+            var json = new
+            {
                 type = this.type,
                 roomCode = this.roomCode,
                 playerName = this.playerName,
@@ -65,6 +86,8 @@ namespace ArtWarsClientWPF.StatePacket
             jsonString = JsonConvert.SerializeObject(json);
 
             size = HEADER_SIZE + jsonString.Length;
+            //log sent packet to file
+            DataLogger.Instance.LogOUT($"{size}{json}");
         }
         //make a string from a packet
         public override string ToString()

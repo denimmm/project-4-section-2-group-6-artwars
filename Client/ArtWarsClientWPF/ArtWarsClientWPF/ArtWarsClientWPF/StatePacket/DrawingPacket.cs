@@ -1,14 +1,9 @@
-﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.IO;
 using System.Text;
 using System.Text.Json;
-using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using System.Windows.Media.Imaging;
 using ArtWarsClientWPF.Models;
+using ArtWarsServer.Model;
 namespace ArtWarsClientWPF.StatePacket
 {
     public class DrawingPacket : Packet
@@ -47,7 +42,8 @@ namespace ArtWarsClientWPF.StatePacket
             jsonString = JsonSerializer.Serialize(json);
 
             size = Encoding.UTF8.GetByteCount(jsonString) + HEADER_SIZE;
-
+            //log sent packet to file
+            DataLogger.Instance.LogOUT($"{size}{jsonString}");
         }
         //make new packet from received data
         public DrawingPacket(byte[] packet)
@@ -55,6 +51,7 @@ namespace ArtWarsClientWPF.StatePacket
             //get the size
             size = BitConverter.ToInt32(packet, 0); //get int from the first 4 bytes
             string json = Encoding.UTF8.GetString(packet, 4, size - 4);
+            DataLogger.Instance.LogIN($"{size}{json}");
             try
             {
                 //make a connectingPacket object and copy its data lol
@@ -73,11 +70,13 @@ namespace ArtWarsClientWPF.StatePacket
                     image = null;
                     playerId = "-1";
                 }
+
             }
             catch (JsonException ex)
             {
                 Console.WriteLine($"Error deserializing JSON: {ex.Message}");
             }
+            
         }
         public byte[] Serialize()
         {
