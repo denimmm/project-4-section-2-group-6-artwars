@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace ArtWarsClientWPF
 {
-    /// <summary>
-    /// Interaction logic for PromptWaitingWindow.xaml
-    /// </summary>
     public partial class PromptWaitingWindow : Window
     {
         private Client _client;

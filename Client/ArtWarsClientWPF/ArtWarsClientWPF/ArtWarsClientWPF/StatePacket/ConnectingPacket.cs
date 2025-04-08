@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.IO;
 using System.Linq.Expressions;
+using ArtWarsServer.Model;
 
 namespace ArtWarsClientWPF.StatePacket
 {
@@ -36,6 +37,8 @@ namespace ArtWarsClientWPF.StatePacket
             //get the size from bytes 
             size = BitConverter.ToInt32(bytes, 0);
             string json = Encoding.UTF8.GetString(bytes, HEADER_SIZE, size - HEADER_SIZE);
+            //log data to file 
+            DataLogger.Instance.LogIN($"{size}{json}");
             try
             {
                 var packet = JsonConvert.DeserializeObject<ConnectingPacket>(json);
@@ -84,19 +87,7 @@ namespace ArtWarsClientWPF.StatePacket
 
             size = HEADER_SIZE + jsonString.Length;
             //log sent packet to file
-            try
-            {
-                using (StreamWriter writer = new StreamWriter("ConnectingLongOut.txt", false))
-                {
-                    string log = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + "Outgoing: "+ size + jsonString;
-                    writer.WriteLine(log);
-                }
-
-            }
-            catch
-            {
-                Console.WriteLine("Error writing to file");
-            }
+            DataLogger.Instance.LogOUT($"{size}{json}");
         }
         //make a string from a packet
         public override string ToString()

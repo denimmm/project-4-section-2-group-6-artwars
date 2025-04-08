@@ -3,6 +3,7 @@ using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 using ArtWarsClientWPF.Models;
+using ArtWarsServer.Model;
 namespace ArtWarsClientWPF.StatePacket
 {
     public class DrawingPacket : Packet
@@ -42,18 +43,7 @@ namespace ArtWarsClientWPF.StatePacket
 
             size = Encoding.UTF8.GetByteCount(jsonString) + HEADER_SIZE;
             //log sent packet to file
-            try
-            {
-                using (StreamWriter writer = new StreamWriter($"{type}Out.txt", false))
-                {
-                    string log = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + "Outgoing: " + size + jsonString;
-                    writer.WriteLine(log);
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error writing to file: " + e.Message);
-            }
+            DataLogger.Instance.LogOUT($"{size}{jsonString}");
         }
         //make new packet from received data
         public DrawingPacket(byte[] packet)
@@ -61,6 +51,7 @@ namespace ArtWarsClientWPF.StatePacket
             //get the size
             size = BitConverter.ToInt32(packet, 0); //get int from the first 4 bytes
             string json = Encoding.UTF8.GetString(packet, 4, size - 4);
+            DataLogger.Instance.LogIN($"{size}{json}");
             try
             {
                 //make a connectingPacket object and copy its data lol
@@ -85,21 +76,7 @@ namespace ArtWarsClientWPF.StatePacket
             {
                 Console.WriteLine($"Error deserializing JSON: {ex.Message}");
             }
-            //log received packet to file
-            try
-            {
-                // make file name from type
-
-                using (StreamWriter writer = new StreamWriter($"{type}In.txt", false))
-                {
-                    string log = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + "Incoming: " + size + json;
-                    writer.WriteLine(log);
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error writing to file: " + e.Message);
-            }
+            
         }
         public byte[] Serialize()
         {

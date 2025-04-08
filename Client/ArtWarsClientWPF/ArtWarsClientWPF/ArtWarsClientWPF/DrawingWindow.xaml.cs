@@ -27,12 +27,12 @@ namespace ArtWarsClientWPF
         private TcpHandler _handler;
         private dynamic _packet;
         private DrawingPacket _drawingPacket;
-        private string prompt = "Draw here.....";
         public DrawingWindow(TcpHandler handler, Client client, dynamic packet)
         {
             _handler = handler;
             _client = client;
             _packet = packet;
+            _client.state = packet.type;
             InitializeComponent();
             Background = Brushes.White;
            setDrawingLabel(_packet.prompt);

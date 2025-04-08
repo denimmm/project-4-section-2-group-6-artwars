@@ -17,9 +17,7 @@ using System.Windows.Shapes;
 
 namespace ArtWarsClientWPF
 {
-    /// <summary>
-    /// Interaction logic for ResultWindow.xaml
-    /// </summary>
+    
     public partial class ResultWindow : Window
     {
         private Client _client;
@@ -37,12 +35,24 @@ namespace ArtWarsClientWPF
         {
             try
             {
-                byte[] data = new byte[4048];
+                byte[] data = new byte[2*1024*1024];
                 int bytes = await _handler._stream.ReadAsync(data, 0, data.Length);
 
                 if (bytes > 0)
                 {
+                    //check packet type if there is a winner 
+                   
                     DrawingPacket drawingPacket = new DrawingPacket(data);
+                    if(drawingPacket.type != "Result")
+                    {
+                        MessageBox.Show("No winner another round...");
+                        //got to main window
+                        //MainWindow mainWindow = new MainWindow(_handler, _client);
+                        //mainWindow.Show();
+                        //this.Close();
+                        return;
+                    }
+                    _client.state = drawingPacket.type;
                     BitmapImage image = new BitmapImage();
                     image.BeginInit();
                     image.StreamSource = new MemoryStream(drawingPacket.image);

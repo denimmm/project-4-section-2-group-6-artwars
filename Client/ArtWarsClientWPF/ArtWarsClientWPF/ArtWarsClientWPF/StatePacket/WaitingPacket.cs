@@ -1,4 +1,5 @@
 ﻿using ArtWarsClientWPF.Models;
+using ArtWarsServer.Model;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -54,8 +55,8 @@ namespace ArtWarsClientWPF.StatePacket
                     prompt = "";
                     playerId = -1;
                 }
-               
 
+                DataLogger.Instance.LogIN($"{size}{json}");
             }
             catch (JsonException ex)
             {
@@ -68,18 +69,7 @@ namespace ArtWarsClientWPF.StatePacket
 
             jsonString = json;
             //log received packet to file
-            try
-            {
-                using (StreamWriter writer = new StreamWriter($"{type}LogIn.txt", true))
-                {
-                    string log = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - "  + "Incoming: " + size + json;
-                    writer.WriteLine(log);
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error writing to file: " + e.Message);
-            }
+            
         }
 
         //make new packet to send
@@ -104,19 +94,7 @@ namespace ArtWarsClientWPF.StatePacket
             //set size of packet
             size = HEADER_SIZE + Encoding.UTF8.GetBytes(jsonString).Length;
             //log sent packet to file
-            try
-            {
-                using (StreamWriter writer = new StreamWriter($"{type}LogOut.txt", true))
-                {
-                    string log = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + "Outgoing: " + size + jsonString;
-                    writer.WriteLine(log);
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Error writing to file: " + e.Message);
-            }
-
+            DataLogger.Instance.LogOUT($"{size}{jsonString}");
         }
 
 

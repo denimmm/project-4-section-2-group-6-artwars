@@ -17,9 +17,6 @@ using System.Windows.Shapes;
 
 namespace ArtWarsClientWPF
 {
-    /// <summary>
-    /// Interaction logic for VotingWindow.xaml
-    /// </summary>
     public partial class VotingWindow : Window
     {
         private Client _client;
@@ -61,8 +58,9 @@ namespace ArtWarsClientWPF
                 }
                 
           }
+          _client.state = "Voting";
             //Displays first image once its been received
-                updateImage();
+            updateImage();
         }
         private void updateImage()
         {

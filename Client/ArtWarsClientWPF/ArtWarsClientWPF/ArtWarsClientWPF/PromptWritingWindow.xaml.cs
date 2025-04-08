@@ -16,9 +16,6 @@ using System.Windows.Shapes;
 
 namespace ArtWarsClientWPF
 {
-    /// <summary>
-    /// Interaction logic for PromptWritingWindow.xaml
-    /// </summary>
     public partial class PromptWritingWindow : Window
     {
         private Client _client;
