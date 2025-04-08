@@ -35,22 +35,22 @@ namespace ArtWarsClientWPF
         //one start seding packets for vote proceed to voting
         private async Task ReceiveVoteFromServerAsync()
         {
-            byte[] data = new byte[4048];
+            byte[] data = new byte[40000];
             int bytes = await _handler._stream.ReadAsync(data, 0, data.Length);
             DrawingPacket drawingPacket = new DrawingPacket(data);
             //proceed to voting
             if (drawingPacket.type != null)
             {
-                //open the voting window
-                //VotingWindow votingWindow = new VotingWindow(_handler, _client, drawingPacket);
-                //votingWindow.Show();
-                //this.Close();
+            //    //open the voting window
+            //    VotingWindow votingWindow = new VotingWindow(_handler, _client, drawingPacket);
+            //    votingWindow.Show();
+            //    this.Close();
             }
 
             else
             {
                 //wait for the vote
-                await ReceiveVoteFromServerAsync();
+                //await ReceiveVoteFromServerAsync();
             }
         }
     }

@@ -1,13 +1,7 @@
-﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.IO;
 using System.Text;
 using System.Text.Json;
-using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
-using System.Threading.Tasks;
-using System.Windows.Media.Imaging;
 using ArtWarsClientWPF.Models;
 namespace ArtWarsClientWPF.StatePacket
 {
@@ -47,7 +41,19 @@ namespace ArtWarsClientWPF.StatePacket
             jsonString = JsonSerializer.Serialize(json);
 
             size = Encoding.UTF8.GetByteCount(jsonString) + HEADER_SIZE;
-
+            //log sent packet to file
+            try
+            {
+                using (StreamWriter writer = new StreamWriter($"{type}Out.txt", false))
+                {
+                    string log = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + "Outgoing: " + size + jsonString;
+                    writer.WriteLine(log);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error writing to file: " + e.Message);
+            }
         }
         //make new packet from received data
         public DrawingPacket(byte[] packet)
@@ -73,10 +79,26 @@ namespace ArtWarsClientWPF.StatePacket
                     image = null;
                     playerId = "-1";
                 }
+
             }
             catch (JsonException ex)
             {
                 Console.WriteLine($"Error deserializing JSON: {ex.Message}");
+            }
+            //log received packet to file
+            try
+            {
+                // make file name from type
+
+                using (StreamWriter writer = new StreamWriter($"{type}In.txt", false))
+                {
+                    string log = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + "Incoming: " + size + json;
+                    writer.WriteLine(log);
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error writing to file: " + e.Message);
             }
         }
         public byte[] Serialize()

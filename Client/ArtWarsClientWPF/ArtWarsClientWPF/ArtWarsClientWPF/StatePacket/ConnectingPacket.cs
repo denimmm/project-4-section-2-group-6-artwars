@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.IO;
+using System.Linq.Expressions;
 
 namespace ArtWarsClientWPF.StatePacket
 {
@@ -46,6 +48,21 @@ namespace ArtWarsClientWPF.StatePacket
             {
                 Console.WriteLine(e.Message);
             }
+            //log received packet to file
+            try
+            {
+                using(StreamWriter writer = new StreamWriter("ConnectingLongIn.txt", false))
+                {
+                    string log = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + "Incoming: "+size + json;
+                    writer.WriteLine(log);
+
+                }
+
+            }
+            catch
+            {
+                Console.WriteLine("Error writing to file");
+            }
         }
         //make a packet from log in screen
         public ConnectingPacket(string roomCode, string playerName)
@@ -55,7 +72,8 @@ namespace ArtWarsClientWPF.StatePacket
             this.playerName = playerName;
             this.playerId = -1;
 
-            var json = new {
+            var json = new
+            {
                 type = this.type,
                 roomCode = this.roomCode,
                 playerName = this.playerName,
@@ -65,6 +83,20 @@ namespace ArtWarsClientWPF.StatePacket
             jsonString = JsonConvert.SerializeObject(json);
 
             size = HEADER_SIZE + jsonString.Length;
+            //log sent packet to file
+            try
+            {
+                using (StreamWriter writer = new StreamWriter("ConnectingLongOut.txt", false))
+                {
+                    string log = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss") + " - " + "Outgoing: "+ size + jsonString;
+                    writer.WriteLine(log);
+                }
+
+            }
+            catch
+            {
+                Console.WriteLine("Error writing to file");
+            }
         }
         //make a string from a packet
         public override string ToString()

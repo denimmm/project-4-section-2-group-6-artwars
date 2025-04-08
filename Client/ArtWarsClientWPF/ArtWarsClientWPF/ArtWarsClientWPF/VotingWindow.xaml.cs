@@ -24,79 +24,66 @@ namespace ArtWarsClientWPF
     {
         private Client _client;
         private TcpHandler _handler;
-        private BitmapImage[] _images;
+        int packetCount = 0;
         private int _currentImageIndex = 0;
-        private List <DrawingPacket> drawingPacketSend = new List<DrawingPacket>();
-        public VotingWindow(TcpHandler tcpHandler, Client client /*DrawingPacket firstPacketForVote*/)
+        private List <DrawingPacket> drawingPacketsReceived = new List<DrawingPacket>();
+        public VotingWindow(TcpHandler tcpHandler, Client client/*, DrawingPacket firstPacketForVote*/)
         {
             _handler = tcpHandler;
             _client = client;
-            //drawingPacketSend = new List<DrawingPacket>();
-            //drawingPacketSend.Add(firstPacketForVote);
+            //drawingPacketsReceived = new List<DrawingPacket>();
+            //drawingPacketsReceived.Add(firstPacketForVote);
             InitializeComponent();
       
             _ = ReceiveImagesFromServerAsync();
+
+            //updateImage();
         }
         private async Task ReceiveImagesFromServerAsync()
         {
-            //could be less or more than four images
-
-            //_images = new BitmapImage[4];
-           // for (int i = 0; i < 3; i++)
-            //{
-                byte[] data = new byte[400048];
+          bool isAllReceived = false;
+          while(!isAllReceived){
+                byte[] data = new byte[2*1024*1024];
                 int bytes = await _handler._stream.ReadAsync(data, 0, data.Length);
-                DrawingPacket drawingPacket = new DrawingPacket(data);
-                drawingPacketSend.Add(drawingPacket);
-                // if type is voiting stop receiving
-                //if (drawingPacket.type == "Voting")
-                //{
-                //    _client.state = drawingPacket.type;
-                //    break;
-                //}
-
-                //BitmapImage image = new BitmapImage();
-                //image.BeginInit();
-                //image.StreamSource = new MemoryStream(drawingPacket.image);
-                //image.EndInit();
-                //_images[i] = image;
-                //if (_client.state == "Voting")
-                //{
-                //    //do not accept anymore
-                //    break;
-                //}
-            }
+                if (bytes > 0)
+                {
+                    // Deserialize the packet
+                    DrawingPacket drawingPacket = new DrawingPacket(data);
+                    drawingPacketsReceived.Add(drawingPacket);
+                    packetCount++;
+                    // Check if the packet is a drawing packet
+                    if(drawingPacket.type == "Voting")
+                    {
+                        _client.state = drawingPacket.type;
+                        isAllReceived = true;
+                    }
+                    
+                }
+                
+          }
             //Displays first image once its been received
-            updateImage();
+                updateImage();
         }
         private void updateImage()
         {
-            DrawingPacket currentPacket;
-            //for(int i = 0; i < 4; i++)
-            //{
-            //    if (i == _currentImageIndex)
-            //    {
-            //        currentPacket = drawingPacketSend[_currentImageIndex];
-            //    }
-            //}
-            //scroll through the images
-            currentPacket = drawingPacketSend[_currentImageIndex];
-            BitmapImage image = new BitmapImage();
-            image.BeginInit();
-            image.StreamSource = new MemoryStream(currentPacket.image);
-            image.CacheOption = BitmapCacheOption.OnLoad;
-            image.EndInit();
-            image.Freeze();
-            //if (_client.state == "Voting")
-            //{
-            //    //do not accept anymore
-            //    break;
-            //}
 
-            //fixed if condition from == to !=
-            if (image != null && drawingPacketSend != null && drawingPacketSend.Count > _currentImageIndex)
+
+            if (drawingPacketsReceived != null && packetCount > _currentImageIndex)
             {
-                Image1.Source = image;
+
+                DrawingPacket currentPacket = drawingPacketsReceived[_currentImageIndex];
+                BitmapImage image = new BitmapImage();
+                image.BeginInit();
+                image.StreamSource = new MemoryStream(currentPacket.image);
+                image.CacheOption = BitmapCacheOption.OnLoad;
+                image.EndInit();
+                image.Freeze();
+
+                //fixed if condition from == to !=
+                if (image != null && drawingPacketsReceived != null && packetCount > _currentImageIndex)
+                {
+                    Image1.Source = image;
+                }
             }
 
         }
@@ -107,34 +94,38 @@ namespace ArtWarsClientWPF
                 _currentImageIndex--;
                 updateImage();
             }
+            else { MessageBox.Show("No more images to the left.");
+            }
             
         }
         private void RightButton_Click(object sender, RoutedEventArgs e)
         {
-            if (_currentImageIndex < drawingPacketSend.Count - 1)
+            if (_currentImageIndex < packetCount - 1)
             {
                 _currentImageIndex++;
                 updateImage();
+            }
+            else { MessageBox.Show("No more images to the right.");
             }
 
         }
 
         private void VoteButton_Click(object sender, RoutedEventArgs e)
         {
-           if (drawingPacketSend == null || drawingPacketSend.Count == 0)
+           if (drawingPacketsReceived == null || drawingPacketsReceived.Count == 0)
             {
                 MessageBox.Show("No images to vote for currently.");
                 return;
             }
 
            int votedImageIndex = _currentImageIndex;
-            byte[] data = drawingPacketSend[votedImageIndex].Serialize();
+            byte[] data = drawingPacketsReceived[votedImageIndex].Serialize();
 
-            _handler._stream.Read(data, 0, data.Length);
+            _handler._stream.Write(data, 0, data.Length);
 
             // Disable the vote button to stop vote button from being pressed multiple times
             VoteButton.IsEnabled = false;
-            MessageBox.Show($"Vote successful");
+            MessageBox.Show($"You voted for {drawingPacketsReceived[_currentImageIndex].playerId}");
             //got to ResultsWindow
             ResultWindow resultsWindow = new ResultWindow(_handler, _client);
             resultsWindow.Show();

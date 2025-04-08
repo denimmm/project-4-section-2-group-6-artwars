@@ -35,7 +35,7 @@ namespace ArtWarsClientWPF
             _packet = packet;
             InitializeComponent();
             Background = Brushes.White;
-           setDrawingLabel(_packet.type);
+           setDrawingLabel(_packet.prompt);
         }
         private void setDrawingLabel(string p)
         {
@@ -108,14 +108,14 @@ namespace ArtWarsClientWPF
             byte[] data = File.ReadAllBytes(filePath);
             _drawingPacket = new DrawingPacket(data, _client);
             await _handler.SendPacket(_drawingPacket.Serialize());
-            // go to voting screen
+            //// go to voting screen
             VotingWindow votingWindow = new VotingWindow(_handler, _client/*, _drawingPacket*/);
             votingWindow.Show();
             //close the current window
             this.Close();
 
-            //// go to waiting to vote screen
-            //VoteWaitingWindow voteWaitingWindow = new VoteWaitingWindow(_handler, _client /*_drawingPacket*/);
+            // go to waiting to vote screen
+            //VoteWaitingWindow voteWaitingWindow = new VoteWaitingWindow(_handler, _client);
             //voteWaitingWindow.Show();
             //this.Close();
         }
