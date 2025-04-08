@@ -55,8 +55,7 @@ namespace ArtWarsServer.Model
             server.prompt = returnPacket.prompt;
 
             //update the packet with the new prompt
-            PromptRequest.prompt = server.prompt;
-            PromptPacket returnPrompt = new PromptPacket(server.code, server.prompt, server.chosenPlayer.ID);
+            PromptPacket finalPrompt = new PromptPacket(server.code, server.prompt, -1);
 
             //send the prompt to all users
             await server.BroadcastToPlayers(returnPrompt);

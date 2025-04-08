@@ -29,7 +29,7 @@ namespace ArtWarsServer.Model
             Prompt_Writing_Time = 60;
             Voting_Time = 60;
             Drawing_Time = 360;
-            Results_Time = 30;
+            Results_Time = 10;
 			ROOM_CODE_MAX_NUMBER = 10000;
             bufferSize = 2000000;
             NumberOfRounds = 0;

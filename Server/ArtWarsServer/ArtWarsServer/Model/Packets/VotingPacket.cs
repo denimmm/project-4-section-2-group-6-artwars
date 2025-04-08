@@ -19,18 +19,18 @@ namespace ArtWarsServer.Model
     {
         public string type { get; }
         public string roomCode { get; }
-        public string prompt { get; set; }
+        public string vote { get; set; }
         public int playerId { get; }
 
         public string jsonString;
 
 
         [JsonConstructor]
-        public VotingPacket(string type, string roomCode, string prompt, int playerId)
+        public VotingPacket(string type, string roomCode, string vote, int playerId)
         {
             this.type = type;
             this.roomCode = roomCode;
-            this.prompt = prompt;
+            this.vote = vote;
             this.playerId = playerId;
 
             jsonString = "";
@@ -44,6 +44,8 @@ namespace ArtWarsServer.Model
             size = BitConverter.ToInt32(packet, 0); //get int from the first 4 bytes
             string json = Encoding.UTF8.GetString(packet, 4, size -4);
 
+            DataLogger.Instance.LogIN($"{size}{json}");
+
             try
             {
 
@@ -53,7 +55,7 @@ namespace ArtWarsServer.Model
                 {
                     type = obj.type;
                     roomCode = obj.roomCode;
-                    prompt = obj.prompt;
+                    vote = obj.vote;
                     playerId = obj.playerId;
                 }
 
@@ -63,7 +65,7 @@ namespace ArtWarsServer.Model
                 Debug.WriteLine($"Error deserializing JSON: {ex.Message}");
                 type = "failed";
                 roomCode = "-1";
-                prompt = "";
+                vote = "";
                 playerId = -1 ;
             }
 
@@ -72,17 +74,17 @@ namespace ArtWarsServer.Model
         }
 
         //make new packet to send
-        public VotingPacket(string roomCode, string prompt, int playerId) {
-            this.type = "prompt";
+        public VotingPacket(string roomCode, string vote, int playerId) {
+            this.type = "voting";
             this.roomCode = roomCode;
-            this.prompt = prompt;
+            this.vote = vote;
             this.playerId = playerId;
 
             var json = new
             {
                 type = this.type,
                 roomCode = this.roomCode,
-                prompt = this.prompt,
+                vote = this.vote,
                 playerId = this.playerId
             };
 
@@ -91,6 +93,8 @@ namespace ArtWarsServer.Model
 
             //set size of packet
             size = HEADER_SIZE + Encoding.UTF8.GetBytes(jsonString).Length;
+
+            DataLogger.Instance.LogOUT($"{size}{jsonString}");
 
         }
 
