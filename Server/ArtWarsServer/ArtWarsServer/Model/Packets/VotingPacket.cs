@@ -92,7 +92,7 @@ namespace ArtWarsServer.Model
             //set size of packet
             size = HEADER_SIZE + Encoding.UTF8.GetBytes(jsonString).Length;
 
-            DataLogger.Instance.log($"{size}{jsonString}");
+            DataLogger.Instance.log($"[OUT] {size}{jsonString}");
 
         }
 

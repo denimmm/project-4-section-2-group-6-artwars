@@ -26,7 +26,7 @@ namespace ArtWarsServer.Model
 
         public void log(string message) {
             //add the message to the queue
-            logQueue.Enqueue(message);
+            logQueue.Enqueue($"[{DateTime.Now.ToString()}]" + message);
             saveToFile();
 
 
