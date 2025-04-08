@@ -31,6 +31,8 @@ namespace ArtWarsServer.Model.Packets
             size = BitConverter.ToInt32(packet, 0);
             string json = Encoding.UTF8.GetString(packet, 4, size - 4);
 
+            DataLogger.Instance.LogIN($"{size}{json}");
+
             try
             {
                 var obj = JsonSerializer.Deserialize<DrawingPacket>(json);
@@ -41,6 +43,7 @@ namespace ArtWarsServer.Model.Packets
                     image = obj.image;
                     //image = Convert.FromBase64String(obj.jsonString); // Convert from Base64
                     playerId = obj.playerId;
+
                 }
                 else
                 {
@@ -56,10 +59,13 @@ namespace ArtWarsServer.Model.Packets
         {
             string json = JsonSerializer.Serialize(this);
             byte[] jsonBytes = Encoding.UTF8.GetBytes(json);
-            byte[] serializedData = new byte[jsonBytes.Length + HEADER_SIZE];
+            int size = jsonBytes.Length + HEADER_SIZE;
+            byte[] serializedData = new byte[size];
 
             Buffer.BlockCopy(BitConverter.GetBytes(serializedData.Length), 0, serializedData, 0, HEADER_SIZE);
             Buffer.BlockCopy(jsonBytes, 0, serializedData, HEADER_SIZE, jsonBytes.Length);
+
+            DataLogger.Instance.LogOUT($"{size}{json}");
 
             return serializedData;
         }

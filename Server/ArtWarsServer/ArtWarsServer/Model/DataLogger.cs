@@ -16,7 +16,7 @@ namespace ArtWarsServer.Model
 
         bool writing;
         ConcurrentQueue<string> logQueue = new ConcurrentQueue<string>();
-        string LogFilePath = "file.log";
+        string LogFilePath = $"{DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss")}.log";
 
         private DataLogger()
         {
@@ -24,9 +24,17 @@ namespace ArtWarsServer.Model
 
         }
 
-        public void log(string message) {
+        public void LogOUT(string message) {
             //add the message to the queue
-            logQueue.Enqueue($"[{DateTime.Now.ToString()}]" + message);
+            logQueue.Enqueue($"[{DateTime.Now.ToString()}]" + "[OUT] " + message);
+            saveToFile();
+
+
+        }
+        public void LogIN(string message)
+        {
+            //add the message to the queue
+            logQueue.Enqueue($"[{DateTime.Now.ToString()}]" + "[IN] " + message);
             saveToFile();
 
 

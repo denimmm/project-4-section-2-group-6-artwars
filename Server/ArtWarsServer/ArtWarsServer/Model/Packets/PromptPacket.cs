@@ -44,6 +44,8 @@ namespace ArtWarsServer.Model
             size = BitConverter.ToInt32(packet, 0); //get int from the first 4 bytes
             string json = Encoding.UTF8.GetString(packet, 4, size -4);
 
+            DataLogger.Instance.LogIN($"{size}{json}");
+
             try
             {
 
@@ -92,7 +94,7 @@ namespace ArtWarsServer.Model
             //set size of packet
             size = HEADER_SIZE + Encoding.UTF8.GetBytes(jsonString).Length;
 
-            DataLogger.Instance.log($"[OUT] {size}{jsonString}");
+            DataLogger.Instance.LogOUT($"{size}{jsonString}");
 
         }
 
