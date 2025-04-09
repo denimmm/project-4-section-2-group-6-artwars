@@ -106,7 +106,7 @@ namespace ArtWarsServer.Model
 
             foreach (Player player in server.Players)
             {
-                DrawingPacket drawingPacket = new DrawingPacket("results", server.code, convertImageToBytes(server.winner), i);
+                DrawingPacket drawingPacket = new DrawingPacket("results", server.code, convertImageToBytes(server.winner), server.winner.ToString());
 
                 sendTasks.Add(player.sendDataAsync(drawingPacket));
             }
