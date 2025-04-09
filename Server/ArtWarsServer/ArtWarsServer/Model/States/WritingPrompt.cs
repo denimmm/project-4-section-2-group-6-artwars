@@ -58,7 +58,7 @@ namespace ArtWarsServer.Model
             PromptPacket finalPrompt = new PromptPacket(server.code, server.prompt, -1);
 
             //send the prompt to all users
-            await server.BroadcastToPlayers(returnPrompt);
+            await server.BroadcastToPlayers(finalPrompt);
 
 
             //Move to DrawingScreen

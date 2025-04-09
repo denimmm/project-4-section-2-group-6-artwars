@@ -5,11 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ArtWarsClientWPF"
         mc:Ignorable="d"
-        Title="WaitingWindow" Height="450" Width="800">
-    <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Text="Waiting to Start!" Height="267" Width = "588" FontSize="50" TextAlignment="Center" Padding="100"/>
+        Title="Art Wars - Waiting"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        Background="AliceBlue">
 
-        </StackPanel>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="80*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+
+        <!-- Title -->
+        <Viewbox Grid.Row="0">
+            <Label Content="Art Wars"
+                   FontFamily="Algerian"
+                   FontSize="64"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" />
+        </Viewbox>
+
+        <!-- Message Box -->
+        <Border Grid.Row="1"
+                Background="White"
+                CornerRadius="20"
+                Margin="60"
+                Padding="40"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+            <TextBlock Text="Waiting to Start!"
+                       FontFamily="Roboto"
+                       FontSize="36"
+                       TextAlignment="Center"
+                       Foreground="Black"
+                       TextWrapping="Wrap" />
+        </Border>
+
+        <!-- Optional status or footer -->
+        <Viewbox Grid.Row="2">
+            <TextBlock Text="Please wait..."
+                       FontFamily="Roboto"
+                       FontSize="24"
+                       HorizontalAlignment="Center"
+                       Foreground="Black" />
+        </Viewbox>
     </Grid>
 </Window>

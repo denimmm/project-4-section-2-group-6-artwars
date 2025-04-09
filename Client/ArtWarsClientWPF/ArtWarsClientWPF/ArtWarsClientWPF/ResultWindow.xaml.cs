@@ -43,14 +43,30 @@ namespace ArtWarsClientWPF
                     //check packet type if there is a winner 
                    
                     DrawingPacket drawingPacket = new DrawingPacket(data);
-                    if(drawingPacket.type != "Result")
+                    if(drawingPacket.type != "results")
                     {
                         MessageBox.Show("No winner another round...");
-                        //got to main window
-                        //MainWindow mainWindow = new MainWindow(_handler, _client);
-                        //mainWindow.Show();
-                        //this.Close();
-                        return;
+                        // wait to receive a prompt packet
+                        byte[] promptdata = new byte[1024];
+                        int promptbytes = await _handler._stream.ReadAsync(promptdata, 0, promptdata.Length);
+                        if (promptbytes > 0) {
+                            ConnectingPacket promptPacket = new ConnectingPacket(promptdata);
+                            if(_client.player.Id ==promptPacket.playerId.ToString())
+                            {
+                                //go to prompt window
+                                PromptWritingWindow promptWritingWindow = new PromptWritingWindow(_handler, _client);
+                                promptWritingWindow.Show();
+                                this.Close();
+                            }
+                            else
+                            {
+                                //go to prompt waiting window
+                                PromptWaitingWindow promptWaitingWindow = new PromptWaitingWindow(_handler, _client);
+                                promptWaitingWindow.Show();
+                                this.Close();
+                            }
+                        }
+                       
                     }
                     _client.state = drawingPacket.type;
                     BitmapImage image = new BitmapImage();

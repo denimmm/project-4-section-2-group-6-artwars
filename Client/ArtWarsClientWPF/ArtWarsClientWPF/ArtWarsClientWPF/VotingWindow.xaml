@@ -5,12 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ArtWarsClientWPF"
         mc:Ignorable="d"
-        Title="VotingWindow" Height="450" Width="800">
-    <Grid>
+        Title="VotingWindow" Height="450" Width="800"
+        WindowState = "Maximized"
+        WindowStartupLocation="CenterScreen">
 
+    <Grid>
         <Button Margin="20,0,0,0" Content="&lt;" HorizontalAlignment="Left"  VerticalAlignment="Center" Width="50" Height="30" FontSize="20" Click="LeftButton_Click"/>
-        <Image x:Name="Image1" Source ="{Binding Path}" Width="400" Height="300" HorizontalAlignment="Left" VerticalAlignment="Top" Stretch="Uniform" Margin="210,55,0,0" />
-        <Button   Margin="0,0,20,0"  Content=">" HorizontalAlignment="Right"  VerticalAlignment="Center" Width="50" Height="30" FontSize="20" Click="RightButton_Click"/>
-        <Button Content="Vote" Height="50" Width="100" VerticalAlignment="Bottom" Margin="20" Click="VoteButton_Click" Name="VoteButton"></Button>
+        <Viewbox Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image x:Name="Image1" Width="400" Height="300" />
+        </Viewbox>
+        <Button Margin="0,0,20,0" Content=">" HorizontalAlignment="Right" VerticalAlignment="Center" Width="50" Height="30" FontSize="20" Click="RightButton_Click"/>
+        <Button Content="Vote" Height="50" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="20" Click="VoteButton_Click" Name="VoteButton"/>
     </Grid>
 </Window>

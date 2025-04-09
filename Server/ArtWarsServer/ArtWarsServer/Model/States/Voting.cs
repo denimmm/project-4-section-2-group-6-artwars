@@ -32,7 +32,7 @@ namespace ArtWarsServer.Model
             string state = "Drawing";
             for (int i = 0; i < server.Players.Count; i++)
             {
-                if (i == server.Players.Count)
+                if (i+1 == server.Players.Count)
                 {
                     //change packet type to voting for the last image to tell client to stop receiving
                     state = "Voting";

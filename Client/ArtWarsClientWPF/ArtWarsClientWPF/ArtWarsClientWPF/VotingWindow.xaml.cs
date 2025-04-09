@@ -1,5 +1,6 @@
 ﻿using ArtWarsClientWPF.Models;
 using ArtWarsClientWPF.StatePacket;
+using ArtWarsServer.Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -117,10 +118,14 @@ namespace ArtWarsClientWPF
             }
 
            int votedImageIndex = _currentImageIndex;
-            byte[] data = drawingPacketsReceived[votedImageIndex].Serialize();
+            //byte[] data = drawingPacketsReceived[votedImageIndex].Serialize();
+
+            // Send the vote to the server
+            VotingPacket votePacket = new VotingPacket(_client.roomCode, drawingPacketsReceived[votedImageIndex].playerId, _client.player.Id);
+            byte[] data = votePacket.Serialize();
 
             _handler._stream.Write(data, 0, data.Length);
-
+            
             // Disable the vote button to stop vote button from being pressed multiple times
             VoteButton.IsEnabled = false;
             MessageBox.Show($"You voted for {drawingPacketsReceived[_currentImageIndex].playerId}");
