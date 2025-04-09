@@ -3,18 +3,73 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ArtWarsClientWPF"
         mc:Ignorable="d"
-        Title="PromptWritingWindow" Height="450" Width="800">
+        Title="Art Wars - Write Prompt"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        Background="AliceBlue">
+
     <Grid>
-        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
-            <TextBlock Text="Enter prompt:" Margin="0,10,0,0" />
-            <TextBox x:Name="PromptBox" Width="200" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="80*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
 
-            <Button Content="Submit" Width="100" Margin="0,10,0,0"
-                    Click="SubmitPromptButton_Click" />
+        <!-- Title -->
+        <Viewbox Grid.Row="0">
+            <Label Content="Write Your Prompt"
+                   FontFamily="Algerian"
+                   FontSize="50"
+                   Margin="0,20,0,0"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center" />
+        </Viewbox>
 
-            <TextBlock x:Name="StatusText" Foreground="Red" />
-        </StackPanel>
+        <!-- Prompt Input Section -->
+        <Border Grid.Row="1"
+                Background="White"
+                CornerRadius="15"
+                Padding="40"
+                Margin="60"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="Enter your drawing prompt:"
+                           FontFamily="Roboto"
+                           FontSize="40"
+                           Margin="20,20,20,20"
+                           TextAlignment="Center"/>
+
+                <TextBox x:Name="PromptBox"
+               
+                         FontSize="40"
+                         FontFamily="Roboto"
+                         TextWrapping="Wrap"
+                         AcceptsReturn="True"
+                         VerticalScrollBarVisibility="Auto"
+                         Margin="0,0,0,20"/>
+
+                <Button Content="Submit"
+                        Width="150"
+                        Height="40"
+                        FontSize="18"
+                        FontFamily="Roboto"
+                        Background="#FF5C5CFF"
+                        Foreground="White"
+                        FontWeight="Bold"
+                        Click="SubmitPromptButton_Click"
+                        HorizontalAlignment="Center" />
+
+                <TextBlock x:Name="StatusText"
+                           FontFamily="Roboto"
+                           FontSize="16"
+                           Foreground="Red"
+                           TextAlignment="Center"
+                           Margin="0,20,0,0"/>
+            </StackPanel>
+        </Border>
+
     </Grid>
 </Window>

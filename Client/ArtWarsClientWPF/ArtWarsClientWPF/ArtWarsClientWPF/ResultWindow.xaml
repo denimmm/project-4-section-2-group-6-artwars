@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ArtWarsClientWPF"
         mc:Ignorable="d"
-        Title="ResultWindow" Height="450" Width="800">
+        Title="ResultWindow" Height="450" Width="800"
+        WindowState = "Maximized"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <TextBlock Text="Winner:" TextAlignment="Center" FontSize="40" />
         <Image x:Name="WinnerImage" Height="300" Stretch="Uniform" Margin="191,67,191,67"/>
-        <Button x:Name="CloseButton" Content="Close" HorizontalAlignment="Right" VerticalAlignment="Top" Width="100" Height="30" Margin="10,10,10,0" Click="CloseButton_Click"/>
+        <Button x:Name="CloseButton" FontSize="20" FontWeight="Bold" Content="Close" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30" Margin="20,20,20,20" Click="CloseButton_Click"/>
     </Grid>
 </Window>

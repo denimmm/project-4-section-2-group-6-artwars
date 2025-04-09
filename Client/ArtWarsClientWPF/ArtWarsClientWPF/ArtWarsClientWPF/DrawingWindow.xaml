@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:ArtWarsClientWPF"
         mc:Ignorable="d"
         Title="DrawingWindow" Height="450" Width="800">
-   
+
     <Grid>
         <!-- display the prompt on top of drawing window -->
-      
+
         <StackPanel Orientation="Vertical" HorizontalAlignment="Right" Background="LightGray" Width="100">
             <TextBlock Text="Drawing Tools" FontWeight="Bold" Margin="5" HorizontalAlignment="Center"/>
             <Button Content="Black" Click="ColorButton_Click" Background="Black" Foreground="White" Margin="2" Tag="Black"/>
@@ -30,21 +30,28 @@
             <Slider x:Name="BrushSizeSlider" Minimum="1" Maximum="20" Value="3" TickPlacement="BottomRight" TickFrequency="1"
                     ValueChanged="BrushSizeSlider_ValueChanged"/>
             <Button Content="Save" Click="SaveButton_Click" Foreground="Black" Margin="2"/>
-            <Button Content="Submit" Click="SubmitButton_Click" Foreground="Black" Margin="2"/>
-            
+
+            <!-- Submit Button Styled to match PromptWritingWindow -->
+            <Button Content="Submit" Click="SubmitButton_Click" Foreground="White" FontFamily="Roboto" FontSize="18" FontWeight="Bold"
+                    Background="#FF5C5CFF" Width="150" Height="40" HorizontalAlignment="Center" Margin="2"/>
+
         </StackPanel>
 
+        <!-- Canvas Area -->
         <local:DrawingCanvas x:Name="CanvasArea" Background="White" Margin="10,10,105,10"/>
+
+        <!-- Drawing Prompt -->
         <TextBlock x:Name="DrawingPrompt" 
-               Text="Waiting for prompt..." 
-               FontWeight="Bold" 
-               FontSize="28" 
-               Foreground="Black"
-               Background="White"
-               Opacity="0.7"
-               Padding="5"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Top"/>
+                   Text="Waiting for prompt..." 
+                   FontFamily="Roboto"
+                   FontWeight="Bold" 
+                   FontSize="30" 
+                   Foreground="Black"
+                   Background="White"
+                   Opacity="0.7"
+                   Padding="5"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Top"/>
     </Grid>
 </Window>
 
