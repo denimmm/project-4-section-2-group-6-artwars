@@ -36,6 +36,8 @@ namespace ArtWarsServer.Model
         //player chosen to write prompt
         public Player ?chosenPlayer;
 
+        //winning player
+        public int winner;
         public Frame ?MainFrame {  get; set; }
 
 
