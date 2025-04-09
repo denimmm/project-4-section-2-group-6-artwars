@@ -43,7 +43,7 @@ namespace ArtWarsClientWPF
                     //check packet type if there is a winner 
                    
                     DrawingPacket drawingPacket = new DrawingPacket(data);
-                    if(drawingPacket.type != "Result")
+                    if(drawingPacket.type != "results")
                     {
                         MessageBox.Show("No winner another round...");
                         // wait to receive a prompt packet

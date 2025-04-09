@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ArtWarsClientWPF"
         mc:Ignorable="d"
-        Title="DrawingWindow" Height="450" Width="800">
+        Title="DrawingWindow" Height="450" Width="800"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        Background="AliceBlue">
 
     <Grid>
         <!-- display the prompt on top of drawing window -->

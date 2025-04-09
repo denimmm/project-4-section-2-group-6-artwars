@@ -21,13 +21,13 @@ namespace ArtWarsServer.Model
         public string type { get; }
         public string roomCode { get; }
         public string vote { get; set; }
-        public int playerId { get; }
+        public string playerId { get; }
 
         public string jsonString;
 
 
         [JsonConstructor]
-        public VotingPacket(string type, string roomCode, string vote, int playerId)
+        public VotingPacket(string type, string roomCode, string vote, string playerId)
         {
             this.type = type;
             this.roomCode = roomCode;
@@ -67,7 +67,7 @@ namespace ArtWarsServer.Model
                 type = "failed";
                 roomCode = "-1";
                 vote = "";
-                playerId = -1;
+                playerId = "-1";
             }
 
             jsonString = "";
@@ -75,7 +75,7 @@ namespace ArtWarsServer.Model
         }
 
         //make new packet to send
-        public VotingPacket(string roomCode, string vote, int playerId)
+        public VotingPacket(string roomCode, string vote, string playerId)
         {
             this.type = "voting";
             this.roomCode = roomCode;
