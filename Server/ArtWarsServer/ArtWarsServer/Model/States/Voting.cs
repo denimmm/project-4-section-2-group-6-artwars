@@ -5,7 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using System.IO;    
+using System.IO;
+using System.Diagnostics;
 
 namespace ArtWarsServer.Model
 {
@@ -13,20 +14,27 @@ namespace ArtWarsServer.Model
     {
         Server server;
 
+        List<int> Votes;
+
         public Voting(Server server)
         {
             this.server = server;
             server.MainFrame?.Navigate(new View.VotingPage());
         }
 
+        //list of ids from player votes.
+        public static List<int> votes = new List<int>();
 
         public async Task Start()
         {
+
+            //send images to players.
             string state = "Drawing";
             for (int i = 0; i < server.Players.Count; i++)
             {
                 if (i == server.Players.Count)
                 {
+                    //change packet type to voting for the last image to tell client to stop receiving
                     state = "Voting";
                 }
                 DrawingPacket drawingPacket = new DrawingPacket(state, server.code, convertImageToBytes(server.Players[i].ID),server.Players[i].ID.ToString());
@@ -35,11 +43,20 @@ namespace ArtWarsServer.Model
 
 
 
+            //recieve votes
+            await RecieveVotesAsync();
+
+            //determine winner
+            determineWinner();
 
 
+            //send winner to players
+            await broadcastWinner();
 
-
+            //next state
+            NextState();
         }
+
         public byte[] convertImageToBytes(int playerId)
         {
             // Send the drawing to the server
@@ -50,10 +67,54 @@ namespace ArtWarsServer.Model
             return imageBytes;
         }
 
-        private async Task SendAllDrawings(Player player)
+        //sets votes array and receives all the votes
+        private async Task RecieveVotesAsync()
         {
+            //list of tasks returning bytestrings
+            var voteTasks = new List<Task<byte[]>>();
+
+            //loop through all players
+            foreach (Player player in server.Players)
+            {
+                //make a new task to recieve from each player
+                voteTasks.Add(player.ReceiveDataAsync()); 
+
+            }
+
+
+            List<byte[]> votes = (await Task.WhenAll(voteTasks)).ToList();
+
 
         }
+
+        void determineWinner()
+        {
+            //find mode of the list
+            var mode = Votes
+                .GroupBy(n => n)
+                .OrderByDescending(g => g.Count())
+                .First()
+                .Key;
+
+            //set the winner
+            server.winner = mode;
+        }
+
+        async Task broadcastWinner()
+        {
+            var sendTasks = new List<Task>();
+
+            foreach (Player player in server.Players)
+            {
+                DrawingPacket drawingPacket = new DrawingPacket("results", server.code, convertImageToBytes(server.winner), i);
+
+                sendTasks.Add(player.sendDataAsync(drawingPacket));
+            }
+
+            await Task.WhenAll(sendTasks);
+
+        }
+
 
 
         public void NextState()
