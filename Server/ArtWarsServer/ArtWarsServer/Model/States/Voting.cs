@@ -84,7 +84,15 @@ namespace ArtWarsServer.Model
 
             List<byte[]> votes = (await Task.WhenAll(voteTasks)).ToList();
 
-
+            //convert byte[] to int
+            Votes = new List<int>();
+            foreach (byte[] vote in votes)
+            {
+                //deserialize the packet
+                VotingPacket packet = new VotingPacket(vote);
+                //add the vote to the list
+                Votes.Add(int.Parse(packet.vote));
+            }
         }
 
         void determineWinner()

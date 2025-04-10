@@ -69,6 +69,8 @@ namespace ArtWarsClientWPF
                        
                     }
                     _client.state = drawingPacket.type;
+                    //change winner text
+                    WinnerText.Text = $"Winner: {drawingPacket.playerId}";
                     BitmapImage image = new BitmapImage();
                     image.BeginInit();
                     image.StreamSource = new MemoryStream(drawingPacket.image);
