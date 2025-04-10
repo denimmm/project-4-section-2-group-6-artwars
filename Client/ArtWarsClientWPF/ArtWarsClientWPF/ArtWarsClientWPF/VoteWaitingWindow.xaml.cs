@@ -26,28 +26,28 @@ namespace ArtWarsClientWPF
             _client = client;
             InitializeComponent();
             //start receiving the vote from server
-            _ = ReceiveVoteFromServerAsync();
+            _ = ReceiveVoteFromServer();
         }
         // to receive the vote from the server
         //one start seding packets for vote proceed to voting
-        private async Task ReceiveVoteFromServerAsync()
+        private async Task ReceiveVoteFromServer()
         {
-            byte[] data = new byte[2*1024*1024];
+            byte[] data = new byte[2 * 1024 * 1024];
             int bytes = await _handler._stream.ReadAsync(data, 0, data.Length);
             DrawingPacket drawingPacket = new DrawingPacket(data);
             //proceed to voting
             if (drawingPacket.type != null)
             {
-            //    //open the voting window
-            //    VotingWindow votingWindow = new VotingWindow(_handler, _client, drawingPacket);
-            //    votingWindow.Show();
-            //    this.Close();
+                //    //open the voting window
+                VotingWindow votingWindow = new VotingWindow(_handler, _client, drawingPacket);
+                votingWindow.Show();
+                this.Close();
             }
 
             else
             {
                 //wait for the vote
-                //await ReceiveVoteFromServerAsync();
+                _ = ReceiveVoteFromServer();
             }
         }
     }

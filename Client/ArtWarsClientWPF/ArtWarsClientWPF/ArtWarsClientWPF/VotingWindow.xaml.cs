@@ -25,12 +25,12 @@ namespace ArtWarsClientWPF
         int packetCount = 0;
         private int _currentImageIndex = 0;
         private List <DrawingPacket> drawingPacketsReceived = new List<DrawingPacket>();
-        public VotingWindow(TcpHandler tcpHandler, Client client/*, DrawingPacket firstPacketForVote*/)
+        public VotingWindow(TcpHandler tcpHandler, Client client, DrawingPacket firstPacketForVote)
         {
             _handler = tcpHandler;
             _client = client;
             //drawingPacketsReceived = new List<DrawingPacket>();
-            //drawingPacketsReceived.Add(firstPacketForVote);
+            drawingPacketsReceived.Add(firstPacketForVote);
             InitializeComponent();
       
             _ = ReceiveImagesFromServerAsync();
@@ -39,8 +39,19 @@ namespace ArtWarsClientWPF
         }
         private async Task ReceiveImagesFromServerAsync()
         {
+
           bool isAllReceived = false;
-          while(!isAllReceived){
+            //check if the packet in list is last packet
+            if(drawingPacketsReceived != null && drawingPacketsReceived.Count > 0)
+            {
+                packetCount++;
+                DrawingPacket lastPacket = drawingPacketsReceived[drawingPacketsReceived.Count - 1];
+                if (lastPacket.type == "Voting")
+                {
+                    isAllReceived = true;
+                }
+            }
+            while (!isAllReceived){
                 byte[] data = new byte[2*1024*1024];
                 int bytes = await _handler._stream.ReadAsync(data, 0, data.Length);
                 if (bytes > 0)
@@ -121,7 +132,7 @@ namespace ArtWarsClientWPF
             //byte[] data = drawingPacketsReceived[votedImageIndex].Serialize();
 
             // Send the vote to the server
-            VotingPacket votePacket = new VotingPacket(_client.roomCode, drawingPacketsReceived[votedImageIndex].playerId, _client.player.Id);
+            VotingPacket votePacket = new VotingPacket(_client.roomCode, drawingPacketsReceived[votedImageIndex].playerId, int.Parse(_client.player.Id));
             byte[] data = votePacket.Serialize();
 
             _handler._stream.Write(data, 0, data.Length);

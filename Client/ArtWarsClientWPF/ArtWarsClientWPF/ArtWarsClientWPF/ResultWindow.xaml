@@ -9,7 +9,12 @@
         WindowState = "Maximized"
         WindowStartupLocation="CenterScreen">
     <Grid>
-        <TextBlock Text="Winner:" TextAlignment="Center" FontSize="40" />
+        <TextBlock x:Name ="WinnerText"  Text="Winner:" TextAlignment="Center" FontSize="40" />
+        <!-- 
+        <Viewbox Stretch="Uniform" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Image x:Name="WinnerImage" Width="400" Height="300" />
+        </Viewbox>
+        -->
         <Image x:Name="WinnerImage" Height="300" Stretch="Uniform" Margin="191,67,191,67"/>
         <Button x:Name="CloseButton" FontSize="20" FontWeight="Bold" Content="Close" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="100" Height="30" Margin="20,20,20,20" Click="CloseButton_Click"/>
     </Grid>

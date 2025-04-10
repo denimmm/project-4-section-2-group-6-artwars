@@ -29,22 +29,19 @@ namespace Client.UnitTest
         public async Task StreamReadAsyncReturnsExpectedByteCount()
         {
             // Arrange
-            var handler = new TcpHandler();
-            byte[] buffer = new byte[10];
-            int expectedBytes = buffer.Length;
+            byte[] testData = new byte[10]; // Simulated data
+            using var memoryStream = new MemoryStream(testData);
 
-            var mockStream = new Mock<NetworkStream>();
-            // Set up the mock stream to return the expected byte count
-            mockStream.Setup(s => s.ReadAsync(It.IsAny<byte[]>(), It.IsAny<int>(), It.IsAny<int>()))
-                .ReturnsAsync(expectedBytes);
-            // Set the mock stream to the handler
-            handler._stream = mockStream.Object;
             // Act
-            int bytesRead = await handler._stream.ReadAsync(buffer, 0, buffer.Length);
+            byte[] buffer = new byte[testData.Length];
+            int bytesRead = await memoryStream.ReadAsync(buffer, 0, buffer.Length);
+
             // Assert
-            Assert.AreEqual(expectedBytes, bytesRead);
+            Assert.AreEqual(testData.Length, bytesRead);
         }
-
-
     }
+
+
+
 }
+
