@@ -96,7 +96,7 @@ namespace ArtWarsClientWPF
                 fileInfo = new FileInfo(filePath);
             }
 
-            MessageBox.Show($"Drawing saved to {filePath} with quality {quality}", "Save Successful", MessageBoxButton.OK, MessageBoxImage.Information);
+            //MessageBox.Show($"Drawing saved to {filePath} with quality {quality}", "Save Successful", MessageBoxButton.OK, MessageBoxImage.Information);
         }
         //submit button
         private async void SubmitButton_Click(Object sender, RoutedEventArgs e)

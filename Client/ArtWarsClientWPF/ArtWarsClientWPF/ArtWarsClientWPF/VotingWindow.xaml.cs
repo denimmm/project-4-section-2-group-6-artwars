@@ -104,8 +104,8 @@ namespace ArtWarsClientWPF
                 _currentImageIndex--;
                 updateImage();
             }
-            else { MessageBox.Show("No more images to the left.");
-            }
+            //else { MessageBox.Show("No more images to the left.");
+            //}
             
         }
         private void RightButton_Click(object sender, RoutedEventArgs e)
@@ -115,8 +115,8 @@ namespace ArtWarsClientWPF
                 _currentImageIndex++;
                 updateImage();
             }
-            else { MessageBox.Show("No more images to the right.");
-            }
+            //else { MessageBox.Show("No more images to the right.");
+            //}
 
         }
 

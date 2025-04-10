@@ -129,6 +129,7 @@ namespace ArtWarsServer.Model
         {
             //make and assign new state to server
             server.state = new Results(server);
+            server.MainFrame?.Navigate(new View.ResultsPage());
         }
 
         public static void Reset()
