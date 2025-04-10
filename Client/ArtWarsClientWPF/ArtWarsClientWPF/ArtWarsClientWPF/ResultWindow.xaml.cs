@@ -45,7 +45,7 @@ namespace ArtWarsClientWPF
                     DrawingPacket drawingPacket = new DrawingPacket(data);
                     if(drawingPacket.type != "results")
                     {
-                        MessageBox.Show("No winner another round...");
+                        //MessageBox.Show("No winner another round...");
                         // wait to receive a prompt packet
                         byte[] promptdata = new byte[1024];
                         int promptbytes = await _handler._stream.ReadAsync(promptdata, 0, promptdata.Length);

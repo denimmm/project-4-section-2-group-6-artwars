@@ -36,6 +36,7 @@ namespace ArtWarsServer.Model
             {
                 //make and assign new state to server
                 server.state = new WritingPrompt(server);
+                server.MainFrame?.Navigate(new View.WritingPromptPage());
                 server.state.Start();
             }
 

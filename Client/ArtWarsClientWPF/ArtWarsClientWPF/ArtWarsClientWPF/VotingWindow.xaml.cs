@@ -104,8 +104,8 @@ namespace ArtWarsClientWPF
                 _currentImageIndex--;
                 updateImage();
             }
-            else { MessageBox.Show("No more images to the left.");
-            }
+            //else { MessageBox.Show("No more images to the left.");
+            //}
             
         }
         private void RightButton_Click(object sender, RoutedEventArgs e)
@@ -115,8 +115,8 @@ namespace ArtWarsClientWPF
                 _currentImageIndex++;
                 updateImage();
             }
-            else { MessageBox.Show("No more images to the right.");
-            }
+            //else { MessageBox.Show("No more images to the right.");
+            //}
 
         }
 
@@ -139,7 +139,7 @@ namespace ArtWarsClientWPF
             
             // Disable the vote button to stop vote button from being pressed multiple times
             VoteButton.IsEnabled = false;
-            MessageBox.Show($"You voted for {drawingPacketsReceived[_currentImageIndex].playerId}");
+            //MessageBox.Show($"You voted for {drawingPacketsReceived[_currentImageIndex].playerId}");
             //got to ResultsWindow
             ResultWindow resultsWindow = new ResultWindow(_handler, _client);
             resultsWindow.Show();
