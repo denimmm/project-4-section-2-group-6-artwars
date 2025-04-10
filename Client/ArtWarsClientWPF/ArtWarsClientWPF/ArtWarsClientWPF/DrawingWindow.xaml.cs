@@ -74,7 +74,7 @@ namespace ArtWarsClientWPF
                 // Handle the null case, e.g., log an error or initialize CanvasArea
             }
         }
-        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        private void ImageToFile()
         {
             string resourceFolder = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources");
             if (!System.IO.Directory.Exists(resourceFolder))
@@ -96,11 +96,13 @@ namespace ArtWarsClientWPF
                 fileInfo = new FileInfo(filePath);
             }
 
-            MessageBox.Show($"Drawing saved to {filePath} with quality {quality}", "Save Successful", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show($"Drawing has been saved Successful.");
         }
         //submit button
         private async void SubmitButton_Click(Object sender, RoutedEventArgs e)
         {
+            //save the image 
+            ImageToFile();
             // Send the drawing to the server
             string resourceFolder = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources");
             string filePath = System.IO.Path.Combine(resourceFolder, "Drawing.jpg");
