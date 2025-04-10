@@ -139,7 +139,7 @@ namespace ArtWarsClientWPF
             
             // Disable the vote button to stop vote button from being pressed multiple times
             VoteButton.IsEnabled = false;
-            MessageBox.Show($"You voted for {drawingPacketsReceived[_currentImageIndex].playerId}");
+            //MessageBox.Show($"You voted for {drawingPacketsReceived[_currentImageIndex].playerId}");
             //got to ResultsWindow
             ResultWindow resultsWindow = new ResultWindow(_handler, _client);
             resultsWindow.Show();

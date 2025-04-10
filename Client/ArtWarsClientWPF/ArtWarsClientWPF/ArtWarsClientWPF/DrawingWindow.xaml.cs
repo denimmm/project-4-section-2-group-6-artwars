@@ -101,6 +101,7 @@ namespace ArtWarsClientWPF
         //submit button
         private async void SubmitButton_Click(Object sender, RoutedEventArgs e)
         {
+            SaveButton_Click(sender, e);
             // Send the drawing to the server
             string resourceFolder = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources");
             string filePath = System.IO.Path.Combine(resourceFolder, "Drawing.jpg");
