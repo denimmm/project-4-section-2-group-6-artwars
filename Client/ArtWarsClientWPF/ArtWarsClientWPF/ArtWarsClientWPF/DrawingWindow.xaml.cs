@@ -96,7 +96,7 @@ namespace ArtWarsClientWPF
                 fileInfo = new FileInfo(filePath);
             }
 
-            MessageBox.Show($"Drawing has been saved Successful.");
+            MessageBox.Show($"Drawing has been saved Successful. Submitting....");
         }
         //submit button
         private async void SubmitButton_Click(Object sender, RoutedEventArgs e)
