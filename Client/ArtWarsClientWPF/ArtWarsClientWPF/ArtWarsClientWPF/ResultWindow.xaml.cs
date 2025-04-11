@@ -22,27 +22,27 @@ namespace ArtWarsClientWPF
     {
         private Client _client;
         private TcpHandler _handler;
-        public ResultWindow(TcpHandler handler, Client client)
+        public ResultWindow(TcpHandler handler, Client client,DrawingPacket packet)
         {
             _handler = handler;
             _client = client;
             InitializeComponent();
             //start receiving the result image from server
-            _ = ReceiveResultImageFromServerAsync();
+            _ = ReceiveResultImageFromServerAsync(packet);
         }
         //wait to receive the result image from server
-        private async Task ReceiveResultImageFromServerAsync()
+        private async Task ReceiveResultImageFromServerAsync(DrawingPacket drawingPacket)
         {
             try
             {
-                byte[] data = new byte[2*1024*1024];
-                int bytes = await _handler._stream.ReadAsync(data, 0, data.Length);
+                //byte[] data = new byte[2*1024*1024];
+                //int bytes = await _handler._stream.ReadAsync(data, 0, data.Length);
 
-                if (bytes > 0)
+                if (drawingPacket!= null)
                 {
                     //check packet type if there is a winner 
                    
-                    DrawingPacket drawingPacket = new DrawingPacket(data);
+                    //DrawingPacket drawingPacket = new DrawingPacket(data);
                     if(drawingPacket.type != "results")
                     {
                         //MessageBox.Show("No winner another round...");

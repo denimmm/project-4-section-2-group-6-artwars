@@ -16,6 +16,9 @@
     <Compile Update="PromptWritingWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="ResultWaitingWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="ResultWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -40,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="PromptWritingWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ResultWaitingWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="ResultWindow.xaml">
