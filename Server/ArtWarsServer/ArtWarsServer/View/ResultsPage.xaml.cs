@@ -41,7 +41,7 @@ namespace ArtWarsServer.View
             Server server = ((App)Application.Current).server;
             Winner winner = new Winner();
             // Get winner information (replace with your actual winner logic)
-            var player = server.Players[0]; // Implement this method in your server class
+            var player = server.Players[server.winner-1]; // Implement this method in your server class
             string imagesDir = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Images"); // Change directory here if needed // Currently configured to Access Images folder in Base directory (Debug)
             string path = Path.Combine(imagesDir, $"{player.ID}.jpg");
 
