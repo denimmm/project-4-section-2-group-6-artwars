@@ -141,8 +141,8 @@ namespace ArtWarsClientWPF
             VoteButton.IsEnabled = false;
             //MessageBox.Show($"You voted for {drawingPacketsReceived[_currentImageIndex].playerId}");
             //got to ResultsWindow
-            ResultWindow resultsWindow = new ResultWindow(_handler, _client);
-            resultsWindow.Show();
+            ResultWaitingWindow resultsWaitingWindow = new ResultWaitingWindow(_handler, _client);
+            resultsWaitingWindow.Show();
             this.Close();
         }
     }
